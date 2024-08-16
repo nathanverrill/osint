@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+message AISStreamIOMessage {
+    // Unique identifier for the message
+    string uuid = 1;
+
+    // Maritime Mobile Service Identity (MMSI)
+    string mmsi = 2;
+
+    // Ship name
+    string ship_name = 3;
+
+    // Type of AIS message (e.g., position report, static data, etc.)
+    string message_type = 4;
+
+    // Timestamp in UTC
+    string time_utc = 5;
+
+    // Latitude and longitude coordinates
+    double latitude = 6;
+    double longitude = 7;
+
+    // Zlib-compressed bytes of the entire AIS message content
+    bytes full_message_zlib_compressed = 8;
+}
