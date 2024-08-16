@@ -12,11 +12,11 @@ Demonstrate processing pipeline for realtime analytics, standardization and AI/M
 
 #### start Redpanda
 
-in root of project directory `docker-compose up -d` and confirm running with `docker-compose ps`
+in root of project directory `docker-compose up -d` and confirm running with `docker ps`
 
 #### get AIS Streamio Key from aisstream.io website
 
-update config.yaml with Streamio key
+update `config.yaml` with Streamio key. See `https://aisstream.io/`
 
 #### Python 3.10 environment
 
@@ -26,11 +26,11 @@ for conda: `conda create -n osint python=3.10` and `conda activate osint`
 
 #### Load python libraries
 
-`python3 -m pip install -r requirements.txt
+`python3 -m pip install -r requirements.txt`
 
 #### Start producer
 
-`python3 ais_streamio_producer.py
+`python3 ais_streamio_producer.py`
 
 #### View in Redpanda
 
@@ -50,6 +50,6 @@ The consumer starts with latest, so you'll only see data if producer is running.
 
 The purpose of the consumer script is to get a quick preview of the data
 
-#### Further configuration
+#### Further optional configuration
 
 In Redpanda console, set retention to infinite and storage to your desired amount, depending on your local, something like 50 GiB
