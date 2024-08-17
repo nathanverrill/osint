@@ -3,3 +3,19 @@ aisstream:
 area_of_interest: 
   bounding_boxes: 
     - [[-90, -180], [90, 180]]
+kafka:
+  input_topic: "ais_streamio_proto"
+  output_topic: "ais_streamio_json"
+  producer_config:
+    bootstrap.servers: 'localhost:19092'
+    queue.buffering.max.messages: 500000
+    queue.buffering.max.kbytes: 2097152
+    linger.ms: 50
+    batch.num.messages: 10000
+    compression.type: 'snappy'
+    acks: 'all'
+  consumer_config:
+    bootstrap.servers: 'localhost:19092'
+    auto.offset.reset: 'latest'
+    enable.auto.commit: True
+    group.id: 'ais-streamio-group'

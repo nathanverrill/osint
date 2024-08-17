@@ -90,7 +90,7 @@ async def connect_ais_stream(api_key):
 
                 # Produce the serialized message to the Kafka topic
                 producer.produce(
-                    topic='ais_streamio',
+                    topic='ais_streamio_raw',
                     key=str(message['MetaData'].get("MMSI")),
                     value=serialized_message,
                     callback=delivery_report
