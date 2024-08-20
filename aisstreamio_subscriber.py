@@ -1,3 +1,22 @@
+"""
+AIS Streamio Subscriber
+
+This Python script subscribes to the AIS Streamio WebSocket API, receives AIS reports, and produces them to a Kafka topic.
+The script uses the `confluent-kafka` library to produce messages to Kafka and the `websockets` library to connect to the AIS Streamio API.
+The script is optimized for high-throughput message production and uses a separate thread to periodically flush messages to Kafka.
+
+Configuration:
+The script loads its configuration from a YAML file named `config.yaml`.
+The configuration file should contain the following settings:
+  - `aisstream.api_key`: the API key for the AIS Streamio API
+  - `area_of_interest.bounding_boxes`: a list of bounding boxes defining the area of interest for AIS reports
+
+Dependencies:
+  - `confluent-kafka`: a Python library for producing messages to Kafka
+  - `websockets`: a Python library for connecting to WebSocket APIs
+  - `orjson`: a fast JSON parsing library
+  - `yaml`: a human-readable serialization format
+"""
 import asyncio
 import websockets
 import orjson  # Fast JSON parsing library

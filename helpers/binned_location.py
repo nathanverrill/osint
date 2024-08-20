@@ -1,3 +1,19 @@
+"""
+AIS Bytewax Operations
+
+This module provides a set of operations for processing AIS (Automatic Identification System) messages in a Bytewax pipeline.
+The operations include formatting timestamps, enriching metadata, binning locations, calculating features, flattening JSON structures, and filtering messages by type.
+
+The operations are designed to be used in a Bytewax pipeline to process AIS messages from a Kafka topic.
+Each operation takes a `KafkaSinkMessage` object as input and returns a new `KafkaSinkMessage` object with the transformed data.
+
+Dependencies:
+  - `orjson`: a fast JSON parsing library
+  - `flatten_json`: a library for flattening JSON structures
+  - `bytewax`: a Python library for building data pipelines
+  - `uuid`: a library for generating unique identifiers
+  - `dateutil`: a library for parsing dates and times
+"""
 import h3
 import s2sphere
 import mgrs

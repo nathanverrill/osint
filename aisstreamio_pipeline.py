@@ -1,3 +1,22 @@
+"""
+AIS Streamio Pipeline
+
+This Python script defines a Bytewax dataflow pipeline that processes raw AIS (Automatic Identification System) reports from a Kafka topic.
+The pipeline enriches the metadata, bins the location, extracts features for analytics, and flattens the JSON data.
+It then outputs the processed data to multiple Kafka topics, one for each AIS message type.
+
+Configuration:
+The pipeline configuration is loaded from a YAML file named `config.yaml`.
+The configuration file should contain the following settings:
+  - `kafka.brokers`: a list of Kafka broker URLs
+  - `ais.message_types`: a list of AIS message types to process
+  - `ais.topics.raw`: the name of the Kafka topic containing raw AIS reports
+
+Dependencies:
+  - Bytewax: a Python library for building data pipelines
+  - Kafka: a distributed streaming platform
+  - YAML: a human-readable serialization format
+"""
 from helpers.ais_bytewax import AISBytewaxOperations
 
 from bytewax.connectors.kafka import KafkaSource, KafkaSink
