@@ -1,13 +1,9 @@
 import asyncio
 import websockets
 import orjson  # Fast JSON parsing library
-import uuid
-import zlib
 import time
-import sys
 import threading
 from confluent_kafka import Producer, KafkaError
-from schemas.ais_streamio_pb2 import AISStreamIOMessage  # Adjust the import path as needed
 
 # Load API key and area of interest bounding boxes from config.yaml
 def load_config():
@@ -21,19 +17,19 @@ bounding_boxes = config['area_of_interest']['bounding_boxes']
 
 # Kafka producer configuration optimized for high throughput
 producer_config = {
-    'bootstrap.servers': 'localhost:19092',
-    'queue.buffering.max.messages': 500000,
-    'queue.buffering.max.kbytes': 2097152,
+    'bootstrap.servers': '127.00.1:19092',
+    'queue.buffering.max.messages': 50000,
+    'queue.buffering.max.kbytes': 524288,
     'linger.ms': 50,
-    'batch.num.messages': 10000,
-    'compression.type': 'snappy',
+    'batch.num.messages': 1000,
+    # 'compression.type': 'snappy', #testing shows snappy didn't have a huge improvement; requires some downstream config so opting not to use it; leaving here for future ref on setting it or if there's a need
     'acks': 'all'
 }
 
 producer = Producer(producer_config)
 
 # Parameters for managing flush and performance
-flush_threshold = 10000  # Flush after every 10,000 messages
+flush_threshold = 1000  # Flush after every 10,000 messages
 flush_interval = 5  # Flush every 5 seconds
 last_flush_time = time.time()
 message_count = 0
@@ -65,36 +61,18 @@ async def connect_ais_stream(api_key):
 
         while True:
             try:
-                # Receive and compress message
-                message_json = await websocket.recv()
-                compressed_message_json = zlib.compress(message_json, level=1)  # Adjusted compression level
-                # print(message_json)
-                # Generate a UUID and parse the message
-                message_uuid = str(uuid.uuid4())
-                message = orjson.loads(message_json)
 
-                # Create the Protobuf message
-                ais_streamio_message = AISStreamIOMessage(
-                    uuid=message_uuid,
-                    mmsi=str(message['MetaData'].get("MMSI")),
-                    ship_name=message['MetaData'].get("ShipName", "").strip(),
-                    message_type=message.get("MessageType", ""),
-                    time_utc=message['MetaData'].get("time_utc"),
-                    latitude=message['MetaData'].get("latitude"),
-                    longitude=message['MetaData'].get("longitude"),
-                    full_message_zlib_compressed=compressed_message_json
-                )
-
-                # Serialize the Protobuf message to bytes
-                serialized_message = ais_streamio_message.SerializeToString()
-
-                # Produce the serialized message to the Kafka topic
+                message = await websocket.recv()
+ 
+                # keyed by message type
+                msg_json = orjson.loads(message)
+                msg_key = msg_json['MessageType']
+                
                 producer.produce(
-                    topic='ais_streamio_raw',
-                    key=str(message['MetaData'].get("MMSI")),
-                    value=serialized_message,
-                    callback=delivery_report
-                )
+                    topic='ais_streamio_reports_raw',
+                    key=msg_key,
+                    value=message
+                )                                  
                 
                 message_count += 1
 

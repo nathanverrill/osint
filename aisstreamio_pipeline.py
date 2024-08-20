@@ -1,0 +1,42 @@
+from helpers.ais_bytewax import AISBytewaxOperations
+
+from bytewax.connectors.kafka import KafkaSource, KafkaSink
+from bytewax import operators as op
+from bytewax.dataflow import Dataflow
+
+import yaml
+
+# Load configuration from config.yaml
+with open("config.yaml", "r") as config_file:
+    config = yaml.safe_load(config_file)
+
+BROKERS = config['kafka']['brokers']
+AIS_MESSAGE_TYPES = config['ais']['message_types']
+RAW_TOPIC = config['ais']['topics']['raw'] 
+
+# configuration needed to limit 
+PRODUCER_CONFIG = {
+    'queue.buffering.max.messages': 5000,
+    'queue.buffering.max.kbytes': 212144,
+    'linger.ms': 50,
+    'batch.num.messages': 1000,
+    'acks': 'all'
+}
+
+# Stream processing for each Kafka message
+flow = Dataflow("Process Raw AIS Streamio Reports")
+stream = op.input("Kafka In", flow, KafkaSource(BROKERS, RAW_TOPIC))
+enriched = op.map("Enrich Metadata", stream, AISBytewaxOperations.enrich_metadata)
+binned = op.map("Bin Location", enriched, AISBytewaxOperations.bin_location)
+features = op.map("Extract Features for Analytics", binned, AISBytewaxOperations.calculate_features)
+flattened = op.map("Flatten JSON", binned, AISBytewaxOperations.flatten_json)
+op.output(f"Kafka Out - All Reports", flattened, KafkaSink(BROKERS, f"ais_reports", add_config=PRODUCER_CONFIG))
+
+# # Stream processing specific to message type
+keyed_on_mmsi = op.map("Assign MMSI Kafka Key", binned, AISBytewaxOperations.set_mmsi_key)
+
+# # filter and route to topics for each message type
+for message_type in AIS_MESSAGE_TYPES:
+    filter_fn = lambda msg, mt=message_type: AISBytewaxOperations.filter_message_type(msg, mt)
+    filtered_messages = op.filter(f"Filter {message_type}", keyed_on_mmsi, filter_fn)
+    op.output(f"Kafka Out - {message_type}", filtered_messages, KafkaSink(BROKERS, f"ais_{message_type.lower()}"))
