@@ -1,0 +1,32 @@
+{
+    "Message": {
+        "PositionReport": {
+            "Cog": 360,
+            "CommunicationState": 59916,
+            "Latitude": 51.820895,
+            "Longitude": 4.90448,
+            "MessageID": 1,
+            "NavigationalStatus": 15,
+            "PositionAccuracy": true,
+            "Raim": true,
+            "RateOfTurn": -128,
+            "RepeatIndicator": 0,
+            "Sog": 0,
+            "Spare": 0,
+            "SpecialManoeuvreIndicator": 0,
+            "Timestamp": 29,
+            "TrueHeading": 511,
+            "UserID": 244870258,
+            "Valid": true
+        }
+    },
+    "MessageType": "PositionReport",
+    "MetaData": {
+        "MMSI": 244870258,
+        "MMSI_String": 244870258,
+        "ShipName": "DANMARIS",
+        "latitude": 51.820895,
+        "longitude": 4.90448,
+        "time_utc": "2024-08-20 18:43:30.581815109 +0000 UTC"
+    }
+}

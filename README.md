@@ -10,9 +10,13 @@ Demonstrate processing pipeline for realtime analytics, standardization and AI/M
 
 ### Usage for AIS
 
-#### start Redpanda
+#### Start Kafka
 
-in root of project directory `docker-compose up -d` and confirm running with `docker ps`
+Redpanda is used for the Kafka broker. Redpanda is faster and easier to use, and compatible with all Kafka APIs.
+
+For local development, utilize a single node cluster. Navigate to the single_node directory and run `docker-compose up -d` and confirm running with `docker ps` or in Docker Desktop
+
+A docker compose for a three_node broker is also included.
 
 #### get AIS Streamio Key from aisstream.io website
 
@@ -32,26 +36,27 @@ for pyenv: `pyenv virtualenv 3.10 osint` and `pyenv local osint`
 
 #### Start producer
 
-`python3 ais_streamio_producer.py`
+Script subscribes to AIS Streamio web socket and publishes to raw topic in Kafka.
+`python3 aisstreamio_subscriber.py`
 
 #### View in Redpanda
 
-Navigate to `http://localhost:8080/topics/ais_streamio`
+Navigate to `http://127.0.0.1:8080/topics/ais_streamio_reports_raw`
 
-The topic should have been autocreated and you'll see data
+The topic should have been autocreated and you'll see data. Message Type is used for the Kafka key.
 
-the MMSI is the Kafka Key, you may see unable to deserialize the value. this is because the message is in protobuf
+#### Run pipeline
 
-TODO: figure out how to deserialize message into protobuf in console
+The bytewax library is used for stream processing. See bytewax.io.
 
-#### View decompressed stream
+`python3 -m bytewax.run aisstreamio_pipeline.py`
 
-`python3 ais_streamio_consumer_test.py`
+The pipeline standardizes and enriches each of the raw messages and publishes each message into a topic specific to that message type.
 
-The consumer starts with latest, so you'll only see data if producer is running.
+Navigate to Redpanda console to see Kafka topics for each message type.
 
-The purpose of the consumer script is to get a quick preview of the data
+`http://127.0.0.1:8080/topics`
 
 #### Further optional configuration
 
-In Redpanda console, set retention to infinite and storage to your desired amount, depending on your local, something like 50 GiB
+In Redpanda console, set retention to infinite and storage to your desired amount, depending on your local, something like 20GB.
