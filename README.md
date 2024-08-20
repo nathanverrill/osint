@@ -20,9 +20,11 @@ update `config.yaml` with Streamio key. See `https://aisstream.io/`
 
 #### Python 3.10 environment
 
-using conda or local 3.10
+using conda, pyenv, or local 3.10
 
 for conda: `conda create -n osint python=3.10` and `conda activate osint`
+
+for pyenv: `pyenv virtualenv 3.10 osint` and `pyenv local osint`
 
 #### Load python libraries
 
