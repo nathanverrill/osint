@@ -52,7 +52,8 @@ PRODUCER_CONFIG = {
     'queue.buffering.max.kbytes': 212144,
     'linger.ms': 50,
     'batch.num.messages': 1000,
-    'acks': 'all'
+    'acks': 'all',
+    'compression.type': 'snappy'
 }
 
 # Stream processing for each Kafka message

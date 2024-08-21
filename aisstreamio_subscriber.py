@@ -53,7 +53,7 @@ producer_config = {
     'queue.buffering.max.kbytes': 524288,
     'linger.ms': 50,
     'batch.num.messages': 1000,
-    # 'compression.type': 'snappy', #testing shows snappy didn't have a huge improvement; requires some downstream config so opting not to use it; leaving here for future ref on setting it or if there's a need
+    'compression.type': 'snappy', #requires some downstream config so opting not to use it; leaving here for future ref on setting it or if there's a need
     'acks': 'all'
 }
 
