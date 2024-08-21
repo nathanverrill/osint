@@ -20,7 +20,9 @@ A docker compose for a three_node broker is also included.
 
 #### get AIS Streamio Key from aisstream.io website
 
-update `config.yaml` with Streamio key. See `https://aisstream.io/`
+Add an api key to your environment from `https://aisstream.io/` in one of two ways:
+- from the command line: `export ARCGIS_APIKEY=[your api key without square brackets]`
+- add `export ARCGIS_APIKEY=[your api key without square brackets]` to your .zshrc file (usually found at `~/.zshrc`) and run `source ~/.zshrc` from the terminal.
 
 #### Python 3.10 environment
 

@@ -1,5 +1,5 @@
 aisstream:
-  api_key: "" # get from aisstream.io
+  api_key: ${ARCGIS_APIKEY} # get from aisstream.io
 area_of_interest: 
   bounding_boxes: 
     - [[-90, -180], [90, 180]]

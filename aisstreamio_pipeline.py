@@ -18,20 +18,33 @@ Dependencies:
   - YAML: a human-readable serialization format
 """
 from helpers.ais_bytewax import AISBytewaxOperations
-
 from bytewax.connectors.kafka import KafkaSource, KafkaSink
 from bytewax import operators as op
 from bytewax.dataflow import Dataflow
 
 import yaml
+import re
+import os
+
 
 # Load configuration from config.yaml
+# Replaces references like ${MY_API_KEY} with the environmental variable of the same name
+regex_pattern = r".*?(\$\{(\w+)\}).*?"
 with open("config.yaml", "r") as config_file:
-    config = yaml.safe_load(config_file)
+    config_string = config_file.read()
+    matches = re.finditer(regex_pattern, config_string, re.MULTILINE)
+    for env in matches:
+        variable_value = os.environ.get(env[2])
+        if variable_value:
+            config_string.replace(env[1], variable_value)
+        else:
+            print("WARNING:  You are missing the following environmental variable on your system:", env[2])
+            print(f"          Consider adding it from the command line like so: export {env[2]}=your_secret_value")
+    config = yaml.safe_load(config_string)
 
 BROKERS = config['kafka']['brokers']
 AIS_MESSAGE_TYPES = config['ais']['message_types']
-RAW_TOPIC = config['ais']['topics']['raw'] 
+RAW_TOPIC = config['ais']['topics']['raw']
 
 # configuration needed to limit 
 PRODUCER_CONFIG = {

@@ -3,3 +3,10 @@ websockets
 orjson
 pyyaml
 confluent_kafka
+bytewax==0.21.0
+flatten-json==0.1.14
+h3==3.7.7
+python-dateutil==2.9.0.post0
+packaging==24.1
+mgrs==1.5.0
+s2sphere==0.2.5
