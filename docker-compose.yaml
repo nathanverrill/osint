@@ -1,11 +1,11 @@
-name: smart-data-broker
+name: redpanda-one-broker
 networks:
-  osint-network:
+  kafka_network:
     driver: bridge
 volumes:
-  osint-redpanda: null
+  redpanda: null
 services:
-  osint-redpanda:
+  redpanda:
     command:
       - redpanda
       - start
@@ -29,47 +29,49 @@ services:
       - --smp 1
       - --default-log-level=info
     image: docker.redpanda.com/redpandadata/redpanda:v24.2.2
-    container_name: osint-redpanda
+    container_name: redpanda
     volumes:
-      - osint-redpanda:/var/lib/redpanda/data
+      - redpanda:/var/lib/redpanda/data
     networks:
-      - osint-network
+      - kafka_network
     ports:
       - 18081:18081
       - 18082:18082
       - 19092:19092
       - 19644:9644
   console:
-    container_name: osint-redpanda-console
+    container_name: redpanda-console
     image: docker.redpanda.com/redpandadata/console:v2.7.1
     networks:
-      - osint-network
+      - kafka_network
     entrypoint: /bin/sh
     command: -c 'echo "$$CONSOLE_CONFIG_FILE" > /tmp/config.yml; /app/console'
     environment:
       CONFIG_FILEPATH: /tmp/config.yml
       CONSOLE_CONFIG_FILE: |
         kafka:
-          brokers: ["osint-redpanda:9092"]
+          brokers: ["redpanda:9092"]
           schemaRegistry:
             enabled: true
-            urls: ["http://osint-redpanda:8081"]
+            urls: ["http://redpanda:8081"]
         redpanda:
           adminApi:
             enabled: true
-            urls: ["http://osint-redpanda:9644"]
+            urls: ["http://redpanda:9644"]
     ports:
       - 8080:8080
     depends_on:
-      - osint-redpanda
+      - redpanda
 
   osint-livemap:
-    build: ./livemap
+    build:
+      context: ./livemap
+      dockerfile: Dockerfile
     container_name: osint-livemap
     image: osint-livemap:latest
     ports:
       - "8001:8000"
     networks:
-      - osint-network
+      - kafka_network
     depends_on:
-      - osint-redpanda
+      - redpanda

@@ -8,6 +8,7 @@ from datetime import datetime, timedelta
 from typing import Optional, List
 import asyncio
 from uuid import uuid4
+import tenacity
 
 app = FastAPI()
 
@@ -27,7 +28,7 @@ templates = Jinja2Templates(directory="templates")
 message_buffer = deque()
 
 # Duration for buffering messages (5 minutes)
-BUFFER_DURATION = timedelta(minutes=5)
+BUFFER_DURATION = timedelta(minutes=1)
 
 # API endpoint to get the most recent 5 minutes of messages
 @app.get("/latest-ais-positions")
@@ -54,26 +55,31 @@ async def events():
     return StreamingResponse(event_stream(), media_type="text/event-stream")
 
 # Kafka consumer task to be run as a background task
+@tenacity.retry(wait=tenacity.wait_exponential(min=1, max=10), stop=tenacity.stop_after_attempt(5))
 async def kafka_consumer_task():
     consumer = KafkaConsumer(
         'ais_positionreport',
-        bootstrap_servers=['osint-redpanda:9092'],
+        bootstrap_servers=['redpanda:9092'],
         auto_offset_reset='latest',  # Start with the latest messages
         enable_auto_commit=True,
         group_id=f'fastapi-consumer-group-{uuid4()}',
         value_deserializer=lambda x: x.decode('utf-8')
     )
-
     while True:
-        msg = consumer.poll(1.0)  # Poll the broker every 1 second
-        if msg is None:
+        try:
+            msg = consumer.poll(1.0)  # Poll the broker every 1 second
+            if msg is None:
+                await asyncio.sleep(0.1)  # Yield control to the event loop
+                continue
+            for tp, messages in msg.items():
+                for message in messages:
+                    # Add the new message to the buffer
+                    add_message_to_buffer(message.value)
             await asyncio.sleep(0.1)  # Yield control to the event loop
-            continue
-        for tp, messages in msg.items():
-            for message in messages:
-                # Add the new message to the buffer
-                add_message_to_buffer(message.value)
-        await asyncio.sleep(0.1)  # Yield control to the event loop
+        except Exception as e:
+            # Log the error and retry
+            print(f"Error consuming from Kafka: {e}")
+            raise
 
 # Add a message to the buffer and clean up old messages
 def add_message_to_buffer(message: str):

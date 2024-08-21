@@ -36,7 +36,7 @@ bounding_boxes = config['area_of_interest']['bounding_boxes']
 
 # Kafka producer configuration optimized for high throughput
 producer_config = {
-    'bootstrap.servers': '127.00.1:19092',
+    'bootstrap.servers': 'localhost:19092',
     'queue.buffering.max.messages': 50000,
     'queue.buffering.max.kbytes': 524288,
     'linger.ms': 50,
