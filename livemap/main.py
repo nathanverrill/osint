@@ -57,7 +57,7 @@ async def events():
 async def kafka_consumer_task():
     consumer = KafkaConsumer(
         'ais_positionreport',
-        bootstrap_servers=['redpanda:9092'],
+        bootstrap_servers=['osint-redpanda:9092'],
         auto_offset_reset='latest',  # Start with the latest messages
         enable_auto_commit=True,
         group_id=f'fastapi-consumer-group-{uuid4()}',
