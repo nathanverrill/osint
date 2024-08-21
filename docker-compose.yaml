@@ -1,6 +1,6 @@
-name: redpanda-one-broker
+name: osint
 networks:
-  kafka_network:
+  osint-network:
     driver: bridge
 volumes:
   redpanda: null
@@ -29,21 +29,21 @@ services:
       - --smp 1
       - --default-log-level=info
     image: docker.redpanda.com/redpandadata/redpanda:v24.2.2
-    container_name: redpanda
+    container_name: osint-redpanda
     volumes:
       - redpanda:/var/lib/redpanda/data
     networks:
-      - kafka_network
+      - osint-network
     ports:
       - 18081:18081
       - 18082:18082
       - 19092:19092
       - 19644:9644
   console:
-    container_name: redpanda-console
+    container_name: osint-redpanda-console
     image: docker.redpanda.com/redpandadata/console:v2.7.1
     networks:
-      - kafka_network
+      - osint-network
     entrypoint: /bin/sh
     command: -c 'echo "$$CONSOLE_CONFIG_FILE" > /tmp/config.yml; /app/console'
     environment:
@@ -63,12 +63,12 @@ services:
     depends_on:
       - redpanda
 
-  mapping-api:
-    container_name: osint-mapping
-    image: osint-mapping:latest
+  osint-livemap:
+    container_name: osint-livemap
+    image: osint-livemap:latest
     ports:
       - "8001:8000"
     networks:
-      - kafka_network
+      - osint-network
     depends_on:
       - redpanda
