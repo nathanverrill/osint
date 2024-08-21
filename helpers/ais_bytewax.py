@@ -17,6 +17,7 @@ Dependencies:
 import orjson
 from flatten_json import flatten
 from helpers.binned_location import BinnedLocation
+from helpers.ais_tracks import AISTrackParser
 from bytewax.connectors.kafka import KafkaSinkMessage
 from uuid import uuid4
 from dateutil import parser
@@ -89,6 +90,13 @@ class AISBytewaxOperations:
         msg_json['WKT'] = bin.wkt
         msg_json['MGRS'] = bin.mgrs
 
+        return KafkaSinkMessage(msg.key, orjson.dumps(msg_json))
+
+    @staticmethod
+    def calculate_tracks(msg):
+        """Map messages to surface and air tracks using altitude (SAR aircraft) and message type."""
+        msg_json = orjson.loads(msg.value)
+        msg_json['TrackType'] = AISTrackParser(msg_json).track_type
         return KafkaSinkMessage(msg.key, orjson.dumps(msg_json))
 
     @staticmethod
