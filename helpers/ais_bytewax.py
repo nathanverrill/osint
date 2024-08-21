@@ -20,6 +20,7 @@ from helpers.binned_location import BinnedLocation
 from bytewax.connectors.kafka import KafkaSinkMessage
 from uuid import uuid4
 from dateutil import parser
+from jsonpath_ng.ext import parse # key search with expressions
 
 class AISBytewaxOperations:
     
@@ -94,7 +95,50 @@ class AISBytewaxOperations:
     @staticmethod
     def calculate_features(msg):
         """Extract values useful for analytics and visualization."""
-        return KafkaSinkMessage(msg.key, msg.value)
+        msg_json = orjson.loads(msg.value)
+        msg_type = msg_json["MessageType"]
+        
+        # Course and Speed
+        position_msgs = ["PositionReport","ExtendedClassBPositionReport","StandardClassBPositionReport"]
+        for position_msg in position_msgs:
+            if msg_type == position_msg:
+                # Course in Degrees
+                jsonpath_expr = parse('$..Cog')
+                matches = jsonpath_expr.find(msg_json['Message'])
+                if not matches:
+                    msg_json["CourseDegrees"] = 3600 # reserved for unavailable/unknown             
+                else:
+                    msg_json["CourseDegrees"] = round(matches[0].value / 10, 2) # reported in 1/10 degrees
+                
+                # Speed in Knots
+                jsonpath_expr = parse('$..Sog')
+                matches = jsonpath_expr.find(msg_json['Message'])
+                if not matches:
+                    msg_json["SpeedKnots"] = 1023 # reserved for unavailable/unknown
+                else:
+                    msg_json["SpeedKnots"] = round(matches[0].value / 10, 1) # reported in 1/10 knots   
+                    
+                # Rate of Turn
+                jsonpath_expr = parse('$..RateOfTurn')
+                matches = jsonpath_expr.find(msg_json['Message'])
+                if not matches:
+                    msg_json["RateOfTurn"] = -128 # reserved for unavailable/unknown
+                else:
+                    msg_json["RateOfTurn"] = matches[0].value # reported in degrees/min
+                    
+                # Maneuvering
+                jsonpath_expr = parse('$..SpecialManoeuvreIndicator')
+                matches = jsonpath_expr.find(msg_json['Message'])
+                if not matches:
+                    # oe spelling of maneoevre is international spelling
+                    msg_json["SpecialManoeuvre"] = False # reserved for unavailable/unknown
+                else:
+                    msg_json["SpecialManoeuvre"] = bool(matches[0].value) # reported in degrees/min              
+                    
+                
+                    
+        
+        return KafkaSinkMessage(msg.key, orjson.dumps(msg_json))
     
     @staticmethod
     def flatten_json(msg):
