@@ -75,3 +75,14 @@ services:
       - kafka_network
     depends_on:
       - redpanda
+
+  osint-aisstreamio-subscriber:
+    build:
+      context: ./aisstreamio_subscriber
+      dockerfile: Dockerfile
+    container_name: osint-aisstreamio-subscriber
+    image: osint-aisstreamio-subscriber:latest
+    networks:
+      - kafka_network
+    depends_on:
+      - redpanda
