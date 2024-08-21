@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-Time Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+      #map {
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+      // Initialize the map
+      const map = L.map("map").setView([0, 0], 2);
+
+      // Add a tile layer
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 18,
+        attribution: "© OpenStreetMap",
+      }).addTo(map);
+
+      // Object to track markers by MMSI
+      const markers = {};
+
+      // Function to update the map with new data
+      function updateMap(data) {
+        const mmsi = data.MMSI; // Assuming MMSI is in this field
+        const latitude = data.Lat; // Using data.Lat instead of data.Message_PositionReport_Latitude
+        const longitude = data.Lng; // Using data.Lng instead of data.Message_PositionReport_Longitude
+        const shipName = data.ShipName || "Unknown Ship";
+
+        // Check if latitude and longitude are valid numbers
+        if (!isNaN(latitude) && !isNaN(longitude)) {
+          // If there's already a marker for this MMSI, update its position
+          if (markers[mmsi]) {
+            markers[mmsi].setLatLng([latitude, longitude]);
+          } else {
+            // Otherwise, create a new marker and add it to the map
+            const marker = L.marker([latitude, longitude])
+              .addTo(map)
+              .bindPopup(`${mmsi}: ${shipName} `);
+
+            // Store the marker in the markers object
+            markers[mmsi] = marker;
+          }
+
+          // Optionally, you can still set the view to the latest marker's position
+          // map.setView([latitude, longitude], 10);
+        }
+      }
+
+      // Setup Server-Sent Events (SSE) to receive updates
+      const evtSource = new EventSource("http://localhost:8001/events"); // Adjust the URL as necessary
+
+      evtSource.onmessage = function (event) {
+        // Parse the JSON data from the event
+        const data = JSON.parse(event.data);
+
+        // Update the map with the new data
+        updateMap(data);
+      };
+    </script>
+  </body>
+</html>
