@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+kafka-python
+orjson
+jinja2
+uuid
+websockets

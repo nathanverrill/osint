@@ -62,3 +62,13 @@ services:
       - 8080:8080
     depends_on:
       - redpanda
+
+  mapping-api:
+    container_name: osint-mapping
+    image: osint-mapping:latest
+    ports:
+      - "8001:8000"
+    networks:
+      - kafka_network
+    depends_on:
+      - redpanda
