@@ -47,12 +47,12 @@ flow = Dataflow("Process Raw AIS Streamio Reports")
 stream = op.input("Kafka In", flow, KafkaSource(BROKERS, RAW_TOPIC))
 enriched = op.map("Enrich Metadata", stream, AISBytewaxOperations.enrich_metadata)
 binned = op.map("Bin Location", enriched, AISBytewaxOperations.bin_location)
-features = op.map("Extract Features for Analytics", binned, AISBytewaxOperations.calculate_features)
-flattened = op.map("Flatten JSON", binned, AISBytewaxOperations.flatten_json)
+features = op.map("Calculate Features for Analytics", binned, AISBytewaxOperations.calculate_features)
+flattened = op.map("Flatten JSON", features, AISBytewaxOperations.flatten_json)
 op.output(f"Kafka Out - All Reports", flattened, KafkaSink(BROKERS, f"ais_reports", add_config=PRODUCER_CONFIG))
 
 # # Stream processing specific to message type
-keyed_on_mmsi = op.map("Assign MMSI Kafka Key", binned, AISBytewaxOperations.set_mmsi_key)
+keyed_on_mmsi = op.map("Assign MMSI Kafka Key", flattened, AISBytewaxOperations.set_mmsi_key)
 
 # # filter and route to topics for each message type
 for message_type in AIS_MESSAGE_TYPES:

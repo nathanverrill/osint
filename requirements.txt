@@ -3,3 +3,7 @@ websockets
 orjson
 pyyaml
 confluent_kafka
+jsonpath_ng
+flatten_json
+bytewax
+ipkernel

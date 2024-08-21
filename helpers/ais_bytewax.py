@@ -20,6 +20,7 @@ from helpers.binned_location import BinnedLocation
 from bytewax.connectors.kafka import KafkaSinkMessage
 from uuid import uuid4
 from dateutil import parser
+from jsonpath_ng.ext import parse # key search with expressions
 
 class AISBytewaxOperations:
     
@@ -90,12 +91,51 @@ class AISBytewaxOperations:
 
         return KafkaSinkMessage(msg.key, orjson.dumps(msg_json))
 
-
     @staticmethod
     def calculate_features(msg):
         """Extract values useful for analytics and visualization."""
-        return KafkaSinkMessage(msg.key, msg.value)
-    
+        msg_json = orjson.loads(msg.value)
+        msg_type = msg_json["MessageType"]
+
+        # Define a dictionary to map AIS message types to their corresponding feature extractors
+        feature_extractors = {
+            "PositionReport": AISBytewaxOperations.extract_position_features,
+            "ExtendedClassBPositionReport": AISBytewaxOperations.extract_position_features,
+            "StandardClassBPositionReport": AISBytewaxOperations.extract_position_features,
+        }
+
+        # Check if the message type is supported
+        if msg_type in feature_extractors:
+            # Extract features using the corresponding feature extractor
+            msg_json = feature_extractors[msg_type](msg_json)
+
+        return KafkaSinkMessage(msg.key, orjson.dumps(msg_json))
+
+
+    @staticmethod
+    def extract_position_features(msg_json):
+        """Extract features from position reports."""
+        features = {
+            "CourseDegrees": AISBytewaxOperations.extract_feature(msg_json, '$..Cog', 3600, lambda x: round(x / 10, 2)),
+            "SpeedKnots": AISBytewaxOperations.extract_feature(msg_json, '$..Sog', 1023, lambda x: round(x / 10, 1)),
+            "RateOfTurn": AISBytewaxOperations.extract_feature(msg_json, '$..RateOfTurn', -128, lambda x: x),
+            "SpecialManoeuvre": AISBytewaxOperations.extract_feature(msg_json, '$..SpecialManoeuvreIndicator', False, bool),
+        }
+
+        msg_json.update(features)
+        return msg_json
+
+
+    @staticmethod
+    def extract_feature(msg_json, jsonpath, default_value, transform_func):
+        """Extract a feature from the message JSON using a JSONPath expression."""
+        jsonpath_expr = parse(jsonpath)
+        matches = jsonpath_expr.find(msg_json['Message'])
+        if not matches:
+            return default_value
+        else:
+            return transform_func(matches[0].value)
+                
     @staticmethod
     def flatten_json(msg):
         """Flatten JSON structure."""
