@@ -1,0 +1,76 @@
+[
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 360,
+                "CommunicationState": 59916,
+                "Latitude": 52.71332666666667,
+                "Longitude": 6.050813333333334,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 41,
+                "TrueHeading": 511,
+                "UserID": 244150427,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "UUID": "2753e18a-83d6-41a4-881f-326f2630ddf5",
+        "TimestampIso": "2024-08-19T22:43:41.588113+00:00",
+        "Timestamp": 1724107421.588113,
+        "MMSI": "244150427",
+        "ShipName": "MARLISSA",
+        "Lat": 52.71332,
+        "Lng": 6.05078,
+        "LatReported": 52.71332666666667,
+        "LngReported": 6.050813333333334,
+        "H3": "88196d2a31fffff",
+        "S2": 5172507476251116000,
+        "WKT": "POINT (6.05078 52.71332)",
+        "MGRS": "32ULD00794446"
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 117.6,
+                "CommunicationState": 59916,
+                "Latitude": -38.050115,
+                "Longitude": -57.535291666666666,
+                "MessageID": 1,
+                "NavigationalStatus": 7,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 40,
+                "TrueHeading": 511,
+                "UserID": 701000956,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "UUID": "474f9232-c678-4cee-aee0-4998ea0a7642",
+        "TimestampIso": "2024-08-19T22:43:41.590245+00:00",
+        "Timestamp": 1724107421.590245,
+        "MMSI": "701000956",
+        "ShipName": "DON ESCIPION",
+        "Lat": -38.05009,
+        "Lng": -57.53527,
+        "LatReported": -38.050115,
+        "LngReported": -57.535291666666666,
+        "H3": "88c20360c9fffff",
+        "S2": 10773980218554057000,
+        "WKT": "POINT (-57.53527 -38.05009)",
+        "MGRS": "21HVT53038849"
+    }
+]

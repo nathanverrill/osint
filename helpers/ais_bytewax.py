@@ -17,7 +17,6 @@ Dependencies:
 import orjson
 from flatten_json import flatten
 from helpers.binned_location import BinnedLocation
-from helpers.ais_tracks import AISTrackParser
 from bytewax.connectors.kafka import KafkaSinkMessage
 from uuid import uuid4
 from dateutil import parser
@@ -92,58 +91,55 @@ class AISBytewaxOperations:
 
         return KafkaSinkMessage(msg.key, orjson.dumps(msg_json))
 
-    @staticmethod
-    def calculate_tracks(msg):
-        """Map messages to surface and air tracks using altitude (SAR aircraft) and message type."""
-        msg_json = orjson.loads(msg.value)
-        msg_json['TrackType'] = AISTrackParser(msg_json).track_type
-        return KafkaSinkMessage(msg.key, orjson.dumps(msg_json))
 
     @staticmethod
     def calculate_features(msg):
         """Extract values useful for analytics and visualization."""
         msg_json = orjson.loads(msg.value)
         msg_type = msg_json["MessageType"]
-
-        # Define a dictionary to map AIS message types to their corresponding feature extractors
-        feature_extractors = {
-            "PositionReport": AISBytewaxOperations.extract_position_features,
-            "ExtendedClassBPositionReport": AISBytewaxOperations.extract_position_features,
-            "StandardClassBPositionReport": AISBytewaxOperations.extract_position_features,
-        }
-
-        # Check if the message type is supported
-        if msg_type in feature_extractors:
-            # Extract features using the corresponding feature extractor
-            msg_json = feature_extractors[msg_type](msg_json)
-
-        return KafkaSinkMessage(msg.key, orjson.dumps(msg_json))
-
-
-    @staticmethod
-    def extract_position_features(msg_json):
-        """Extract features from position reports."""
-        features = {
-            "CourseDegrees": AISBytewaxOperations.extract_feature(msg_json, '$..Cog', 3600, lambda x: round(x / 10, 2)),
-            "SpeedKnots": AISBytewaxOperations.extract_feature(msg_json, '$..Sog', 1023, lambda x: round(x / 10, 1)),
-            "RateOfTurn": AISBytewaxOperations.extract_feature(msg_json, '$..RateOfTurn', -128, lambda x: x),
-            "SpecialManoeuvre": AISBytewaxOperations.extract_feature(msg_json, '$..SpecialManoeuvreIndicator', False, bool),
-        }
-
-        msg_json.update(features)
-        return msg_json
-
-
-    @staticmethod
-    def extract_feature(msg_json, jsonpath, default_value, transform_func):
-        """Extract a feature from the message JSON using a JSONPath expression."""
-        jsonpath_expr = parse(jsonpath)
-        matches = jsonpath_expr.find(msg_json['Message'])
-        if not matches:
-            return default_value
-        else:
-            return transform_func(matches[0].value)
+        
+        # Course and Speed
+        position_msgs = ["PositionReport","ExtendedClassBPositionReport","StandardClassBPositionReport"]
+        for position_msg in position_msgs:
+            if msg_type == position_msg:
+                # Course in Degrees
+                jsonpath_expr = parse('$..Cog')
+                matches = jsonpath_expr.find(msg_json['Message'])
+                if not matches:
+                    msg_json["CourseDegrees"] = 3600 # reserved for unavailable/unknown             
+                else:
+                    msg_json["CourseDegrees"] = round(matches[0].value / 10, 2) # reported in 1/10 degrees
                 
+                # Speed in Knots
+                jsonpath_expr = parse('$..Sog')
+                matches = jsonpath_expr.find(msg_json['Message'])
+                if not matches:
+                    msg_json["SpeedKnots"] = 1023 # reserved for unavailable/unknown
+                else:
+                    msg_json["SpeedKnots"] = round(matches[0].value / 10, 1) # reported in 1/10 knots   
+                    
+                # Rate of Turn
+                jsonpath_expr = parse('$..RateOfTurn')
+                matches = jsonpath_expr.find(msg_json['Message'])
+                if not matches:
+                    msg_json["RateOfTurn"] = -128 # reserved for unavailable/unknown
+                else:
+                    msg_json["RateOfTurn"] = matches[0].value # reported in degrees/min
+                    
+                # Maneuvering
+                jsonpath_expr = parse('$..SpecialManoeuvreIndicator')
+                matches = jsonpath_expr.find(msg_json['Message'])
+                if not matches:
+                    # oe spelling of maneoevre is international spelling
+                    msg_json["SpecialManoeuvre"] = False # reserved for unavailable/unknown
+                else:
+                    msg_json["SpecialManoeuvre"] = bool(matches[0].value) # reported in degrees/min              
+                    
+                
+                    
+        
+        return KafkaSinkMessage(msg.key, orjson.dumps(msg_json))
+    
     @staticmethod
     def flatten_json(msg):
         """Flatten JSON structure."""
