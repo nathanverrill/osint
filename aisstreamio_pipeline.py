@@ -36,7 +36,7 @@ with open("config.yaml", "r") as config_file:
     for env in matches:
         variable_value = os.environ.get(env[2])
         if variable_value:
-            config_string.replace(env[1], variable_value)
+            config_string = config_string.replace(env[1], variable_value)
         else:
             print("WARNING:  You are missing the following environmental variable on your system:", env[2])
             print(f"          Consider adding it from the command line like so: export {env[2]}=your_secret_value")
