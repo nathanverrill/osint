@@ -21,14 +21,26 @@ import asyncio
 import websockets
 import orjson  # Fast JSON parsing library
 import time
+import yaml
+import re
+import os
 import threading
 from confluent_kafka import Producer, KafkaError
 
 # Load API key and area of interest bounding boxes from config.yaml
 def load_config():
-    import yaml
-    with open('config.yaml', 'r') as file:
-        return yaml.safe_load(file)
+    regex_pattern = r".*?(\$\{(\w+)\}).*?"
+    with open("config.yaml", "r") as config_file:
+        config_string = config_file.read()
+        matches = re.finditer(regex_pattern, config_string, re.MULTILINE)
+        for env in matches:
+            variable_value = os.environ.get(env[2])
+            if variable_value:
+                config_string = config_string.replace(env[1], variable_value)
+            else:
+                print("WARNING:  You are missing the following environmental variable on your system:", env[2])
+                print(f"          Consider adding it from the command line like so: export {env[2]}=your_secret_value")
+        return yaml.safe_load(config_string)
 
 config = load_config()
 api_key = config['aisstream']['api_key']
@@ -41,7 +53,7 @@ producer_config = {
     'queue.buffering.max.kbytes': 524288,
     'linger.ms': 50,
     'batch.num.messages': 1000,
-    # 'compression.type': 'snappy', #testing shows snappy didn't have a huge improvement; requires some downstream config so opting not to use it; leaving here for future ref on setting it or if there's a need
+    'compression.type': 'snappy', #requires some downstream config so opting not to use it; leaving here for future ref on setting it or if there's a need
     'acks': 'all'
 }
 
