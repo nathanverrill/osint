@@ -22,7 +22,7 @@ from helpers.ais_bytewax import AISBytewaxOperations
 from bytewax.connectors.kafka import KafkaSource, KafkaSink
 from bytewax import operators as op
 from bytewax.dataflow import Dataflow
-import regex as re
+import re
 import yaml
 
 # Load configuration from config.yaml
