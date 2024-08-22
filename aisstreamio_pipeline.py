@@ -22,6 +22,8 @@ from helpers.ais_bytewax import AISBytewaxOperations
 from bytewax.connectors.kafka import KafkaSource, KafkaSink
 from bytewax import operators as op
 from bytewax.dataflow import Dataflow
+
+import os
 import re
 import yaml
 

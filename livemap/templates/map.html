@@ -27,33 +27,6 @@
       // Object to track markers by MMSI
       const markers = {};
 
-      // Function to update the map with new data
-      function updateMap(data) {
-        const mmsi = data.MMSI; // Assuming MMSI is in this field
-        const latitude = data.Lat; // Using data.Lat instead of data.Message_PositionReport_Latitude
-        const longitude = data.Lng; // Using data.Lng instead of data.Message_PositionReport_Longitude
-        const shipName = data.ShipName || "Unknown Ship";
-
-        // Check if latitude and longitude are valid numbers
-        if (!isNaN(latitude) && !isNaN(longitude)) {
-          // If there's already a marker for this MMSI, update its position
-          if (markers[mmsi]) {
-            markers[mmsi].setLatLng([latitude, longitude]);
-          } else {
-            // Otherwise, create a new marker and add it to the map
-            const marker = L.marker([latitude, longitude])
-              .addTo(map)
-              .bindPopup(`${mmsi}: ${shipName} `);
-
-            // Store the marker in the markers object
-            markers[mmsi] = marker;
-          }
-
-          // Optionally, you can still set the view to the latest marker's position
-          // map.setView([latitude, longitude], 10);
-        }
-      }
-
       // Setup Server-Sent Events (SSE) to receive updates
       const evtSource = new EventSource("http://localhost:8001/events"); // Adjust the URL as necessary
 
@@ -61,8 +34,27 @@
         // Parse the JSON data from the event
         const data = JSON.parse(event.data);
 
-        // Update the map with the new data
-        updateMap(data);
+        const mmsi = data.MMSI; // Assuming MMSI is in this field
+        const latitude = data.Lat; // Using data.Lat instead of data.Message_PositionReport_Latitude
+        const longitude = data.Lng; // Using data.Lng instead of data.Message_PositionReport_Longitude
+        const shipName = data.ShipName || "Unknown Ship";
+
+        // Check if latitude and longitude are valid numbers
+        if (!isNaN(latitude) && !isNaN(longitude)) {
+          // If there's no marker for this MMSI, create a new one and log a message
+          if (!markers[mmsi]) {
+            console.log(`Received new MMSI: ${mmsi} - ${shipName}`);
+            const marker = L.marker([latitude, longitude])
+              .addTo(map)
+              .bindPopup(`${mmsi}: ${shipName} `);
+
+            // Store the marker in the markers object
+            markers[mmsi] = marker;
+          } else {
+            // If there's already a marker for this MMSI, update its position
+            markers[mmsi].setLatLng([latitude, longitude]);
+          }
+        }
       };
     </script>
   </body>
