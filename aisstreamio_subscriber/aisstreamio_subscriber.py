@@ -23,7 +23,8 @@ with open("config.yaml", "r") as config_file:
             print("WARNING:  You are missing the following environmental variable on your system:", env[2])
             print(f"          Consider adding it from the command line like so: export {env[2]}=your_secret_value")
     config = yaml.safe_load(config_string)
-    
+
+api_key = config['aisstream']['api_key']
 bounding_boxes = config['area_of_interest']['bounding_boxes']
 
 # Kafka producer configuration optimized for high throughput
