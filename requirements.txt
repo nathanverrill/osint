@@ -18,3 +18,5 @@ python-dateutil==2.9.0.post0
 packaging==24.1
 mgrs==1.5.0
 s2sphere==0.2.5
+tenacity
+websockets
