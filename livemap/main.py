@@ -23,13 +23,13 @@ app.add_middleware(
 # Set up templates directory
 templates = Jinja2Templates(directory="templates")
 
-# Buffer to hold messages within the last 5 minutes
+# Buffer to hold messages
 message_buffer = deque()
 
-# Duration for buffering messages (5 minutes)
-BUFFER_DURATION = timedelta(minutes=5)
+# Duration for buffering messages
+BUFFER_DURATION = timedelta(seconds=30)  # Increase the buffer duration to 30 seconds
 
-# API endpoint to get the most recent 5 minutes of messages
+# API endpoint to get the most recent 
 @app.get("/latest-ais-positions")
 async def get_latest_ais_positions():
     # Remove expired messages
@@ -47,7 +47,7 @@ async def events():
     async def event_stream():
         while True:
             # Yield control to the event loop
-            await asyncio.sleep(0.1)
+            await asyncio.sleep(0.01)  # Sleep for 10 milliseconds
             # Check if there are new messages in the buffer
             if message_buffer:
                 yield f"data: {message_buffer[-1][1]}\n\n"
@@ -58,22 +58,22 @@ async def kafka_consumer_task():
     consumer = KafkaConsumer(
         'ais_positionreport',
         bootstrap_servers=['redpanda:9092'],
-        auto_offset_reset='latest',  # Start with the latest messages
+        auto_offset_reset='earliest',  # Start with the latest messages
         enable_auto_commit=True,
         group_id=f'fastapi-consumer-group-{uuid4()}',
         value_deserializer=lambda x: x.decode('utf-8')
     )
 
     while True:
-        msg = consumer.poll(1.0)  # Poll the broker every 1 second
+        msg = consumer.poll(0.1)  # Poll the broker every 100 milliseconds
         if msg is None:
-            await asyncio.sleep(0.1)  # Yield control to the event loop
+            await asyncio.sleep(0.01)  # Yield control to the event loop
             continue
         for tp, messages in msg.items():
             for message in messages:
                 # Add the new message to the buffer
                 add_message_to_buffer(message.value)
-        await asyncio.sleep(0.1)  # Yield control to the event loop
+        await asyncio.sleep(0.01)  # Yield control to the event loop
 
 # Add a message to the buffer and clean up old messages
 def add_message_to_buffer(message: str):
@@ -81,7 +81,7 @@ def add_message_to_buffer(message: str):
     message_buffer.append((timestamp, message))
     cleanup_expired_messages()
 
-# Remove messages older than 5 minutes
+# Remove messages older than 30 seconds
 def cleanup_expired_messages():
     current_time = datetime.utcnow()
     while message_buffer and (current_time - message_buffer[0][0]) > BUFFER_DURATION:
