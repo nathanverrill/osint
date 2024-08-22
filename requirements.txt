@@ -1,6 +1,13 @@
-asyncio
-websockets
+confluent-kafka
+bytewax
+flatten-json
+h3
+jsonpath_ng
+mgrs
 orjson
+packaging
+python-dateutil
+s2sphere
 pyyaml
 confluent_kafka
 jsonpath_ng
