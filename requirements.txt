@@ -9,3 +9,13 @@ packaging
 python-dateutil
 s2sphere
 pyyaml
+confluent_kafka
+jsonpath_ng
+ipkernel
+bytewax==0.21.0
+flatten-json==0.1.14
+h3==3.7.7
+python-dateutil==2.9.0.post0
+packaging==24.1
+mgrs==1.5.0
+s2sphere==0.2.5

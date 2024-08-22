@@ -18,7 +18,6 @@ Dependencies:
   - YAML: a human-readable serialization format
 """
 from helpers.ais_bytewax import AISBytewaxOperations
-
 from bytewax.connectors.kafka import KafkaSource, KafkaSink
 from bytewax import operators as op
 from bytewax.dataflow import Dataflow
@@ -26,6 +25,9 @@ from bytewax.dataflow import Dataflow
 import os
 import re
 import yaml
+import re
+import os
+
 
 # Load configuration from config.yaml
 # Replaces references like ${MY_API_KEY} with the environmental variable of the same name
@@ -44,7 +46,7 @@ with open("config.yaml", "r") as config_file:
 
 BROKERS = config['kafka']['brokers']
 AIS_MESSAGE_TYPES = config['ais']['message_types']
-RAW_TOPIC = config['ais']['topics']['raw'] 
+RAW_TOPIC = config['ais']['topics']['raw']
 
 # configuration needed to limit 
 PRODUCER_CONFIG = {
@@ -52,7 +54,8 @@ PRODUCER_CONFIG = {
     'queue.buffering.max.kbytes': 212144,
     'linger.ms': 50,
     'batch.num.messages': 1000,
-    'acks': 'all'
+    'acks': 'all',
+    'compression.type': 'snappy'
 }
 
 # Stream processing for each Kafka message

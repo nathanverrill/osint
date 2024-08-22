@@ -12,17 +12,16 @@ Demonstrate processing pipeline for realtime analytics, standardization and AI/M
 
 If you haven't already, update config.yaml and env variables for your configuration.
 
-update `config.yaml` with Streamio key. See `https://aisstream.io/`
+Add an api key to your environment from `https://aisstream.io/` in one of two ways:
 
-#### Ingestion
+- from the command line: `export ARCGIS_APIKEY=[your api key without square brackets]`
+- add `export ARCGIS_APIKEY=[your api key without square brackets]` to your .zshrc file (usually found at `~/.zshrc`) and run `source ~/.zshrc` from the terminal.
 
-`make ingest`
+#### Python 3.10 environment
 
-Builds and starts the Redpanda docker containers for processing events and the live map.
+using conda or local 3.10
 
-To start receiveing AIS data from AIS Streamio, activate the appropriate virtual environment and install `requirements.txt` then run `python3 aisstreamio_subscriber.py`
-
-You can check the Redpanda console to confirm the `ais_streamio_reports_raw` topic is being populated at `http://localhost:8080/topics`
+for conda: `conda create -n osint python=3.10` and `conda activate osint`
 
 #### Processing
 
