@@ -8,7 +8,6 @@ from datetime import datetime, timedelta
 from typing import Optional, List
 import asyncio
 from uuid import uuid4
-import tenacity
 
 app = FastAPI()
 
@@ -24,11 +23,11 @@ app.add_middleware(
 # Set up templates directory
 templates = Jinja2Templates(directory="templates")
 
-# Buffer to hold messages 
+# Buffer to hold messages within the last 5 minutes
 message_buffer = deque()
 
-# Duration for buffering messages
-BUFFER_DURATION = timedelta(seconds=5)
+# Duration for buffering messages (5 minutes)
+BUFFER_DURATION = timedelta(minutes=5)
 
 # API endpoint to get the most recent 5 minutes of messages
 @app.get("/latest-ais-positions")
@@ -47,17 +46,14 @@ async def serve_map(request: Request):
 async def events():
     async def event_stream():
         while True:
+            # Yield control to the event loop
+            await asyncio.sleep(0.1)
             # Check if there are new messages in the buffer
             if message_buffer:
-                message = message_buffer[-1]
-                yield f"data: {message[1]}\n\n"
-                print(f"Sending to map: {message[1]}")
-            await asyncio.sleep(0.1)  # Send messages immediately (no delay)
-    
+                yield f"data: {message_buffer[-1][1]}\n\n"
     return StreamingResponse(event_stream(), media_type="text/event-stream")
 
 # Kafka consumer task to be run as a background task
-@tenacity.retry(wait=tenacity.wait_exponential(min=1, max=10), stop=tenacity.stop_after_attempt(5))
 async def kafka_consumer_task():
     consumer = KafkaConsumer(
         'ais_positionreport',
@@ -67,23 +63,23 @@ async def kafka_consumer_task():
         group_id=f'fastapi-consumer-group-{uuid4()}',
         value_deserializer=lambda x: x.decode('utf-8')
     )
+
     while True:
-        try:
-            msg = consumer.poll(1.0)  # Poll the broker every 1 second
-            if msg is None:
-                await asyncio.sleep(0.1)  # Yield control to the event loop
-                continue
-            for tp, messages in msg.items():
-                for message in messages:
-                    # Add the new message to the buffer and send it immediately
-                    message_buffer.append((datetime.utcnow(), message.value))
-                    print(f"Received from Kafka: {message.value}")
-                    cleanup_expired_messages()
+        msg = consumer.poll(1.0)  # Poll the broker every 1 second
+        if msg is None:
             await asyncio.sleep(0.1)  # Yield control to the event loop
-        except Exception as e:
-            # Log the error and retry
-            print(f"Error consuming from Kafka: {e}")
-            raise
+            continue
+        for tp, messages in msg.items():
+            for message in messages:
+                # Add the new message to the buffer
+                add_message_to_buffer(message.value)
+        await asyncio.sleep(0.1)  # Yield control to the event loop
+
+# Add a message to the buffer and clean up old messages
+def add_message_to_buffer(message: str):
+    timestamp = datetime.utcnow()
+    message_buffer.append((timestamp, message))
+    cleanup_expired_messages()
 
 # Remove messages older than 5 minutes
 def cleanup_expired_messages():
@@ -99,4 +95,4 @@ async def start_kafka_consumer():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8001)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
