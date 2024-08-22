@@ -18,7 +18,11 @@ update `config.yaml` with Streamio key. See `https://aisstream.io/`
 
 `make ingest`
 
-Builds and starts the docker containers to automatically start ingesting from the ais streamio web socket into the `ais_streamio_reports_raw`. You can navigate to `http://localhost:8080/topics` to see the messages.
+Builds and starts the Redpanda docker containers for processing events and the live map.
+
+To start receiveing AIS data from AIS Streamio, activate the appropriate virtual environment and install `requirements.txt` then run `python3 aisstreamio_subscriber.py`
+
+You can check the Redpanda console to confirm the `ais_streamio_reports_raw` topic is being populated at `http://localhost:8080/topics`
 
 #### Processing
 
@@ -38,7 +42,7 @@ Due to buffering, it may take a minute before the new topics are populated.
 
 A live map is visible at `http://localhost:8001/map`.
 
-Due to buffering, it may take a minute or two before pins start to appear on the map.
+The map is updated when there are new event messages in the `ais_positionreport` topic. A new pin is added when the map sees an MMSI for the first time, and moved if an existing MMSI's position has changed.
 
 #### Further optional configuration
 
