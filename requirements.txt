@@ -11,7 +11,6 @@ s2sphere
 pyyaml
 confluent_kafka
 jsonpath_ng
-ipkernel
 bytewax==0.21.0
 flatten-json==0.1.14
 h3==3.7.7
