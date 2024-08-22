@@ -10,44 +10,25 @@ Demonstrate processing pipeline for realtime analytics, standardization and AI/M
 
 ### Usage for AIS
 
-#### Start Kafka
+If you haven't already, update config.yaml and env variables for your configuration.
 
-Redpanda is used for the Kafka broker. Redpanda is faster and easier to use, and compatible with all Kafka APIs.
+update `config.yaml` with Streamio key. See `https://aisstream.io/`
 
-For local development, utilize a single node cluster. Navigate to the single_node directory and run `docker-compose up -d` and confirm running with `docker ps` or in Docker Desktop
+#### Ingestion
 
-A docker compose for a three_node broker is also included.
+`make ingest`
 
-#### get AIS Streamio Key from aisstream.io website
+Builds and starts the Redpanda docker containers for processing events and the live map.
 
-Add an api key to your environment from `https://aisstream.io/` in one of two ways:
-- from the command line: `export ARCGIS_APIKEY=[your api key without square brackets]`
-- add `export ARCGIS_APIKEY=[your api key without square brackets]` to your .zshrc file (usually found at `~/.zshrc`) and run `source ~/.zshrc` from the terminal.
+To start receiveing AIS data from AIS Streamio, activate the appropriate virtual environment and install `requirements.txt` then run `python3 aisstreamio_subscriber.py`
 
-#### Python 3.10 environment
+You can check the Redpanda console to confirm the `ais_streamio_reports_raw` topic is being populated at `http://localhost:8080/topics`
 
-using conda, pyenv, or local 3.10
+#### Processing
 
-for conda: `conda create -n osint python=3.10` and `conda activate osint`
-
-for pyenv: `pyenv virtualenv 3.10 osint` and `pyenv local osint`
-
-#### Load python libraries
+To run enrichment pipeline, setup the local python environment:
 
 `python3 -m pip install -r requirements.txt`
-
-#### Start producer
-
-Script subscribes to AIS Streamio web socket and publishes to raw topic in Kafka.
-`python3 aisstreamio_subscriber.py`
-
-#### View in Redpanda
-
-Navigate to `http://127.0.0.1:8080/topics/ais_streamio_reports_raw`
-
-The topic should have been autocreated and you'll see data. Message Type is used for the Kafka key.
-
-#### Run pipeline
 
 The bytewax library is used for stream processing. See bytewax.io.
 
@@ -55,10 +36,14 @@ The bytewax library is used for stream processing. See bytewax.io.
 
 The pipeline standardizes and enriches each of the raw messages and publishes each message into a topic specific to that message type.
 
-Navigate to Redpanda console to see Kafka topics for each message type.
+Due to buffering, it may take a minute before the new topics are populated.
 
-`http://127.0.0.1:8080/topics`
+#### Live map
+
+A live map is visible at `http://localhost:8001/map`.
+
+The map is updated when there are new event messages in the `ais_positionreport` topic. A new pin is added when the map sees an MMSI for the first time, and moved if an existing MMSI's position has changed.
 
 #### Further optional configuration
 
-In Redpanda console, set retention to infinite and storage to your desired amount, depending on your local, something like 20GB.
+In Redpanda console, set time retention to infinite and storage to your desired amount, depending on your local, something like 20GB.

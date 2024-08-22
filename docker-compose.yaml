@@ -62,3 +62,27 @@ services:
       - 8080:8080
     depends_on:
       - redpanda
+
+  osint-livemap:
+    build:
+      context: ./livemap
+      dockerfile: Dockerfile
+    container_name: osint-livemap
+    image: osint-livemap:latest
+    ports:
+      - "8001:8000"
+    networks:
+      - kafka_network
+    depends_on:
+      - redpanda
+
+  # osint-aisstreamio-subscriber:
+  #   build:
+  #     context: ./aisstreamio_subscriber
+  #     dockerfile: Dockerfile
+  #   container_name: osint-aisstreamio-subscriber
+  #   image: osint-aisstreamio-subscriber:latest
+  #   networks:
+  #     - kafka_network
+  #   depends_on:
+  #     - redpanda

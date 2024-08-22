@@ -1,22 +1,3 @@
-"""
-AIS Streamio Subscriber
-
-This Python script subscribes to the AIS Streamio WebSocket API, receives AIS reports, and produces them to a Kafka topic.
-The script uses the `confluent-kafka` library to produce messages to Kafka and the `websockets` library to connect to the AIS Streamio API.
-The script is optimized for high-throughput message production and uses a separate thread to periodically flush messages to Kafka.
-
-Configuration:
-The script loads its configuration from a YAML file named `config.yaml`.
-The configuration file should contain the following settings:
-  - `aisstream.api_key`: the API key for the AIS Streamio API
-  - `area_of_interest.bounding_boxes`: a list of bounding boxes defining the area of interest for AIS reports
-
-Dependencies:
-  - `confluent-kafka`: a Python library for producing messages to Kafka
-  - `websockets`: a Python library for connecting to WebSocket APIs
-  - `orjson`: a fast JSON parsing library
-  - `yaml`: a human-readable serialization format
-"""
 import asyncio
 import websockets
 import orjson  # Fast JSON parsing library
@@ -26,9 +7,24 @@ import re
 import os
 import threading
 from confluent_kafka import Producer, KafkaError
+import tenacity
+import os
+import re
+import yaml
 
-# Load API key and area of interest bounding boxes from config.yaml
 def load_config():
+    regex_pattern = r".*?(\$\{(\w+)\}).*?"
+    with open("config.yaml", "r") as config_file:
+        config_string = config_file.read()
+        matches = re.finditer(regex_pattern, config_string, re.MULTILINE)
+        for env in matches:
+            variable_value = os.environ.get(env[2])
+            if variable_value:
+                config_string = config_string.replace(env[1], variable_value)
+            else:
+                print("WARNING:  You are missing the following environmental variable on your system:", env[2])
+                print(f"          Consider adding it from the command line like so: export {env[2]}=your_secret_value")
+        return yaml.safe_load(config_string)
     regex_pattern = r".*?(\$\{(\w+)\}).*?"
     with open("config.yaml", "r") as config_file:
         config_string = config_file.read()
@@ -48,16 +44,22 @@ bounding_boxes = config['area_of_interest']['bounding_boxes']
 
 # Kafka producer configuration optimized for high throughput
 producer_config = {
-    'bootstrap.servers': '127.00.1:19092',
+    'bootstrap.servers': 'localhost:19092',
     'queue.buffering.max.messages': 50000,
     'queue.buffering.max.kbytes': 524288,
     'linger.ms': 50,
     'batch.num.messages': 1000,
-    'compression.type': 'snappy', #requires some downstream config so opting not to use it; leaving here for future ref on setting it or if there's a need
+    'compression.type': 'snappy', 
     'acks': 'all'
 }
 
-producer = Producer(producer_config)
+@tenacity.retry(wait=tenacity.wait_exponential(multiplier=1, min=4, max=10),
+                stop=tenacity.stop_after_attempt(5),
+                retry=tenacity.retry_if_exception_type(KafkaError))
+def create_producer(producer_config):
+    return Producer(producer_config)
+
+producer = create_producer(producer_config)
 
 # Parameters for managing flush and performance
 flush_threshold = 1000  # Flush after every 10,000 messages
@@ -92,9 +94,7 @@ async def connect_ais_stream(api_key):
 
         while True:
             try:
-
                 message = await websocket.recv()
- 
                 # keyed by message type
                 msg_json = orjson.loads(message)
                 msg_key = msg_json['MessageType']
