@@ -1,4 +1,4 @@
-name: redpanda-one-broker
+name: osint
 
 networks:
   kafka_network:
@@ -79,7 +79,7 @@ services:
     ports:
       - "8888:8888"
     volumes:
-      - "${PWD}:/home/jovyan/work"
+      - "~/osint-notebooks:/home/jovyan/work"
     command: start-notebook.sh
     environment:
       JUPYTER_ENABLE_LAB: "yes"
