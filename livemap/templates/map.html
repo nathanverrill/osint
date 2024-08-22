@@ -35,8 +35,8 @@
         const data = JSON.parse(event.data);
 
         const mmsi = data.MMSI; // Assuming MMSI is in this field
-        const latitude = data.Lat; // Using data.Lat instead of data.Message_PositionReport_Latitude
-        const longitude = data.Lng; // Using data.Lng instead of data.Message_PositionReport_Longitude
+        const latitude = data.LatReported; // Using data.Lat instead of data.Message_PositionReport_Latitude
+        const longitude = data.LngReported; // Using data.Lng instead of data.Message_PositionReport_Longitude
         const shipName = data.ShipName || "Unknown Ship";
 
         // Check if latitude and longitude are valid numbers
@@ -51,8 +51,18 @@
             // Store the marker in the markers object
             markers[mmsi] = marker;
           } else {
-            // If there's already a marker for this MMSI, update its position
-            markers[mmsi].setLatLng([latitude, longitude]);
+            // If there's already a marker for this MMSI, check if the position has changed
+            const existingMarker = markers[mmsi];
+            const existingLatLng = existingMarker.getLatLng();
+            if (
+              existingLatLng.lat !== latitude ||
+              existingLatLng.lng !== longitude
+            ) {
+              console.log(
+                `MMSI ${mmsi} has moved to ${latitude}, ${longitude}`
+              );
+              existingMarker.setLatLng([latitude, longitude]);
+            }
           }
         }
       };
