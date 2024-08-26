@@ -33,6 +33,7 @@ services:
       - 18082:18082
       - 19092:19092
       - 19644:9644
+    restart: always
 
   console:
     container_name: redpanda-console
@@ -57,6 +58,7 @@ services:
       - 8080:8080
     depends_on:
       - redpanda
+    restart: always
 
   osint-maritime-streamio:
     env_file:
@@ -72,3 +74,4 @@ services:
       - kafka_network
     depends_on:
       - redpanda
+    restart: always
