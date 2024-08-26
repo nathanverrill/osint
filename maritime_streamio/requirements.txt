@@ -1,3 +1,4 @@
+aiohttp
 confluent-kafka
 websockets
 orjson

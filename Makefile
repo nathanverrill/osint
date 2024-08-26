@@ -1,4 +1,4 @@
-default: ingest
+default: run
 
-ingest:
+run:
 	docker-compose up -d --build

@@ -58,30 +58,17 @@ services:
     depends_on:
       - redpanda
 
-  osint-livemap:
+  osint-maritime-streamio:
+    env_file:
+      - .env
     build:
-      context: ./livemap
+      context: ./maritime_streamio
       dockerfile: Dockerfile
-    container_name: osint-livemap
-    image: osint-livemap:latest
+    container_name: osint-maritime-streamio
+    image: osint-maritime-streamio:latest
     ports:
       - "8001:8000"
     networks:
       - kafka_network
     depends_on:
       - redpanda
-
-  jupyter-notebook:
-    container_name: jupyter-notebook
-    image: jupyter/datascience-notebook:latest
-    networks:
-      - kafka_network
-    ports:
-      - "8888:8888"
-    volumes:
-      - "~/osint-notebooks:/home/jovyan/work"
-    command: start-notebook.sh
-    environment:
-      JUPYTER_ENABLE_LAB: "yes"
-    restart: unless-stopped
-    tty: true

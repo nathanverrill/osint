@@ -13,4 +13,4 @@ RUN pip install -r requirements.txt
 COPY . .
 
 # Run command when container starts
-CMD ["python", "aisstreamio_subscriber.py"]
+CMD ["python", "main.py"]
