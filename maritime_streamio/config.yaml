@@ -1,1 +1,7 @@
-stuff
+ais:
+  streamio:
+    api_key: ${AISSTREAMIO_APIKEY} # get from aisstream.io
+kafka:
+  broker: 'redpanda:9092'
+  producer:
+    topic: 'raw_maritime_streamio'
