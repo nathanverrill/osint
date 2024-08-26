@@ -35,7 +35,8 @@ TOPIC = config['kafka']['producer']['topic']
 print(BROKER)
 # Kafka configuration
 producer = Producer({
-    'bootstrap.servers': BROKER  # Updated to use your Kafka server
+    'bootstrap.servers': BROKER,  # Updated to use your Kafka server
+    'compression.type': 'lz4'
 })
 topic = TOPIC
 
@@ -81,6 +82,5 @@ async def websocket_handler(url):
 
 
 
-# Example usage
 url = 'wss://stream.aisstream.io/v0/stream'
 asyncio.run(websocket_handler(url))
