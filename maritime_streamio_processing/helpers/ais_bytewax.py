@@ -33,7 +33,6 @@ class AISBytewaxOperations:
     def enrich_metadata(msg):
         """Assign id and standardize MMSI, shipname, and add tracking."""
         msg_json = orjson.loads(msg.value)
-
         # assign uuid for traceability
         msg_json['UUID'] = uuid4()
         
