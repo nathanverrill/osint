@@ -1,0 +1,4 @@
+kafka:
+  broker: 'redpanda:9092'
+  producer:
+    input_topic: 'raw_maritime_streamio'
