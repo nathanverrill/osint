@@ -18,9 +18,11 @@ Dependencies:
   - YAML: a human-readable serialization format
 """
 from helpers.ais_bytewax import AISBytewaxOperations
-from bytewax.connectors.kafka import KafkaSource, KafkaSink
+from bytewax.connectors.kafka import operators as kop, KafkaSinkMessage
 from bytewax import operators as op
 from bytewax.dataflow import Dataflow
+from confluent_kafka import OFFSET_END
+from uuid import uuid4
 
 import os
 import re
@@ -56,23 +58,30 @@ PRODUCER_CONFIG = {
     'linger.ms': 50,
     'batch.num.messages': 1000,
     'acks': 'all',
-    'compression.type': 'lz4'
+    'compression.type': 'lz4'   
 }
 
 # Stream processing for each Kafka message
 flow = Dataflow("Process Raw AIS Streamio Reports")
-stream = op.input("Kafka In - Raw Maritime", flow, KafkaSource(BROKER, INPUT_TOPIC))
-enriched = op.map("Enrich Metadata", stream, AISBytewaxOperations.enrich_metadata)
-binned = op.map("Bin Location", enriched, AISBytewaxOperations.bin_location)
-features = op.map("Calculate Features for Analytics", binned, AISBytewaxOperations.calculate_features)
-flattened = op.map("Flatten JSON", features, AISBytewaxOperations.flatten_json)
-op.output("Kafka Out - All Reports", flattened, KafkaSink(BROKER, OUTPUT_TOPIC))
+stream = kop.input("kafka-in", flow, brokers=BROKER, topics=INPUT_TOPIC,starting_offset=OFFSET_END,batch_size=100)
+errs = op.inspect("errors", stream.errs).then(op.raises, "crash-on-err")
+
+# enriched = op.map("Enrich Metadata", stream, AISBytewaxOperations.enrich_metadata)
+# binned = op.map("Bin Location", enriched, AISBytewaxOperations.bin_location)
+# features = op.map("Calculate Features for Analytics", binned, AISBytewaxOperations.calculate_features)
+# flattened = op.map("Flatten JSON", features, AISBytewaxOperations.flatten_json)
+# op.output("Kafka Out - All Reports", flattened, KafkaSink(BROKER, OUTPUT_TOPIC))
 
 # # Stream processing specific to message type
-# keyed_on_mmsi = op.map("Assign MMSI Kafka Key", flattened, AISBytewaxOperations.set_mmsi_key)
+# keyed_on_mmsi = op.map("Assign MMSI Kafka Key", stream, AISBytewaxOperations.set_mmsi_key)
 
-# # filter and route to topics for each message type
+enriched = op.map("Enrich Metadata", stream.oks, AISBytewaxOperations.enrich_metadata)
+kop.output("kafka-out", enriched, brokers=BROKER, topic="a_test_ais_streamio_all")
+
+# op.output(f"Kafka Out - All", stream, KafkaSink(BROKER, "test_ais_streamio_all"))
+
+# # # filter and route to topics for each message type
 # for message_type in AIS_MESSAGE_TYPES:
 #     filter_fn = lambda msg, mt=message_type: AISBytewaxOperations.filter_message_type(msg, mt)
-#     filtered_messages = op.filter(f"Filter {message_type}", keyed_on_mmsi, filter_fn)
-#     op.output(f"Kafka Out - {message_type}", filtered_messages, KafkaSink(BROKERS, f"ais_{message_type.lower()}"))
+#     filtered_messages = op.filter(f"Filter {message_type}", stream, filter_fn)
+#     op.output(f"Kafka Out - {message_type}", filtered_messages, KafkaSink(BROKER, f"ais_{message_type.lower()}"))

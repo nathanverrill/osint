@@ -75,3 +75,17 @@ services:
     depends_on:
       - redpanda
     restart: always
+
+  # osint-maritime-streamio-processor:
+  #   env_file:
+  #     - .env
+  #   build:
+  #     context: ./maritime-streamio-processor
+  #     dockerfile: Dockerfile
+  #   container_name: osint-maritime-streamio_processor
+  #   image: osint-maritime-streamio-processor:latest
+  #   networks:
+  #     - kafka_network
+  #   depends_on:
+  #     - redpanda
+  #   restart: always

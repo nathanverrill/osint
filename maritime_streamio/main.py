@@ -55,7 +55,6 @@ async def produce_to_kafka(messages):
     # Convert the list of messages to a JSON array
     key = str(uuid4())
     producer.produce(topic, key=key, value=orjson.dumps(messages))
-    print('sent message...')
     producer.flush()
 
 async def websocket_handler(url):
