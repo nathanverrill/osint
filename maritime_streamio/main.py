@@ -58,28 +58,41 @@ async def produce_to_kafka(messages):
     producer.flush()
 
 async def websocket_handler(url):
-    async with aiohttp.ClientSession() as session:
-        async with session.ws_connect(url) as ws:
-            # Define your subscription message
-            subscribe_message = {
-                "APIKey": API_KEY,  # Required
-                "BoundingBoxes": BOUNDING_BOXES  # Required
-            }
-            print(subscribe_message)
+    while True:
+        try:
+            async with aiohttp.ClientSession() as session:
+                async with session.ws_connect(url) as ws:
+                    # Define your subscription message
+                    subscribe_message = {
+                        "APIKey": API_KEY,  # Required
+                        "BoundingBoxes": BOUNDING_BOXES  # Required
+                    }
+                    print(subscribe_message)
 
-            # Send the subscription message
-            await ws.send_json(subscribe_message)
+                    # Send the subscription message
+                    await ws.send_json(subscribe_message)
 
-            # Create the buffer_and_send task
-            buffer_task = asyncio.create_task(buffer_and_send())
+                    # Create the buffer_and_send task
+                    buffer_task = asyncio.create_task(buffer_and_send())
 
-            while True:
-                msg = await ws.receive()
-                if msg.type == aiohttp.WSMsgType.BINARY:
-                    message = orjson.loads(msg.data)
-                    message_buffer.append(message)
-
-
+                    while True:
+                        msg = await ws.receive()
+                        if msg.type == aiohttp.WSMsgType.BINARY:
+                            message = orjson.loads(msg.data)
+                            message_buffer.append(message)
+                        elif msg.type == aiohttp.WSMsgType.CLOSE:
+                            print("WebSocket connection closed. Reconnecting...")
+                            break
+                        elif msg.type == aiohttp.WSMsgType.ERROR:
+                            print("WebSocket error:", msg.data)
+                            break
+        except aiohttp.ClientError as e:
+            print("Error connecting to WebSocket:", e)
+        except asyncio.CancelledError:
+            print("WebSocket connection cancelled.")
+        await asyncio.sleep(5)  # wait 5 seconds before reconnecting
+        
+        
 
 url = 'wss://stream.aisstream.io/v0/stream'
 asyncio.run(websocket_handler(url))
