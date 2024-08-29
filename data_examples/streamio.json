@@ -1,0 +1,5910 @@
+[
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": true,
+                "Cog": 360,
+                "CommunicationState": 393222,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 47.486443333333334,
+                "Longitude": -3.1023799999999997,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 228063320,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 228063320,
+            "MMSI_String": 228063320,
+            "ShipName": "BEL'KREOL",
+            "latitude": 47.486443333333334,
+            "longitude": -3.1023799999999997,
+            "time_utc": "2024-08-28 15:52:26.243053646 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 241.9,
+                "CommunicationState": 59916,
+                "Latitude": 34.18281,
+                "Longitude": 135.04507333333333,
+                "MessageID": 3,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 16.7,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 21,
+                "TrueHeading": 240,
+                "UserID": 431014004,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 431014004,
+            "MMSI_String": 431014004,
+            "ShipName": "FERRY I             ",
+            "latitude": 34.18281,
+            "longitude": 135.04507333333333,
+            "time_utc": "2024-08-28 15:52:26.243540476 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 360,
+                "CommunicationState": 59916,
+                "Latitude": 52.46458,
+                "Longitude": 4.5895,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 244780738,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 244780738,
+            "MMSI_String": 244780738,
+            "ShipName": "BOATMAN4  ",
+            "latitude": 52.46458,
+            "longitude": 4.5895,
+            "time_utc": "2024-08-28 15:52:26.24392765 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 347.4,
+                "CommunicationState": 59916,
+                "Latitude": 44.401111666666665,
+                "Longitude": 8.90333,
+                "MessageID": 1,
+                "NavigationalStatus": 3,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 24,
+                "TrueHeading": 511,
+                "UserID": 247317800,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 247317800,
+            "MMSI_String": 247317800,
+            "ShipName": "SAN GENNARO PRIMO   ",
+            "latitude": 44.401111666666665,
+            "longitude": 8.90333,
+            "time_utc": "2024-08-28 15:52:26.244223343 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 82.3,
+                "CommunicationState": 59916,
+                "Latitude": 36.07103333333334,
+                "Longitude": -3.7816933333333336,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 9.1,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 16,
+                "TrueHeading": 82,
+                "UserID": 566583000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 566583000,
+            "MMSI_String": 566583000,
+            "ShipName": "HAFNIA SOYA         ",
+            "latitude": 36.07103333333334,
+            "longitude": -3.7816933333333336,
+            "time_utc": "2024-08-28 15:52:26.244541178 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 192.2,
+                "CommunicationState": 59916,
+                "Latitude": 55.79086666666667,
+                "Longitude": 12.695548333333333,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 10.8,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 21,
+                "TrueHeading": 187,
+                "UserID": 231873000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 231873000,
+            "MMSI_String": 231873000,
+            "ShipName": "BALTIC CRYSTAL      ",
+            "latitude": 55.79086666666667,
+            "longitude": 12.695548333333333,
+            "time_utc": "2024-08-28 15:52:26.244791064 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": false,
+                "Cog": 88.3,
+                "CommunicationState": 24272,
+                "CommunicationStateIsItdma": false,
+                "Latitude": 41.163066666666666,
+                "Longitude": 1.5030433333333333,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 4.1,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 235104793,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 235104793,
+            "MMSI_String": 235104793,
+            "ShipName": "ELISA",
+            "latitude": 41.163066666666666,
+            "longitude": 1.5030433333333333,
+            "time_utc": "2024-08-28 15:52:26.245074274 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 133,
+                "CommunicationState": 59916,
+                "Latitude": 56.71979833333333,
+                "Longitude": 8.207361666666667,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 5.3,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 21,
+                "TrueHeading": 134,
+                "UserID": 219015282,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 219015282,
+            "MMSI_String": 219015282,
+            "ShipName": "FLOTTE LOTTE        ",
+            "latitude": 56.71979833333333,
+            "longitude": 8.207361666666667,
+            "time_utc": "2024-08-28 15:52:26.245265151 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 272.3,
+                "CommunicationState": 59916,
+                "Latitude": 53.54491666666667,
+                "Longitude": 9.961845,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 10.2,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 274,
+                "UserID": 211643790,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 211643790,
+            "MMSI_String": 211643790,
+            "ShipName": "REIHERSTIEG",
+            "latitude": 53.54491666666667,
+            "longitude": 9.961845,
+            "time_utc": "2024-08-28 15:52:26.245696998 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": true,
+                "Cog": 84.6,
+                "CommunicationState": 0,
+                "CommunicationStateIsItdma": false,
+                "Latitude": 41.295518333333334,
+                "Longitude": -72.01030999999999,
+                "MessageID": 18,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Sog": 9,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 21,
+                "TrueHeading": 511,
+                "UserID": 338367675,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 338367675,
+            "MMSI_String": 338367675,
+            "ShipName": "OUTLANDER",
+            "latitude": 41.295518333333334,
+            "longitude": -72.01030999999999,
+            "time_utc": "2024-08-28 15:52:26.245495751 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 95.3,
+                "CommunicationState": 59916,
+                "Latitude": 44.636986666666665,
+                "Longitude": -63.56393666666667,
+                "MessageID": 3,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 162,
+                "UserID": 311321000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 311321000,
+            "MMSI_String": 311321000,
+            "ShipName": "VISION OF THE SEAS",
+            "latitude": 44.636986666666665,
+            "longitude": -63.56393666666667,
+            "time_utc": "2024-08-28 15:52:26.245968946 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 207.5,
+                "CommunicationState": 59916,
+                "Latitude": 37.736425000000004,
+                "Longitude": -122.25743000000001,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 24,
+                "TrueHeading": 50,
+                "UserID": 367436230,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 367436230,
+            "MMSI_String": 367436230,
+            "ShipName": "TAURUS              ",
+            "latitude": 37.736425000000004,
+            "longitude": -122.25743000000001,
+            "time_utc": "2024-08-28 15:52:26.246182595 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "ShipStaticData": {
+                "AisVersion": 1,
+                "CallSign": "PG6628",
+                "Destination": "",
+                "Dimension": {
+                    "A": 76,
+                    "B": 10,
+                    "C": 5,
+                    "D": 6
+                },
+                "Dte": false,
+                "Eta": {
+                    "Day": 0,
+                    "Hour": 0,
+                    "Minute": 0,
+                    "Month": 0
+                },
+                "FixType": 0,
+                "ImoNumber": 0,
+                "MaximumStaticDraught": 0,
+                "MessageID": 5,
+                "Name": "ADIO",
+                "RepeatIndicator": 0,
+                "Spare": false,
+                "Type": 0,
+                "UserID": 244690903,
+                "Valid": true
+            }
+        },
+        "MessageType": "ShipStaticData",
+        "MetaData": {
+            "MMSI": 244690903,
+            "MMSI_String": 244690903,
+            "ShipName": "ADIO",
+            "latitude": 52.376765,
+            "longitude": 5.0333516666666664,
+            "time_utc": "2024-08-28 15:52:26.246613141 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StaticDataReport": {
+                "MessageID": 24,
+                "PartNumber": false,
+                "RepeatIndicator": 0,
+                "ReportA": {
+                    "Name": "TODDY ",
+                    "Valid": true
+                },
+                "ReportB": {
+                    "CallSign": "",
+                    "Dimension": {
+                        "A": 0,
+                        "B": 0,
+                        "C": 0,
+                        "D": 0
+                    },
+                    "FixType": 0,
+                    "ShipType": 0,
+                    "Spare": 0,
+                    "Valid": false,
+                    "VenderIDModel": 0,
+                    "VenderIDSerial": 0,
+                    "VendorIDName": ""
+                },
+                "Reserved": 0,
+                "UserID": 232025077,
+                "Valid": true
+            }
+        },
+        "MessageType": "StaticDataReport",
+        "MetaData": {
+            "MMSI": 232025077,
+            "MMSI_String": 232025077,
+            "ShipName": "TODDY ",
+            "latitude": 50.71156166666666,
+            "longitude": -1.9835466666666666,
+            "time_utc": "2024-08-28 15:52:26.247045208 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "BaseStationReport": {
+                "CommunicationState": 49377,
+                "FixType": 15,
+                "Latitude": 47.47705666666666,
+                "LongRangeEnable": false,
+                "Longitude": -2.359566666666667,
+                "MessageID": 4,
+                "PositionAccuracy": false,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Spare": 0,
+                "UserID": 2275070,
+                "UtcDay": 28,
+                "UtcHour": 15,
+                "UtcMinute": 52,
+                "UtcMonth": 8,
+                "UtcSecond": 22,
+                "UtcYear": 2024,
+                "Valid": true
+            }
+        },
+        "MessageType": "BaseStationReport",
+        "MetaData": {
+            "MMSI": 2275070,
+            "MMSI_String": 2275070,
+            "ShipName": "",
+            "latitude": 47.47705666666666,
+            "longitude": -2.359566666666667,
+            "time_utc": "2024-08-28 15:52:26.246804779 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 240.4,
+                "CommunicationState": 59916,
+                "Latitude": 56.1537,
+                "Longitude": 10.217233333333333,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 217,
+                "UserID": 219002416,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 219002416,
+            "MMSI_String": 219002416,
+            "ShipName": "AROS",
+            "latitude": 56.1537,
+            "longitude": 10.217233333333333,
+            "time_utc": "2024-08-28 15:52:26.247287521 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 28.9,
+                "CommunicationState": 59916,
+                "Latitude": 24.713281666666667,
+                "Longitude": 53.831300000000006,
+                "MessageID": 3,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 10.6,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 538004814,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 538004814,
+            "MMSI_String": 538004814,
+            "ShipName": "TOPAZ RAYYAN        ",
+            "latitude": 24.713281666666667,
+            "longitude": 53.831300000000006,
+            "time_utc": "2024-08-28 15:52:26.247487976 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 77.1,
+                "CommunicationState": 59916,
+                "Latitude": 49.67434166666667,
+                "Longitude": -3.9553316666666665,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 1,
+                "RepeatIndicator": 0,
+                "Sog": 7.1,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 75,
+                "UserID": 636093241,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 636093241,
+            "MMSI_String": 636093241,
+            "ShipName": "ROSTRUM AMERICA     ",
+            "latitude": 49.67434166666667,
+            "longitude": -3.9553316666666665,
+            "time_utc": "2024-08-28 15:52:26.247677571 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "ShipStaticData": {
+                "AisVersion": 1,
+                "CallSign": "5BQY3  ",
+                "Destination": "TNTUN",
+                "Dimension": {
+                    "A": 26,
+                    "B": 156,
+                    "C": 10,
+                    "D": 20
+                },
+                "Dte": false,
+                "Eta": {
+                    "Day": 29,
+                    "Hour": 4,
+                    "Minute": 0,
+                    "Month": 8
+                },
+                "FixType": 1,
+                "ImoNumber": 9138783,
+                "MaximumStaticDraught": 7.6,
+                "MessageID": 5,
+                "Name": "MSC BRIDGE          ",
+                "RepeatIndicator": 0,
+                "Spare": false,
+                "Type": 71,
+                "UserID": 212184000,
+                "Valid": true
+            }
+        },
+        "MessageType": "ShipStaticData",
+        "MetaData": {
+            "MMSI": 212184000,
+            "MMSI_String": 212184000,
+            "ShipName": "MSC BRIDGE          ",
+            "latitude": 37.89091833333334,
+            "longitude": 11.541355000000001,
+            "time_utc": "2024-08-28 15:52:26.247829605 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "BaseStationReport": {
+                "CommunicationState": 49786,
+                "FixType": 15,
+                "Latitude": 51.356495,
+                "LongRangeEnable": false,
+                "Longitude": 4.254135,
+                "MessageID": 4,
+                "PositionAccuracy": false,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Spare": 0,
+                "UserID": 2053505,
+                "UtcDay": 28,
+                "UtcHour": 15,
+                "UtcMinute": 52,
+                "UtcMonth": 8,
+                "UtcSecond": 22,
+                "UtcYear": 2024,
+                "Valid": true
+            }
+        },
+        "MessageType": "BaseStationReport",
+        "MetaData": {
+            "MMSI": 2053505,
+            "MMSI_String": 2053505,
+            "ShipName": "",
+            "latitude": 51.356495,
+            "longitude": 4.254135,
+            "time_utc": "2024-08-28 15:52:26.248061719 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 360,
+                "CommunicationState": 59916,
+                "Latitude": 48.33420666666667,
+                "Longitude": -4.511661666666667,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0.2,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 228817100,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 228817100,
+            "MMSI_String": 228817100,
+            "ShipName": "VCSM ABER WRACH",
+            "latitude": 48.33420666666667,
+            "longitude": -4.511661666666667,
+            "time_utc": "2024-08-28 15:52:26.248288933 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "ShipStaticData": {
+                "AisVersion": 2,
+                "CallSign": "DBEX",
+                "Destination": "ELBE RANGE PILOT",
+                "Dimension": {
+                    "A": 13,
+                    "B": 11,
+                    "C": 4,
+                    "D": 8
+                },
+                "Dte": false,
+                "Eta": {
+                    "Day": 0,
+                    "Hour": 24,
+                    "Minute": 60,
+                    "Month": 0
+                },
+                "FixType": 15,
+                "ImoNumber": 0,
+                "MaximumStaticDraught": 3,
+                "MessageID": 5,
+                "Name": "PILOTTENDER GRODEN",
+                "RepeatIndicator": 0,
+                "Spare": false,
+                "Type": 50,
+                "UserID": 211545300,
+                "Valid": true
+            }
+        },
+        "MessageType": "ShipStaticData",
+        "MetaData": {
+            "MMSI": 211545300,
+            "MMSI_String": 211545300,
+            "ShipName": "PILOTTENDER GRODEN",
+            "latitude": 53.86367833333334,
+            "longitude": 8.710563333333333,
+            "time_utc": "2024-08-28 15:52:26.254958552 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": true,
+                "Cog": 120.2,
+                "CommunicationState": 393222,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 51.97324166666667,
+                "Longitude": 4.121185,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 3,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 244396606,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 244396606,
+            "MMSI_String": 244396606,
+            "ShipName": "SHANTI",
+            "latitude": 51.97324166666667,
+            "longitude": 4.121185,
+            "time_utc": "2024-08-28 15:52:26.255382625 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 272,
+                "CommunicationState": 59916,
+                "Latitude": 53.544914999999996,
+                "Longitude": 9.961845,
+                "MessageID": 3,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 10.1,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 60,
+                "TrueHeading": 274,
+                "UserID": 211643790,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 211643790,
+            "MMSI_String": 211643790,
+            "ShipName": "REIHERSTIEG",
+            "latitude": 53.544914999999996,
+            "longitude": 9.961845,
+            "time_utc": "2024-08-28 15:52:26.255649053 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": false,
+                "Cog": 280.3,
+                "CommunicationState": 20833,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 53.557249999999996,
+                "Longitude": 9.778885,
+                "MessageID": 18,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Sog": 6.7,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 218033420,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 218033420,
+            "MMSI_String": 218033420,
+            "ShipName": "JULE",
+            "latitude": 53.557249999999996,
+            "longitude": 9.778885,
+            "time_utc": "2024-08-28 15:52:26.256028052 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": true,
+                "Cog": 27.5,
+                "CommunicationState": 393222,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 14.577255000000001,
+                "Longitude": 109.07151666666667,
+                "MessageID": 18,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 574160395,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 574160395,
+            "MMSI_String": 574160395,
+            "ShipName": "18LR CHA 8042LSB A24",
+            "latitude": 14.577255000000001,
+            "longitude": 109.07151666666667,
+            "time_utc": "2024-08-28 15:52:26.256349322 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StaticDataReport": {
+                "MessageID": 24,
+                "PartNumber": false,
+                "RepeatIndicator": 0,
+                "ReportA": {
+                    "Name": "SALISH SKY",
+                    "Valid": true
+                },
+                "ReportB": {
+                    "CallSign": "",
+                    "Dimension": {
+                        "A": 0,
+                        "B": 0,
+                        "C": 0,
+                        "D": 0
+                    },
+                    "FixType": 0,
+                    "ShipType": 0,
+                    "Spare": 0,
+                    "Valid": false,
+                    "VenderIDModel": 0,
+                    "VenderIDSerial": 0,
+                    "VendorIDName": ""
+                },
+                "Reserved": 0,
+                "UserID": 316052209,
+                "Valid": true
+            }
+        },
+        "MessageType": "StaticDataReport",
+        "MetaData": {
+            "MMSI": 316052209,
+            "MMSI_String": 316052209,
+            "ShipName": "SALISH SKY",
+            "latitude": 49.269,
+            "longitude": -123.13048166666667,
+            "time_utc": "2024-08-28 15:52:26.256656938 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 257.7,
+                "CommunicationState": 59916,
+                "Latitude": 40.614916666666666,
+                "Longitude": 14.444775,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 7.9,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 247176300,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 247176300,
+            "MMSI_String": 247176300,
+            "ShipName": "ROSELY",
+            "latitude": 40.614916666666666,
+            "longitude": 14.444775,
+            "time_utc": "2024-08-28 15:52:26.256914529 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 324.4,
+                "CommunicationState": 59916,
+                "Latitude": 52.367415,
+                "Longitude": 4.894073333333334,
+                "MessageID": 3,
+                "NavigationalStatus": 5,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0.9,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 244058084,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 244058084,
+            "MMSI_String": 244058084,
+            "ShipName": "MANA",
+            "latitude": 52.367415,
+            "longitude": 4.894073333333334,
+            "time_utc": "2024-08-28 15:52:26.257126185 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 227.5,
+                "CommunicationState": 59916,
+                "Latitude": 52.37101,
+                "Longitude": 4.903566666666666,
+                "MessageID": 1,
+                "NavigationalStatus": 15,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 3.9,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 244780326,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 244780326,
+            "MMSI_String": 244780326,
+            "ShipName": "DANIEL STALPAERT",
+            "latitude": 52.37101,
+            "longitude": 4.903566666666666,
+            "time_utc": "2024-08-28 15:52:26.257283038 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 56.5,
+                "CommunicationState": 59916,
+                "Latitude": 40.64138833333333,
+                "Longitude": -74.16370833333333,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": -127,
+                "RepeatIndicator": 0,
+                "Sog": 1.4,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 21,
+                "TrueHeading": 65,
+                "UserID": 367618310,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 367618310,
+            "MMSI_String": 367618310,
+            "ShipName": "JUSTINE MCALLITER   ",
+            "latitude": 40.64138833333333,
+            "longitude": -74.16370833333333,
+            "time_utc": "2024-08-28 15:52:26.300171587 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": true,
+                "ClassBDsc": true,
+                "ClassBMsg22": false,
+                "ClassBUnit": true,
+                "Cog": 225,
+                "CommunicationState": 393222,
+                "CommunicationStateIsItdma": false,
+                "Latitude": 24.507748333333332,
+                "Longitude": 118.22979833333333,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 21,
+                "TrueHeading": 511,
+                "UserID": 413279110,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 413279110,
+            "MMSI_String": 413279110,
+            "ShipName": "ZHE JIA XING GONG198",
+            "latitude": 24.507748333333332,
+            "longitude": 118.22979833333333,
+            "time_utc": "2024-08-28 15:52:26.300632409 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 355.8,
+                "CommunicationState": 59916,
+                "Latitude": 48.939364999999995,
+                "Longitude": -125.53838999999999,
+                "MessageID": 1,
+                "NavigationalStatus": 15,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 511,
+                "UserID": 316020762,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 316020762,
+            "MMSI_String": 316020762,
+            "ShipName": "F/V TENACIOUS       ",
+            "latitude": 48.939364999999995,
+            "longitude": -125.53838999999999,
+            "time_utc": "2024-08-28 15:52:26.301000698 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 360,
+                "CommunicationState": 59916,
+                "Latitude": 37.87679833333333,
+                "Longitude": 23.726488333333336,
+                "MessageID": 1,
+                "NavigationalStatus": 5,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 511,
+                "UserID": 240333100,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 240333100,
+            "MMSI_String": 240333100,
+            "ShipName": "BRUNO",
+            "latitude": 37.87679833333333,
+            "longitude": 23.726488333333336,
+            "time_utc": "2024-08-28 15:52:26.301320826 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "UnknownMessage": {}
+        },
+        "MessageType": "UnknownMessage",
+        "MetaData": {
+            "MMSI": 244670060,
+            "MMSI_String": 244670060,
+            "ShipName": "NIRVANA",
+            "latitude": 52.61199,
+            "longitude": 5.80582,
+            "time_utc": "2024-08-28 15:52:26.301615917 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 71.5,
+                "CommunicationState": 59916,
+                "Latitude": 59.571509999999996,
+                "Longitude": 23.453135,
+                "MessageID": 3,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 12.7,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 71,
+                "UserID": 636018491,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 636018491,
+            "MMSI_String": 636018491,
+            "ShipName": "MSC KAYLA           ",
+            "latitude": 59.571509999999996,
+            "longitude": 23.453135,
+            "time_utc": "2024-08-28 15:52:26.301801384 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": false,
+                "Cog": 360,
+                "CommunicationState": 86202,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 47.52789666666667,
+                "Longitude": -122.31227333333332,
+                "MessageID": 18,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 338468375,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 338468375,
+            "MMSI_String": 338468375,
+            "ShipName": "",
+            "latitude": 47.52789666666667,
+            "longitude": -122.31227333333332,
+            "time_utc": "2024-08-28 15:52:26.302175984 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "ShipStaticData": {
+                "AisVersion": 2,
+                "CallSign": "BOKT5  ",
+                "Destination": "CNTXG               ",
+                "Dimension": {
+                    "A": 150,
+                    "B": 30,
+                    "C": 9,
+                    "D": 23
+                },
+                "Dte": false,
+                "Eta": {
+                    "Day": 12,
+                    "Hour": 0,
+                    "Minute": 1,
+                    "Month": 9
+                },
+                "FixType": 1,
+                "ImoNumber": 9809215,
+                "MaximumStaticDraught": 6.7,
+                "MessageID": 5,
+                "Name": "ZHONG GU LIN YI     ",
+                "RepeatIndicator": 0,
+                "Spare": false,
+                "Type": 70,
+                "UserID": 413247480,
+                "Valid": true
+            }
+        },
+        "MessageType": "ShipStaticData",
+        "MetaData": {
+            "MMSI": 413247480,
+            "MMSI_String": 413247480,
+            "ShipName": "ZHONG GU LIN YI     ",
+            "latitude": 5.886525000000001,
+            "longitude": 80.22639166666666,
+            "time_utc": "2024-08-28 15:52:26.302551787 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 72.3,
+                "CommunicationState": 59916,
+                "Latitude": 51.930888333333336,
+                "Longitude": 3.40701,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 10.4,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 72,
+                "UserID": 352001434,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 352001434,
+            "MMSI_String": 352001434,
+            "ShipName": "SAKIZAYA ZEST       ",
+            "latitude": 51.930888333333336,
+            "longitude": 3.40701,
+            "time_utc": "2024-08-28 15:52:26.302956894 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 57.9,
+                "CommunicationState": 59916,
+                "Latitude": 51.45308166666667,
+                "Longitude": 3.7107533333333333,
+                "MessageID": 1,
+                "NavigationalStatus": 3,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 241,
+                "UserID": 245263000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 245263000,
+            "MMSI_String": 245263000,
+            "ShipName": "",
+            "latitude": 51.45308166666667,
+            "longitude": 3.7107533333333333,
+            "time_utc": "2024-08-28 15:52:26.30340937 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "DataLinkManagementMessage": {
+                "Data": {
+                    "0": {
+                        "Increment": 250,
+                        "Offset": 1498,
+                        "TimeOut": 7,
+                        "Valid": false,
+                        "integerOfSlots": 1
+                    },
+                    "1": {
+                        "Increment": 1125,
+                        "Offset": 2250,
+                        "TimeOut": 7,
+                        "Valid": false,
+                        "integerOfSlots": 1
+                    },
+                    "2": {
+                        "Increment": 1125,
+                        "Offset": 1385,
+                        "TimeOut": 7,
+                        "Valid": false,
+                        "integerOfSlots": 1
+                    },
+                    "3": {
+                        "Increment": 0,
+                        "Offset": 0,
+                        "TimeOut": 0,
+                        "Valid": false,
+                        "integerOfSlots": 0
+                    }
+                },
+                "MessageID": 20,
+                "RepeatIndicator": 0,
+                "Spare": 0,
+                "UserID": 2241130,
+                "Valid": true
+            }
+        },
+        "MessageType": "DataLinkManagementMessage",
+        "MetaData": {
+            "MMSI": 2241130,
+            "MMSI_String": 2241130,
+            "ShipName": "AITANA",
+            "latitude": 38.65112,
+            "longitude": -0.27415666666666666,
+            "time_utc": "2024-08-28 15:52:26.303720892 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "DataLinkManagementMessage": {
+                "Data": {
+                    "0": {
+                        "Increment": 250,
+                        "Offset": 1506,
+                        "TimeOut": 7,
+                        "Valid": false,
+                        "integerOfSlots": 1
+                    },
+                    "1": {
+                        "Increment": 1125,
+                        "Offset": 2250,
+                        "TimeOut": 7,
+                        "Valid": false,
+                        "integerOfSlots": 1
+                    },
+                    "2": {
+                        "Increment": 1125,
+                        "Offset": 1408,
+                        "TimeOut": 7,
+                        "Valid": false,
+                        "integerOfSlots": 1
+                    },
+                    "3": {
+                        "Increment": 0,
+                        "Offset": 0,
+                        "TimeOut": 0,
+                        "Valid": false,
+                        "integerOfSlots": 0
+                    }
+                },
+                "MessageID": 20,
+                "RepeatIndicator": 0,
+                "Spare": 0,
+                "UserID": 2241135,
+                "Valid": true
+            }
+        },
+        "MessageType": "DataLinkManagementMessage",
+        "MetaData": {
+            "MMSI": 2241135,
+            "MMSI_String": 2241135,
+            "ShipName": "SAN JOSE",
+            "latitude": 38.9157,
+            "longitude": 1.2776233333333333,
+            "time_utc": "2024-08-28 15:52:26.303990277 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "DataLinkManagementMessage": {
+                "Data": {
+                    "0": {
+                        "Increment": 1125,
+                        "Offset": 0,
+                        "TimeOut": 7,
+                        "Valid": false,
+                        "integerOfSlots": 1
+                    },
+                    "1": {
+                        "Increment": 250,
+                        "Offset": 1498,
+                        "TimeOut": 7,
+                        "Valid": false,
+                        "integerOfSlots": 1
+                    },
+                    "2": {
+                        "Increment": 0,
+                        "Offset": 0,
+                        "TimeOut": 0,
+                        "Valid": false,
+                        "integerOfSlots": 0
+                    },
+                    "3": {
+                        "Increment": 0,
+                        "Offset": 0,
+                        "TimeOut": 0,
+                        "Valid": false,
+                        "integerOfSlots": 0
+                    }
+                },
+                "MessageID": 20,
+                "RepeatIndicator": 0,
+                "Spare": 0,
+                "UserID": 2766140,
+                "Valid": true
+            }
+        },
+        "MessageType": "DataLinkManagementMessage",
+        "MetaData": {
+            "MMSI": 2766140,
+            "MMSI_String": 2766140,
+            "ShipName": "",
+            "latitude": 59.51677166666666,
+            "longitude": 24.839841666666665,
+            "time_utc": "2024-08-28 15:52:26.30424947 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": false,
+                "Cog": 360,
+                "CommunicationState": 85242,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 37.41375,
+                "Longitude": 23.134181666666667,
+                "MessageID": 18,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Sog": 0.1,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 238844140,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 238844140,
+            "MMSI_String": 238844140,
+            "ShipName": "GODEWIND",
+            "latitude": 37.41375,
+            "longitude": 23.134181666666667,
+            "time_utc": "2024-08-28 15:52:26.30458547 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StaticDataReport": {
+                "MessageID": 24,
+                "PartNumber": true,
+                "RepeatIndicator": 0,
+                "ReportA": {
+                    "Name": "",
+                    "Valid": false
+                },
+                "ReportB": {
+                    "CallSign": "IK8170",
+                    "Dimension": {
+                        "A": 0,
+                        "B": 0,
+                        "C": 0,
+                        "D": 0
+                    },
+                    "FixType": 15,
+                    "ShipType": 36,
+                    "Spare": 0,
+                    "Valid": true,
+                    "VenderIDModel": 2,
+                    "VenderIDSerial": 791006,
+                    "VendorIDName": "SRT"
+                },
+                "Reserved": 0,
+                "UserID": 247163520,
+                "Valid": true
+            }
+        },
+        "MessageType": "StaticDataReport",
+        "MetaData": {
+            "MMSI": 247163520,
+            "MMSI_String": 247163520,
+            "ShipName": "",
+            "latitude": 37.93081666666667,
+            "longitude": 12.324276666666666,
+            "time_utc": "2024-08-28 15:52:26.30585426 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 0,
+                "CommunicationState": 59916,
+                "Latitude": 32.326095,
+                "Longitude": -90.89655666666665,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 24,
+                "TrueHeading": 19,
+                "UserID": 367327920,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 367327920,
+            "MMSI_String": 367327920,
+            "ShipName": "MARITIME            ",
+            "latitude": 32.326095,
+            "longitude": -90.89655666666665,
+            "time_utc": "2024-08-28 15:52:26.305032906 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StaticDataReport": {
+                "MessageID": 24,
+                "PartNumber": true,
+                "RepeatIndicator": 0,
+                "ReportA": {
+                    "Name": "",
+                    "Valid": false
+                },
+                "ReportB": {
+                    "CallSign": "FGF5281",
+                    "Dimension": {
+                        "A": 4,
+                        "B": 8,
+                        "C": 2,
+                        "D": 2
+                    },
+                    "FixType": 15,
+                    "ShipType": 36,
+                    "Spare": 0,
+                    "Valid": true,
+                    "VenderIDModel": 1,
+                    "VenderIDSerial": 336205,
+                    "VendorIDName": "SMT"
+                },
+                "Reserved": 0,
+                "UserID": 227729710,
+                "Valid": true
+            }
+        },
+        "MessageType": "StaticDataReport",
+        "MetaData": {
+            "MMSI": 227729710,
+            "MMSI_String": 227729710,
+            "ShipName": "",
+            "latitude": 47.35711833333333,
+            "longitude": -3.0710816666666667,
+            "time_utc": "2024-08-28 15:52:26.305401063 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": true,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": false,
+                "Cog": 360,
+                "CommunicationState": 0,
+                "CommunicationStateIsItdma": false,
+                "Latitude": 48.03071,
+                "Longitude": -122.74383166666667,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 338242118,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 338242118,
+            "MMSI_String": 338242118,
+            "ShipName": "M/V LIBRA           ",
+            "latitude": 48.03071,
+            "longitude": -122.74383166666667,
+            "time_utc": "2024-08-28 15:52:26.306304844 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 275.5,
+                "CommunicationState": 59916,
+                "Latitude": 43.697064999999995,
+                "Longitude": 7.318943333333333,
+                "MessageID": 3,
+                "NavigationalStatus": 1,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": -127,
+                "RepeatIndicator": 0,
+                "Sog": 0.2,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 24,
+                "TrueHeading": 209,
+                "UserID": 215000887,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 215000887,
+            "MMSI_String": 215000887,
+            "ShipName": "ELENI               ",
+            "latitude": 43.697064999999995,
+            "longitude": 7.318943333333333,
+            "time_utc": "2024-08-28 15:52:26.306627487 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 332.9,
+                "CommunicationState": 59916,
+                "Latitude": 35.794758333333334,
+                "Longitude": -0.6192166666666666,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 11.9,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 20,
+                "TrueHeading": 338,
+                "UserID": 352001599,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 352001599,
+            "MMSI_String": 352001599,
+            "ShipName": "ARIS LUCKY",
+            "latitude": 35.794758333333334,
+            "longitude": -0.6192166666666666,
+            "time_utc": "2024-08-28 15:52:26.306970608 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 177.4,
+                "CommunicationState": 59916,
+                "Latitude": 48.43320000000001,
+                "Longitude": -123.43701666666666,
+                "MessageID": 3,
+                "NavigationalStatus": 5,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 254,
+                "UserID": 316014550,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 316014550,
+            "MMSI_String": 316014550,
+            "ShipName": "CDN WARSHIP 432",
+            "latitude": 48.43320000000001,
+            "longitude": -123.43701666666666,
+            "time_utc": "2024-08-28 15:52:26.30738335 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": false,
+                "Cog": 360,
+                "CommunicationState": 33657,
+                "CommunicationStateIsItdma": false,
+                "Latitude": 51.914745,
+                "Longitude": 4.170135,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Sog": 0.3,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 244650223,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 244650223,
+            "MMSI_String": 244650223,
+            "ShipName": "DON'T WORRY",
+            "latitude": 51.914745,
+            "longitude": 4.170135,
+            "time_utc": "2024-08-28 15:52:26.307821208 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "DataLinkManagementMessage": {
+                "Data": {
+                    "0": {
+                        "Increment": 750,
+                        "Offset": 1748,
+                        "TimeOut": 7,
+                        "Valid": false,
+                        "integerOfSlots": 1
+                    },
+                    "1": {
+                        "Increment": 1125,
+                        "Offset": 0,
+                        "TimeOut": 7,
+                        "Valid": false,
+                        "integerOfSlots": 1
+                    },
+                    "2": {
+                        "Increment": 0,
+                        "Offset": 0,
+                        "TimeOut": 0,
+                        "Valid": false,
+                        "integerOfSlots": 0
+                    },
+                    "3": {
+                        "Increment": 0,
+                        "Offset": 0,
+                        "TimeOut": 0,
+                        "Valid": false,
+                        "integerOfSlots": 0
+                    }
+                },
+                "MessageID": 20,
+                "RepeatIndicator": 0,
+                "Spare": 0,
+                "UserID": 2655069,
+                "Valid": true
+            }
+        },
+        "MessageType": "DataLinkManagementMessage",
+        "MetaData": {
+            "MMSI": 2655069,
+            "MMSI_String": 2655069,
+            "ShipName": "_N(I0@GA5H#O_       ",
+            "latitude": 59.33504333333334,
+            "longitude": 18.126820000000002,
+            "time_utc": "2024-08-28 15:52:26.30815387 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "UnknownMessage": {}
+        },
+        "MessageType": "UnknownMessage",
+        "MetaData": {
+            "MMSI": 244700935,
+            "MMSI_String": 244700935,
+            "ShipName": "CHRISTIAAN BRUNINGS",
+            "latitude": 52.372600000000006,
+            "longitude": 4.914541666666667,
+            "time_utc": "2024-08-28 15:52:26.308423775 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 292.1,
+                "CommunicationState": 59916,
+                "Latitude": 60.45122333333334,
+                "Longitude": 22.03076,
+                "MessageID": 3,
+                "NavigationalStatus": 5,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 279,
+                "UserID": 230992670,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 230992670,
+            "MMSI_String": 230992670,
+            "ShipName": "ALFAGELN            ",
+            "latitude": 60.45122333333334,
+            "longitude": 22.03076,
+            "time_utc": "2024-08-28 15:52:26.308721491 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 0,
+                "CommunicationState": 59916,
+                "Latitude": 32.84932,
+                "Longitude": -79.93651166666668,
+                "MessageID": 3,
+                "NavigationalStatus": 5,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 24,
+                "TrueHeading": 57,
+                "UserID": 366235000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 366235000,
+            "MMSI_String": 366235000,
+            "ShipName": "CAPE DOMINGO        ",
+            "latitude": 32.84932,
+            "longitude": -79.93651166666668,
+            "time_utc": "2024-08-28 15:52:26.309112833 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 77.3,
+                "CommunicationState": 59916,
+                "Latitude": 36.720733333333335,
+                "Longitude": 34.74983333333333,
+                "MessageID": 3,
+                "NavigationalStatus": 1,
+                "PositionAccuracy": false,
+                "Raim": true,
+                "RateOfTurn": 10,
+                "RepeatIndicator": 0,
+                "Sog": 7.1,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 211,
+                "UserID": 271052266,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 271052266,
+            "MMSI_String": 271052266,
+            "ShipName": "MEDKON ANKARA",
+            "latitude": 36.720733333333335,
+            "longitude": 34.74983333333333,
+            "time_utc": "2024-08-28 15:52:26.309889705 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "ShipStaticData": {
+                "AisVersion": 0,
+                "CallSign": "5BBG5  ",
+                "Destination": "ES VLC              ",
+                "Dimension": {
+                    "A": 21,
+                    "B": 165,
+                    "C": 13,
+                    "D": 13
+                },
+                "Dte": false,
+                "Eta": {
+                    "Day": 28,
+                    "Hour": 16,
+                    "Minute": 0,
+                    "Month": 8
+                },
+                "FixType": 1,
+                "ImoNumber": 9498743,
+                "MaximumStaticDraught": 6.5,
+                "MessageID": 5,
+                "Name": "HEDY LAMARR         ",
+                "RepeatIndicator": 0,
+                "Spare": false,
+                "Type": 69,
+                "UserID": 209348000,
+                "Valid": true
+            }
+        },
+        "MessageType": "ShipStaticData",
+        "MetaData": {
+            "MMSI": 209348000,
+            "MMSI_String": 209348000,
+            "ShipName": "HEDY LAMARR         ",
+            "latitude": 39.44915,
+            "longitude": -0.32334999999999997,
+            "time_utc": "2024-08-28 15:52:26.344821059 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 247.9,
+                "CommunicationState": 59916,
+                "Latitude": -32.91325666666667,
+                "Longitude": 151.80300333333335,
+                "MessageID": 3,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": -127,
+                "RepeatIndicator": 0,
+                "Sog": 9.9,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 63,
+                "UserID": 503070250,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 503070250,
+            "MMSI_String": 503070250,
+            "ShipName": "SVITZER NEWTON      ",
+            "latitude": -32.91325666666667,
+            "longitude": 151.80300333333335,
+            "time_utc": "2024-08-28 15:52:26.345263676 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StaticDataReport": {
+                "MessageID": 24,
+                "PartNumber": false,
+                "RepeatIndicator": 0,
+                "ReportA": {
+                    "Name": "AQUARAMA",
+                    "Valid": true
+                },
+                "ReportB": {
+                    "CallSign": "",
+                    "Dimension": {
+                        "A": 0,
+                        "B": 0,
+                        "C": 0,
+                        "D": 0
+                    },
+                    "FixType": 0,
+                    "ShipType": 0,
+                    "Spare": 0,
+                    "Valid": false,
+                    "VenderIDModel": 0,
+                    "VenderIDSerial": 0,
+                    "VendorIDName": ""
+                },
+                "Reserved": 0,
+                "UserID": 338037824,
+                "Valid": true
+            }
+        },
+        "MessageType": "StaticDataReport",
+        "MetaData": {
+            "MMSI": 338037824,
+            "MMSI_String": 338037824,
+            "ShipName": "AQUARAMA",
+            "latitude": 47.64588166666667,
+            "longitude": -122.31004,
+            "time_utc": "2024-08-28 15:52:26.345625853 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 24.6,
+                "CommunicationState": 59916,
+                "Latitude": 35.80963166666667,
+                "Longitude": -11.020485,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 10.4,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 24,
+                "TrueHeading": 24,
+                "UserID": 311040900,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 311040900,
+            "MMSI_String": 311040900,
+            "ShipName": "ORNAK               ",
+            "latitude": 35.80963166666667,
+            "longitude": -11.020485,
+            "time_utc": "2024-08-28 15:52:26.345986497 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 32.5,
+                "CommunicationState": 59916,
+                "Latitude": 22.325701666666664,
+                "Longitude": 114.11920333333335,
+                "MessageID": 3,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": -19,
+                "RepeatIndicator": 0,
+                "Sog": 3.7,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 21,
+                "TrueHeading": 33,
+                "UserID": 211122000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 211122000,
+            "MMSI_String": 211122000,
+            "ShipName": "",
+            "latitude": 22.325701666666664,
+            "longitude": 114.11920333333335,
+            "time_utc": "2024-08-28 15:52:26.346259979 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "Interrogation": {
+                "MessageID": 15,
+                "RepeatIndicator": 0,
+                "Spare": 0,
+                "Station1Msg1": {
+                    "MessageID": 244750203,
+                    "SlotOffset": 0,
+                    "StationID": 244750203,
+                    "Valid": true
+                },
+                "Station1Msg2": {
+                    "MessageID": 0,
+                    "SlotOffset": 0,
+                    "Spare": 0,
+                    "Valid": false
+                },
+                "Station2": {
+                    "MessageID": 0,
+                    "SlotOffset": 0,
+                    "Spare1": 0,
+                    "Spare2": 0,
+                    "StationID": 0,
+                    "Valid": false
+                },
+                "UserID": 211181370,
+                "Valid": true
+            }
+        },
+        "MessageType": "Interrogation",
+        "MetaData": {
+            "MMSI": 211181370,
+            "MMSI_String": 211181370,
+            "ShipName": "SGMS UNTERFRANKEN",
+            "latitude": 52.40202333333333,
+            "longitude": 4.879918333333333,
+            "time_utc": "2024-08-28 15:52:26.346521547 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 17.8,
+                "CommunicationState": 59916,
+                "Latitude": 62.691098333333336,
+                "Longitude": 17.986473333333333,
+                "MessageID": 1,
+                "NavigationalStatus": 15,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 97,
+                "UserID": 265653620,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 265653620,
+            "MMSI_String": 265653620,
+            "ShipName": "EMBLA               ",
+            "latitude": 62.691098333333336,
+            "longitude": 17.986473333333333,
+            "time_utc": "2024-08-28 15:52:26.346754553 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 0,
+                "CommunicationState": 59916,
+                "Latitude": 62.63062166666667,
+                "Longitude": 17.949843333333334,
+                "MessageID": 3,
+                "NavigationalStatus": 5,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 511,
+                "UserID": 265811800,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 265811800,
+            "MMSI_String": 265811800,
+            "ShipName": "HETA T&D     ",
+            "latitude": 62.63062166666667,
+            "longitude": 17.949843333333334,
+            "time_utc": "2024-08-28 15:52:26.347159871 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 360,
+                "CommunicationState": 59916,
+                "Latitude": 37.86268,
+                "Longitude": 23.742774999999998,
+                "MessageID": 3,
+                "NavigationalStatus": 5,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 256036000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 256036000,
+            "MMSI_String": 256036000,
+            "ShipName": "CARINO",
+            "latitude": 37.86268,
+            "longitude": 23.742774999999998,
+            "time_utc": "2024-08-28 15:52:26.347484648 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": true,
+                "Cog": 133.8,
+                "CommunicationState": 393222,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 56.69777333333333,
+                "Longitude": 8.2155,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 219000581,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 219000581,
+            "MMSI_String": 219000581,
+            "ShipName": "NORTH SEA COLLEGE",
+            "latitude": 56.69777333333333,
+            "longitude": 8.2155,
+            "time_utc": "2024-08-28 15:52:26.347765062 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "Interrogation": {
+                "MessageID": 15,
+                "RepeatIndicator": 0,
+                "Spare": 0,
+                "Station1Msg1": {
+                    "MessageID": 244750203,
+                    "SlotOffset": 0,
+                    "StationID": 244750203,
+                    "Valid": true
+                },
+                "Station1Msg2": {
+                    "MessageID": 0,
+                    "SlotOffset": 0,
+                    "Spare": 0,
+                    "Valid": false
+                },
+                "Station2": {
+                    "MessageID": 0,
+                    "SlotOffset": 0,
+                    "Spare1": 0,
+                    "Spare2": 0,
+                    "StationID": 0,
+                    "Valid": false
+                },
+                "UserID": 211181370,
+                "Valid": true
+            }
+        },
+        "MessageType": "Interrogation",
+        "MetaData": {
+            "MMSI": 211181370,
+            "MMSI_String": 211181370,
+            "ShipName": "SGMS UNTERFRANKEN",
+            "latitude": 52.40202333333333,
+            "longitude": 4.879918333333333,
+            "time_utc": "2024-08-28 15:52:26.347977779 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "UnknownMessage": {}
+        },
+        "MessageType": "UnknownMessage",
+        "MetaData": {
+            "MMSI": 244150566,
+            "MMSI_String": 244150566,
+            "ShipName": "LYNX                ",
+            "latitude": 52.461785,
+            "longitude": 4.5871216666666665,
+            "time_utc": "2024-08-28 15:52:26.34811194 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": false,
+                "ClassBDisplay": false,
+                "ClassBDsc": false,
+                "ClassBMsg22": false,
+                "ClassBUnit": false,
+                "Cog": 0,
+                "CommunicationState": 0,
+                "CommunicationStateIsItdma": false,
+                "Latitude": 42.30121833333333,
+                "Longitude": -71.02794833333334,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 60,
+                "TrueHeading": 0,
+                "UserID": 368119580,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 368119580,
+            "MMSI_String": 368119580,
+            "ShipName": "ABSOLUTELY",
+            "latitude": 42.30121833333333,
+            "longitude": -71.02794833333334,
+            "time_utc": "2024-08-28 15:52:26.348307716 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StaticDataReport": {
+                "MessageID": 24,
+                "PartNumber": false,
+                "RepeatIndicator": 0,
+                "ReportA": {
+                    "Name": "TALE",
+                    "Valid": true
+                },
+                "ReportB": {
+                    "CallSign": "",
+                    "Dimension": {
+                        "A": 0,
+                        "B": 0,
+                        "C": 0,
+                        "D": 0
+                    },
+                    "FixType": 0,
+                    "ShipType": 0,
+                    "Spare": 0,
+                    "Valid": false,
+                    "VenderIDModel": 0,
+                    "VenderIDSerial": 0,
+                    "VendorIDName": ""
+                },
+                "Reserved": 0,
+                "UserID": 2014012,
+                "Valid": true
+            }
+        },
+        "MessageType": "StaticDataReport",
+        "MetaData": {
+            "MMSI": 2014012,
+            "MMSI_String": 2014012,
+            "ShipName": "TALE",
+            "latitude": 41.690081666666664,
+            "longitude": 19.588756666666665,
+            "time_utc": "2024-08-28 15:52:26.348531155 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "UnknownMessage": {}
+        },
+        "MessageType": "UnknownMessage",
+        "MetaData": {
+            "MMSI": 277465000,
+            "MMSI_String": 277465000,
+            "ShipName": "BALTIJA",
+            "latitude": 55.68908666666667,
+            "longitude": 21.138121666666667,
+            "time_utc": "2024-08-28 15:52:26.348708125 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 190.5,
+                "CommunicationState": 59916,
+                "Latitude": 55.64958166666667,
+                "Longitude": 21.162481666666668,
+                "MessageID": 2,
+                "NavigationalStatus": 11,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": -127,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 221,
+                "UserID": 620998000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 620998000,
+            "MMSI_String": 620998000,
+            "ShipName": "KISEL",
+            "latitude": 55.64958166666667,
+            "longitude": 21.162481666666668,
+            "time_utc": "2024-08-28 15:52:26.348871391 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 153.7,
+                "CommunicationState": 59916,
+                "Latitude": 53.544914999999996,
+                "Longitude": 9.958061666666667,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 19,
+                "TrueHeading": 258,
+                "UserID": 211437190,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 211437190,
+            "MMSI_String": 211437190,
+            "ShipName": "NEUENFELDE",
+            "latitude": 53.544914999999996,
+            "longitude": 9.958061666666667,
+            "time_utc": "2024-08-28 15:52:26.349024747 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StaticDataReport": {
+                "MessageID": 24,
+                "PartNumber": false,
+                "RepeatIndicator": 0,
+                "ReportA": {
+                    "Name": "NALANI              ",
+                    "Valid": true
+                },
+                "ReportB": {
+                    "CallSign": "",
+                    "Dimension": {
+                        "A": 0,
+                        "B": 0,
+                        "C": 0,
+                        "D": 0
+                    },
+                    "FixType": 0,
+                    "ShipType": 0,
+                    "Spare": 0,
+                    "Valid": false,
+                    "VenderIDModel": 0,
+                    "VenderIDSerial": 0,
+                    "VendorIDName": ""
+                },
+                "Reserved": 0,
+                "UserID": 211843850,
+                "Valid": true
+            }
+        },
+        "MessageType": "StaticDataReport",
+        "MetaData": {
+            "MMSI": 211843850,
+            "MMSI_String": 211843850,
+            "ShipName": "NALANI              ",
+            "latitude": 54.75230166666667,
+            "longitude": 10.672825,
+            "time_utc": "2024-08-28 15:52:26.349236573 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 332.2,
+                "CommunicationState": 59916,
+                "Latitude": 22.581968333333336,
+                "Longitude": 120.29567166666668,
+                "MessageID": 3,
+                "NavigationalStatus": 5,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0.1,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 24,
+                "TrueHeading": 511,
+                "UserID": 677036300,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 677036300,
+            "MMSI_String": 677036300,
+            "ShipName": "FU XING             ",
+            "latitude": 22.581968333333336,
+            "longitude": 120.29567166666668,
+            "time_utc": "2024-08-28 15:52:26.349442548 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 280.5,
+                "CommunicationState": 59916,
+                "Latitude": 56.73347166666667,
+                "Longitude": 8.031328333333333,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 8.9,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 24,
+                "TrueHeading": 280,
+                "UserID": 249127000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 249127000,
+            "MMSI_String": 249127000,
+            "ShipName": "LADY OF CHICHESTER  ",
+            "latitude": 56.73347166666667,
+            "longitude": 8.031328333333333,
+            "time_utc": "2024-08-28 15:52:26.349670213 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 180,
+                "CommunicationState": 59916,
+                "Latitude": 9.434541666666666,
+                "Longitude": -79.87957666666667,
+                "MessageID": 1,
+                "NavigationalStatus": 1,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 20,
+                "TrueHeading": 267,
+                "UserID": 636019395,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 636019395,
+            "MMSI_String": 636019395,
+            "ShipName": "MSC ENGLAND         ",
+            "latitude": 9.434541666666666,
+            "longitude": -79.87957666666667,
+            "time_utc": "2024-08-28 15:52:26.349988499 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": false,
+                "Cog": 169.8,
+                "CommunicationState": 33648,
+                "CommunicationStateIsItdma": false,
+                "Latitude": 40.36646666666666,
+                "Longitude": -73.92288166666667,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 6.7,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 368081880,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 368081880,
+            "MMSI_String": 368081880,
+            "ShipName": "AUGUST MOON",
+            "latitude": 40.36646666666666,
+            "longitude": -73.92288166666667,
+            "time_utc": "2024-08-28 15:52:26.350263082 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 239.1,
+                "CommunicationState": 59916,
+                "Latitude": 25.161533333333335,
+                "Longitude": 121.38576666666667,
+                "MessageID": 1,
+                "NavigationalStatus": 3,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 6,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 21,
+                "TrueHeading": 319,
+                "UserID": 416484000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 416484000,
+            "MMSI_String": 416484000,
+            "ShipName": "CSBC NO.12          ",
+            "latitude": 25.161533333333335,
+            "longitude": 121.38576666666667,
+            "time_utc": "2024-08-28 15:52:26.350493133 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "UnknownMessage": {}
+        },
+        "MessageType": "UnknownMessage",
+        "MetaData": {
+            "MMSI": 2320061,
+            "MMSI_String": 2320061,
+            "ShipName": "",
+            "latitude": 51.444579999999995,
+            "longitude": 0.39501000000000003,
+            "time_utc": "2024-08-28 15:52:26.350659724 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 331.8,
+                "CommunicationState": 59916,
+                "Latitude": 53.38202833333333,
+                "Longitude": -2.993705,
+                "MessageID": 3,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": 127,
+                "RepeatIndicator": 0,
+                "Sog": 6.4,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 24,
+                "TrueHeading": 341,
+                "UserID": 275031000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 275031000,
+            "MMSI_String": 275031000,
+            "ShipName": "AMPERE              ",
+            "latitude": 53.38202833333333,
+            "longitude": -2.993705,
+            "time_utc": "2024-08-28 15:52:26.350822929 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 360,
+                "CommunicationState": 59916,
+                "Latitude": 51.88688333333334,
+                "Longitude": 4.435103333333333,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 244660242,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 244660242,
+            "MMSI_String": 244660242,
+            "ShipName": "MILOU   ",
+            "latitude": 51.88688333333334,
+            "longitude": 4.435103333333333,
+            "time_utc": "2024-08-28 15:52:26.351059241 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "Interrogation": {
+                "MessageID": 15,
+                "RepeatIndicator": 0,
+                "Spare": 0,
+                "Station1Msg1": {
+                    "MessageID": 244750203,
+                    "SlotOffset": 0,
+                    "StationID": 244750203,
+                    "Valid": true
+                },
+                "Station1Msg2": {
+                    "MessageID": 0,
+                    "SlotOffset": 0,
+                    "Spare": 0,
+                    "Valid": false
+                },
+                "Station2": {
+                    "MessageID": 0,
+                    "SlotOffset": 0,
+                    "Spare1": 0,
+                    "Spare2": 0,
+                    "StationID": 0,
+                    "Valid": false
+                },
+                "UserID": 211181370,
+                "Valid": true
+            }
+        },
+        "MessageType": "Interrogation",
+        "MetaData": {
+            "MMSI": 211181370,
+            "MMSI_String": 211181370,
+            "ShipName": "SGMS UNTERFRANKEN",
+            "latitude": 52.40202333333333,
+            "longitude": 4.879918333333333,
+            "time_utc": "2024-08-28 15:52:26.351332231 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": true,
+                "Cog": 323.3,
+                "CommunicationState": 393222,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 52.417586666666665,
+                "Longitude": 5.219686666666666,
+                "MessageID": 18,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 244820056,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 244820056,
+            "MMSI_String": 244820056,
+            "ShipName": "BOHEMIEN",
+            "latitude": 52.417586666666665,
+            "longitude": 5.219686666666666,
+            "time_utc": "2024-08-28 15:52:26.351557632 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 147.4,
+                "CommunicationState": 59916,
+                "Latitude": 36.16208833333334,
+                "Longitude": -4.8356216666666665,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 3,
+                "RepeatIndicator": 0,
+                "Sog": 0.3,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 5,
+                "TrueHeading": 0,
+                "UserID": 636015762,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 636015762,
+            "MMSI_String": 636015762,
+            "ShipName": "ALMI SUN            ",
+            "latitude": 36.16208833333334,
+            "longitude": -4.8356216666666665,
+            "time_utc": "2024-08-28 15:52:26.351783054 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 247,
+                "CommunicationState": 59916,
+                "Latitude": 35.714171666666665,
+                "Longitude": -0.63697,
+                "MessageID": 1,
+                "NavigationalStatus": 15,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 2.5,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 24,
+                "TrueHeading": 511,
+                "UserID": 605106432,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 605106432,
+            "MMSI_String": 605106432,
+            "ShipName": "ZABANA AHMED II     ",
+            "latitude": 35.714171666666665,
+            "longitude": -0.63697,
+            "time_utc": "2024-08-28 15:52:26.352079298 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 78.4,
+                "CommunicationState": 59916,
+                "Latitude": 42.24019,
+                "Longitude": -8.729746666666667,
+                "MessageID": 1,
+                "NavigationalStatus": 15,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0.1,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 225457000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 225457000,
+            "MMSI_String": 225457000,
+            "ShipName": "GONZALO S",
+            "latitude": 42.24019,
+            "longitude": -8.729746666666667,
+            "time_utc": "2024-08-28 15:52:26.352267189 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 181,
+                "CommunicationState": 59916,
+                "Latitude": 43.426946666666666,
+                "Longitude": 4.898906666666666,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 146,
+                "UserID": 227016900,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 227016900,
+            "MMSI_String": 227016900,
+            "ShipName": "MARSEILLAIS 6 ",
+            "latitude": 43.426946666666666,
+            "longitude": 4.898906666666666,
+            "time_utc": "2024-08-28 15:52:26.352470069 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 94.9,
+                "CommunicationState": 59916,
+                "Latitude": 25.261983333333333,
+                "Longitude": 55.273646666666664,
+                "MessageID": 3,
+                "NavigationalStatus": 5,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 2,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 2,
+                "UserID": 319110300,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 319110300,
+            "MMSI_String": 319110300,
+            "ShipName": "NATALINA A",
+            "latitude": 25.261983333333333,
+            "longitude": 55.273646666666664,
+            "time_utc": "2024-08-28 15:52:26.352774297 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 250,
+                "CommunicationState": 59916,
+                "Latitude": 54.380208333333336,
+                "Longitude": 18.65269,
+                "MessageID": 3,
+                "NavigationalStatus": 5,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": -8,
+                "RepeatIndicator": 0,
+                "Sog": 0.1,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 21,
+                "TrueHeading": 76,
+                "UserID": 257514000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 257514000,
+            "MMSI_String": 257514000,
+            "ShipName": "BOW SPRING          ",
+            "latitude": 54.380208333333336,
+            "longitude": 18.65269,
+            "time_utc": "2024-08-28 15:52:26.391113661 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StaticDataReport": {
+                "MessageID": 24,
+                "PartNumber": false,
+                "RepeatIndicator": 0,
+                "ReportA": {
+                    "Name": "ETIENNE",
+                    "Valid": true
+                },
+                "ReportB": {
+                    "CallSign": "",
+                    "Dimension": {
+                        "A": 0,
+                        "B": 0,
+                        "C": 0,
+                        "D": 0
+                    },
+                    "FixType": 0,
+                    "ShipType": 0,
+                    "Spare": 0,
+                    "Valid": false,
+                    "VenderIDModel": 0,
+                    "VenderIDSerial": 0,
+                    "VendorIDName": ""
+                },
+                "Reserved": 0,
+                "UserID": 257784820,
+                "Valid": true
+            }
+        },
+        "MessageType": "StaticDataReport",
+        "MetaData": {
+            "MMSI": 257784820,
+            "MMSI_String": 257784820,
+            "ShipName": "ETIENNE",
+            "latitude": 59.916385,
+            "longitude": 10.68969,
+            "time_utc": "2024-08-28 15:52:26.391633874 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "DataLinkManagementMessage": {
+                "Data": {
+                    "0": {
+                        "Increment": 1125,
+                        "Offset": 0,
+                        "TimeOut": 7,
+                        "Valid": false,
+                        "integerOfSlots": 1
+                    },
+                    "1": {
+                        "Increment": 750,
+                        "Offset": 1756,
+                        "TimeOut": 7,
+                        "Valid": false,
+                        "integerOfSlots": 1
+                    },
+                    "2": {
+                        "Increment": 0,
+                        "Offset": 0,
+                        "TimeOut": 0,
+                        "Valid": false,
+                        "integerOfSlots": 0
+                    },
+                    "3": {
+                        "Increment": 0,
+                        "Offset": 0,
+                        "TimeOut": 0,
+                        "Valid": false,
+                        "integerOfSlots": 0
+                    }
+                },
+                "MessageID": 20,
+                "RepeatIndicator": 0,
+                "Spare": 0,
+                "UserID": 2655105,
+                "Valid": true
+            }
+        },
+        "MessageType": "DataLinkManagementMessage",
+        "MetaData": {
+            "MMSI": 2655105,
+            "MMSI_String": 2655105,
+            "ShipName": "",
+            "latitude": 56.936146666666666,
+            "longitude": 18.221206666666667,
+            "time_utc": "2024-08-28 15:52:26.391971605 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StaticDataReport": {
+                "MessageID": 24,
+                "PartNumber": false,
+                "RepeatIndicator": 0,
+                "ReportA": {
+                    "Name": "ALICIA'S WRATH",
+                    "Valid": true
+                },
+                "ReportB": {
+                    "CallSign": "",
+                    "Dimension": {
+                        "A": 0,
+                        "B": 0,
+                        "C": 0,
+                        "D": 0
+                    },
+                    "FixType": 0,
+                    "ShipType": 0,
+                    "Spare": 0,
+                    "Valid": false,
+                    "VenderIDModel": 0,
+                    "VenderIDSerial": 0,
+                    "VendorIDName": ""
+                },
+                "Reserved": 0,
+                "UserID": 338149263,
+                "Valid": true
+            }
+        },
+        "MessageType": "StaticDataReport",
+        "MetaData": {
+            "MMSI": 338149263,
+            "MMSI_String": 338149263,
+            "ShipName": "ALICIA'S WRATH",
+            "latitude": 47.99651333333334,
+            "longitude": -122.21529333333334,
+            "time_utc": "2024-08-28 15:52:26.392320437 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "UnknownMessage": {}
+        },
+        "MessageType": "UnknownMessage",
+        "MetaData": {
+            "MMSI": 2320061,
+            "MMSI_String": 2320061,
+            "ShipName": "",
+            "latitude": 51.444579999999995,
+            "longitude": 0.39501000000000003,
+            "time_utc": "2024-08-28 15:52:26.392698885 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "UnknownMessage": {}
+        },
+        "MessageType": "UnknownMessage",
+        "MetaData": {
+            "MMSI": 2320061,
+            "MMSI_String": 2320061,
+            "ShipName": "",
+            "latitude": 51.444579999999995,
+            "longitude": 0.39501000000000003,
+            "time_utc": "2024-08-28 15:52:26.393013843 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 0,
+                "CommunicationState": 59916,
+                "Latitude": 51.82019666666667,
+                "Longitude": 4.90459,
+                "MessageID": 1,
+                "NavigationalStatus": 15,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 244670907,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 244670907,
+            "MMSI_String": 244670907,
+            "ShipName": "ANNA 7            #?",
+            "latitude": 51.82019666666667,
+            "longitude": 4.90459,
+            "time_utc": "2024-08-28 15:52:26.393409093 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 141.7,
+                "CommunicationState": 59916,
+                "Latitude": 38.88554666666666,
+                "Longitude": -84.79069,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 1.5,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 367684350,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 367684350,
+            "MMSI_String": 367684350,
+            "ShipName": "BEVERLY WAYNE",
+            "latitude": 38.88554666666666,
+            "longitude": -84.79069,
+            "time_utc": "2024-08-28 15:52:26.393932 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 360,
+                "CommunicationState": 59916,
+                "Latitude": 52.16041666666667,
+                "Longitude": 4.504865,
+                "MessageID": 1,
+                "NavigationalStatus": 15,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 244138406,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 244138406,
+            "MMSI_String": 244138406,
+            "ShipName": "THALIA",
+            "latitude": 52.16041666666667,
+            "longitude": 4.504865,
+            "time_utc": "2024-08-28 15:52:26.394396638 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "UnknownMessage": {}
+        },
+        "MessageType": "UnknownMessage",
+        "MetaData": {
+            "MMSI": 211518240,
+            "MMSI_String": 211518240,
+            "ShipName": "EDUARD ",
+            "latitude": 52.42476833333333,
+            "longitude": 13.582953333333334,
+            "time_utc": "2024-08-28 15:52:26.394711037 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": true,
+                "Cog": 90,
+                "CommunicationState": 393222,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 51.27598666666667,
+                "Longitude": 1.3421716666666665,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 19,
+                "TrueHeading": 511,
+                "UserID": 244700538,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 244700538,
+            "MMSI_String": 244700538,
+            "ShipName": "MV VITA VITALIS",
+            "latitude": 51.27598666666667,
+            "longitude": 1.3421716666666665,
+            "time_utc": "2024-08-28 15:52:26.395098631 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "ShipStaticData": {
+                "AisVersion": 0,
+                "CallSign": "ESRQ   ",
+                "Destination": "FI POR              ",
+                "Dimension": {
+                    "A": 72,
+                    "B": 20,
+                    "C": 10,
+                    "D": 4
+                },
+                "Dte": false,
+                "Eta": {
+                    "Day": 29,
+                    "Hour": 18,
+                    "Minute": 0,
+                    "Month": 8
+                },
+                "FixType": 1,
+                "ImoNumber": 9268174,
+                "MaximumStaticDraught": 6.4,
+                "MessageID": 5,
+                "Name": "ATLANTIS            ",
+                "RepeatIndicator": 0,
+                "Spare": false,
+                "Type": 80,
+                "UserID": 276869000,
+                "Valid": true
+            }
+        },
+        "MessageType": "ShipStaticData",
+        "MetaData": {
+            "MMSI": 276869000,
+            "MMSI_String": 276869000,
+            "ShipName": "ATLANTIS            ",
+            "latitude": 59.62412,
+            "longitude": 23.332584999999998,
+            "time_utc": "2024-08-28 15:52:26.395611681 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 120,
+                "CommunicationState": 59916,
+                "Latitude": 25.01451666666667,
+                "Longitude": 53.017900000000004,
+                "MessageID": 1,
+                "NavigationalStatus": 4,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": -3,
+                "RepeatIndicator": 0,
+                "Sog": 1.7,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 135,
+                "UserID": 319070500,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 319070500,
+            "MMSI_String": 319070500,
+            "ShipName": "NORDIC SKIER        ",
+            "latitude": 25.01451666666667,
+            "longitude": 53.017900000000004,
+            "time_utc": "2024-08-28 15:52:26.396104341 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 13.3,
+                "CommunicationState": 59916,
+                "Latitude": 50.12025166666667,
+                "Longitude": -125.38164333333334,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 316006722,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 316006722,
+            "MMSI_String": 316006722,
+            "ShipName": "THOMAS POINT        ",
+            "latitude": 50.12025166666667,
+            "longitude": -125.38164333333334,
+            "time_utc": "2024-08-28 15:52:26.396402479 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": false,
+                "Cog": 323.4,
+                "CommunicationState": 66405,
+                "CommunicationStateIsItdma": false,
+                "Latitude": 50.01627166666666,
+                "Longitude": -125.22724166666667,
+                "MessageID": 18,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Sog": 22.3,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 316042225,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 316042225,
+            "MMSI_String": 316042225,
+            "ShipName": "",
+            "latitude": 50.01627166666666,
+            "longitude": -125.22724166666667,
+            "time_utc": "2024-08-28 15:52:26.396692852 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 292.9,
+                "CommunicationState": 59916,
+                "Latitude": 1.2822666666666669,
+                "Longitude": 103.89606666666667,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0.1,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 190,
+                "UserID": 563036120,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 563036120,
+            "MMSI_String": 563036120,
+            "ShipName": "STL H20  ",
+            "latitude": 1.2822666666666669,
+            "longitude": 103.89606666666667,
+            "time_utc": "2024-08-28 15:52:26.397000256 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 73.3,
+                "CommunicationState": 59916,
+                "Latitude": 53.55128833333333,
+                "Longitude": 8.566051666666668,
+                "MessageID": 3,
+                "NavigationalStatus": 5,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 28,
+                "TrueHeading": 151,
+                "UserID": 211709370,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 211709370,
+            "MMSI_String": 211709370,
+            "ShipName": "SEEADLER",
+            "latitude": 53.55128833333333,
+            "longitude": 8.566051666666668,
+            "time_utc": "2024-08-28 15:52:26.397765016 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 146.9,
+                "CommunicationState": 59916,
+                "Latitude": 47.97464,
+                "Longitude": -122.34917,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 24,
+                "TrueHeading": 326,
+                "UserID": 368027230,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 368027230,
+            "MMSI_String": 368027230,
+            "ShipName": "WSF SUQUAMISH       ",
+            "latitude": 47.97464,
+            "longitude": -122.34917,
+            "time_utc": "2024-08-28 15:52:26.400635642 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": true,
+                "Cog": 267.7,
+                "CommunicationState": 0,
+                "CommunicationStateIsItdma": false,
+                "Latitude": 41.319705,
+                "Longitude": -71.93487833333333,
+                "MessageID": 18,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Sog": 6.2,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 22,
+                "TrueHeading": 511,
+                "UserID": 367789480,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 367789480,
+            "MMSI_String": 367789480,
+            "ShipName": "GRACIE",
+            "latitude": 41.319705,
+            "longitude": -71.93487833333333,
+            "time_utc": "2024-08-28 15:52:26.399550705 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 191.9,
+                "CommunicationState": 59916,
+                "Latitude": 49.291376666666665,
+                "Longitude": -123.05832333333333,
+                "MessageID": 1,
+                "NavigationalStatus": 7,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 24,
+                "TrueHeading": 55,
+                "UserID": 316005998,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 316005998,
+            "MMSI_String": 316005998,
+            "ShipName": "OSPREY 1            ",
+            "latitude": 49.291376666666665,
+            "longitude": -123.05832333333333,
+            "time_utc": "2024-08-28 15:52:26.403157857 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 355.8,
+                "CommunicationState": 59916,
+                "Latitude": 51.075695,
+                "Longitude": 1.8454416666666666,
+                "MessageID": 3,
+                "NavigationalStatus": 1,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0.1,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 20,
+                "TrueHeading": 96,
+                "UserID": 215564000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 215564000,
+            "MMSI_String": 215564000,
+            "ShipName": "YUKA D              ",
+            "latitude": 51.075695,
+            "longitude": 1.8454416666666666,
+            "time_utc": "2024-08-28 15:52:26.401448753 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 80.1,
+                "CommunicationState": 59916,
+                "Latitude": 51.89923833333333,
+                "Longitude": 4.464921666666667,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 7.2,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 244650941,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 244650941,
+            "MMSI_String": 244650941,
+            "ShipName": "LINSI",
+            "latitude": 51.89923833333333,
+            "longitude": 4.464921666666667,
+            "time_utc": "2024-08-28 15:52:26.402510588 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 360,
+                "CommunicationState": 59916,
+                "Latitude": 24.525064999999998,
+                "Longitude": 54.515033333333335,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 470601000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 470601000,
+            "MMSI_String": 470601000,
+            "ShipName": "TUG LATEER          ",
+            "latitude": 24.525064999999998,
+            "longitude": 54.515033333333335,
+            "time_utc": "2024-08-28 15:52:26.403703288 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 241.5,
+                "CommunicationState": 59916,
+                "Latitude": 57.71196166666667,
+                "Longitude": 11.965783333333333,
+                "MessageID": 1,
+                "NavigationalStatus": 15,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 112,
+                "UserID": 265624900,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 265624900,
+            "MMSI_String": 265624900,
+            "ShipName": "CARL MICHAEL BELLMAN",
+            "latitude": 57.71196166666667,
+            "longitude": 11.965783333333333,
+            "time_utc": "2024-08-28 15:52:26.404318758 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": false,
+                "ClassBDisplay": false,
+                "ClassBDsc": false,
+                "ClassBMsg22": false,
+                "ClassBUnit": false,
+                "Cog": 0,
+                "CommunicationState": 0,
+                "CommunicationStateIsItdma": false,
+                "Latitude": 27.499821666666666,
+                "Longitude": -82.57254833333333,
+                "MessageID": 18,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 60,
+                "TrueHeading": 0,
+                "UserID": 338310285,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 338310285,
+            "MMSI_String": 338310285,
+            "ShipName": "HALL PASS",
+            "latitude": 27.499821666666666,
+            "longitude": -82.57254833333333,
+            "time_utc": "2024-08-28 15:52:26.404621023 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StaticDataReport": {
+                "MessageID": 24,
+                "PartNumber": false,
+                "RepeatIndicator": 0,
+                "ReportA": {
+                    "Name": "ELLA",
+                    "Valid": true
+                },
+                "ReportB": {
+                    "CallSign": "",
+                    "Dimension": {
+                        "A": 0,
+                        "B": 0,
+                        "C": 0,
+                        "D": 0
+                    },
+                    "FixType": 0,
+                    "ShipType": 0,
+                    "Spare": 0,
+                    "Valid": false,
+                    "VenderIDModel": 0,
+                    "VenderIDSerial": 0,
+                    "VendorIDName": ""
+                },
+                "Reserved": 0,
+                "UserID": 219024937,
+                "Valid": true
+            }
+        },
+        "MessageType": "StaticDataReport",
+        "MetaData": {
+            "MMSI": 219024937,
+            "MMSI_String": 219024937,
+            "ShipName": "ELLA",
+            "latitude": 55.59437666666667,
+            "longitude": 12.676303333333333,
+            "time_utc": "2024-08-28 15:52:26.404907849 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "UnknownMessage": {}
+        },
+        "MessageType": "UnknownMessage",
+        "MetaData": {
+            "MMSI": 211518240,
+            "MMSI_String": 211518240,
+            "ShipName": "EDUARD ",
+            "latitude": 52.42476833333333,
+            "longitude": 13.582953333333334,
+            "time_utc": "2024-08-28 15:52:26.43404454 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "BaseStationReport": {
+                "CommunicationState": 2250,
+                "FixType": 15,
+                "Latitude": 27.960891666666665,
+                "LongRangeEnable": true,
+                "Longitude": -15.55889,
+                "MessageID": 4,
+                "PositionAccuracy": false,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Spare": 0,
+                "UserID": 2241148,
+                "UtcDay": 28,
+                "UtcHour": 15,
+                "UtcMinute": 52,
+                "UtcMonth": 8,
+                "UtcSecond": 22,
+                "UtcYear": 2024,
+                "Valid": true
+            }
+        },
+        "MessageType": "BaseStationReport",
+        "MetaData": {
+            "MMSI": 2241148,
+            "MMSI_String": 2241148,
+            "ShipName": "POZO DE LAS NIEVES",
+            "latitude": 27.960891666666665,
+            "longitude": -15.55889,
+            "time_utc": "2024-08-28 15:52:26.434323801 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "UnknownMessage": {}
+        },
+        "MessageType": "UnknownMessage",
+        "MetaData": {
+            "MMSI": 211518240,
+            "MMSI_String": 211518240,
+            "ShipName": "EDUARD ",
+            "latitude": 52.42476833333333,
+            "longitude": 13.582953333333334,
+            "time_utc": "2024-08-28 15:52:26.434702188 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "DataLinkManagementMessage": {
+                "Data": {
+                    "0": {
+                        "Increment": 225,
+                        "Offset": 1436,
+                        "TimeOut": 7,
+                        "Valid": false,
+                        "integerOfSlots": 5
+                    },
+                    "1": {
+                        "Increment": 750,
+                        "Offset": 1396,
+                        "TimeOut": 7,
+                        "Valid": false,
+                        "integerOfSlots": 2
+                    },
+                    "2": {
+                        "Increment": 750,
+                        "Offset": 1420,
+                        "TimeOut": 7,
+                        "Valid": false,
+                        "integerOfSlots": 1
+                    },
+                    "3": {
+                        "Increment": 0,
+                        "Offset": 0,
+                        "TimeOut": 0,
+                        "Valid": false,
+                        "integerOfSlots": 0
+                    }
+                },
+                "MessageID": 20,
+                "RepeatIndicator": 2,
+                "Spare": 0,
+                "UserID": 3669987,
+                "Valid": true
+            }
+        },
+        "MessageType": "DataLinkManagementMessage",
+        "MetaData": {
+            "MMSI": 3669987,
+            "MMSI_String": 3669987,
+            "ShipName": "1GJ30@@@C AZO3YL/0",
+            "latitude": 47.548935,
+            "longitude": -122.78525666666665,
+            "time_utc": "2024-08-28 15:52:26.434867588 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 310,
+                "CommunicationState": 59916,
+                "Latitude": 46.160295,
+                "Longitude": -123.40622166666667,
+                "MessageID": 3,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 2,
+                "Sog": 0.1,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 134,
+                "UserID": 367047270,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 367047270,
+            "MMSI_String": 367047270,
+            "ShipName": "LIBERTY             ",
+            "latitude": 46.160295,
+            "longitude": -123.40622166666667,
+            "time_utc": "2024-08-28 15:52:26.435160977 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": false,
+                "Cog": 360,
+                "CommunicationState": 83098,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 48.941445,
+                "Longitude": -123.553285,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 102.3,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 368023630,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 368023630,
+            "MMSI_String": 368023630,
+            "ShipName": "ABSOLUTELY GRAND",
+            "latitude": 48.941445,
+            "longitude": -123.553285,
+            "time_utc": "2024-08-28 15:52:26.435474453 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 273.2,
+                "CommunicationState": 59916,
+                "Latitude": 40.684905,
+                "Longitude": -74.071905,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 131,
+                "UserID": 366999414,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 366999414,
+            "MMSI_String": 366999414,
+            "ShipName": "HOCKING             ",
+            "latitude": 40.684905,
+            "longitude": -74.071905,
+            "time_utc": "2024-08-28 15:52:26.43579922 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": true,
+                "Cog": 47.5,
+                "CommunicationState": 393222,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 52.81662166666667,
+                "Longitude": 5.158488333333334,
+                "MessageID": 18,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Sog": 3.2,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 244672784,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 244672784,
+            "MMSI_String": 244672784,
+            "ShipName": "",
+            "latitude": 52.81662166666667,
+            "longitude": 5.158488333333334,
+            "time_utc": "2024-08-28 15:52:26.436016416 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 242.7,
+                "CommunicationState": 59916,
+                "Latitude": -22.84443333333333,
+                "Longitude": -43.145968333333336,
+                "MessageID": 3,
+                "NavigationalStatus": 1,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 190,
+                "UserID": 710001520,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 710001520,
+            "MMSI_String": 710001520,
+            "ShipName": "ASSO VENTISEI       ",
+            "latitude": -22.84443333333333,
+            "longitude": -43.145968333333336,
+            "time_utc": "2024-08-28 15:52:26.436270661 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StaticDataReport": {
+                "MessageID": 24,
+                "PartNumber": false,
+                "RepeatIndicator": 0,
+                "ReportA": {
+                    "Name": "OFFCOURSE",
+                    "Valid": true
+                },
+                "ReportB": {
+                    "CallSign": "",
+                    "Dimension": {
+                        "A": 0,
+                        "B": 0,
+                        "C": 0,
+                        "D": 0
+                    },
+                    "FixType": 0,
+                    "ShipType": 0,
+                    "Spare": 0,
+                    "Valid": false,
+                    "VenderIDModel": 0,
+                    "VenderIDSerial": 0,
+                    "VendorIDName": ""
+                },
+                "Reserved": 0,
+                "UserID": 244210931,
+                "Valid": true
+            }
+        },
+        "MessageType": "StaticDataReport",
+        "MetaData": {
+            "MMSI": 244210931,
+            "MMSI_String": 244210931,
+            "ShipName": "OFFCOURSE",
+            "latitude": 52.70045666666667,
+            "longitude": 5.289283333333334,
+            "time_utc": "2024-08-28 15:52:26.436505821 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 272.7,
+                "CommunicationState": 59916,
+                "Latitude": 22.561590000000002,
+                "Longitude": 120.3292,
+                "MessageID": 3,
+                "NavigationalStatus": 5,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 144,
+                "UserID": 477760800,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 477760800,
+            "MMSI_String": 477760800,
+            "ShipName": "JOSCO YANGZHOU",
+            "latitude": 22.561590000000002,
+            "longitude": 120.3292,
+            "time_utc": "2024-08-28 15:52:26.436797075 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": false,
+                "Cog": 250.3,
+                "CommunicationState": 0,
+                "CommunicationStateIsItdma": false,
+                "Latitude": 43.531259999999996,
+                "Longitude": 7.042191666666667,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 5.7,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 228187040,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 228187040,
+            "MMSI_String": 228187040,
+            "ShipName": "SEAZEN VII",
+            "latitude": 43.531259999999996,
+            "longitude": 7.042191666666667,
+            "time_utc": "2024-08-28 15:52:26.437022476 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 32.5,
+                "CommunicationState": 59916,
+                "Latitude": 35.46207833333334,
+                "Longitude": 139.69489333333334,
+                "MessageID": 3,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 127,
+                "RepeatIndicator": 0,
+                "Sog": 1.5,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 24,
+                "TrueHeading": 190,
+                "UserID": 431003749,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 431003749,
+            "MMSI_String": 431003749,
+            "ShipName": "YOSHINO MARU        ",
+            "latitude": 35.46207833333334,
+            "longitude": 139.69489333333334,
+            "time_utc": "2024-08-28 15:52:26.437194298 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": true,
+                "Cog": 297.4,
+                "CommunicationState": 393222,
+                "CommunicationStateIsItdma": true,
+                "Latitude": -42.883145,
+                "Longitude": 147.33624,
+                "MessageID": 18,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 503053380,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 503053380,
+            "MMSI_String": 503053380,
+            "ShipName": "HELSAL IV",
+            "latitude": -42.883145,
+            "longitude": 147.33624,
+            "time_utc": "2024-08-28 15:52:26.43740956 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 27.2,
+                "CommunicationState": 59916,
+                "Latitude": 53.06565,
+                "Longitude": 4.424433333333334,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 5,
+                "RepeatIndicator": 0,
+                "Sog": 9.2,
+                "Spare": 2,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 27,
+                "UserID": 219038000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 219038000,
+            "MMSI_String": 219038000,
+            "ShipName": "MANILA MAERSK",
+            "latitude": 53.06565,
+            "longitude": 4.424433333333334,
+            "time_utc": "2024-08-28 15:52:26.437926537 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": false,
+                "Cog": 360,
+                "CommunicationState": 85018,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 54.841121666666666,
+                "Longitude": 11.009236666666668,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 0.1,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 211591100,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 211591100,
+            "MMSI_String": 211591100,
+            "ShipName": "RELAXX",
+            "latitude": 54.841121666666666,
+            "longitude": 11.009236666666668,
+            "time_utc": "2024-08-28 15:52:26.438129155 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "ShipStaticData": {
+                "AisVersion": 2,
+                "CallSign": "HPRY   ",
+                "Destination": "BEANR=>RULED        ",
+                "Dimension": {
+                    "A": 189,
+                    "B": 48,
+                    "C": 17,
+                    "D": 15
+                },
+                "Dte": false,
+                "Eta": {
+                    "Day": 27,
+                    "Hour": 0,
+                    "Minute": 1,
+                    "Month": 8
+                },
+                "FixType": 1,
+                "ImoNumber": 8913423,
+                "MaximumStaticDraught": 10.5,
+                "MessageID": 5,
+                "Name": "MSC SHANNON III     ",
+                "RepeatIndicator": 0,
+                "Spare": false,
+                "Type": 71,
+                "UserID": 354540000,
+                "Valid": true
+            }
+        },
+        "MessageType": "ShipStaticData",
+        "MetaData": {
+            "MMSI": 354540000,
+            "MMSI_String": 354540000,
+            "ShipName": "MSC SHANNON III     ",
+            "latitude": 59.872483333333335,
+            "longitude": 30.204483333333332,
+            "time_utc": "2024-08-28 15:52:26.437695405 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 360,
+                "CommunicationState": 59916,
+                "Latitude": 51.92279833333334,
+                "Longitude": 4.251506666666667,
+                "MessageID": 3,
+                "NavigationalStatus": 5,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 19,
+                "TrueHeading": 511,
+                "UserID": 244780254,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 244780254,
+            "MMSI_String": 244780254,
+            "ShipName": "BANJAARD",
+            "latitude": 51.92279833333334,
+            "longitude": 4.251506666666667,
+            "time_utc": "2024-08-28 15:52:26.438337696 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 38.5,
+                "CommunicationState": 59916,
+                "Latitude": 50.932381666666664,
+                "Longitude": 1.4712466666666666,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 13.2,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 21,
+                "TrueHeading": 41,
+                "UserID": 355209000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 355209000,
+            "MMSI_String": 355209000,
+            "ShipName": "JOSE PROGRESS       ",
+            "latitude": 50.932381666666664,
+            "longitude": 1.4712466666666666,
+            "time_utc": "2024-08-28 15:52:26.438943047 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 41.6,
+                "CommunicationState": 59916,
+                "Latitude": 47.728795,
+                "Longitude": -3.3589333333333333,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 127,
+                "RepeatIndicator": 0,
+                "Sog": 9.5,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 24,
+                "TrueHeading": 46,
+                "UserID": 227749270,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 227749270,
+            "MMSI_String": 227749270,
+            "ShipName": "ILE DE GROIX        ",
+            "latitude": 47.728795,
+            "longitude": -3.3589333333333333,
+            "time_utc": "2024-08-28 15:52:26.438643918 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": true,
+                "Cog": 157.2,
+                "CommunicationState": 393222,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 50.871946666666666,
+                "Longitude": -1.3104799999999999,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 235016047,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 235016047,
+            "MMSI_String": 235016047,
+            "ShipName": "ENSHAIALLAH",
+            "latitude": 50.871946666666666,
+            "longitude": -1.3104799999999999,
+            "time_utc": "2024-08-28 15:52:26.439152539 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 282.8,
+                "CommunicationState": 59916,
+                "Latitude": 51.697228333333335,
+                "Longitude": 4.468378333333334,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 9.8,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 269057010,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 269057010,
+            "MMSI_String": 269057010,
+            "ShipName": "MIAMI",
+            "latitude": 51.697228333333335,
+            "longitude": 4.468378333333334,
+            "time_utc": "2024-08-28 15:52:26.43940998 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "AssignedModeCommand": {
+                "Commands": {
+                    "0": {
+                        "DestinationID": 235000164,
+                        "Increment": 0,
+                        "Offset": 300,
+                        "Valid": true
+                    },
+                    "1": {
+                        "DestinationID": 235000164,
+                        "Increment": 0,
+                        "Offset": 300,
+                        "Valid": true
+                    }
+                },
+                "MessageID": 16,
+                "RepeatIndicator": 0,
+                "Spare": 0,
+                "UserID": 2320025,
+                "Valid": true
+            }
+        },
+        "MessageType": "AssignedModeCommand",
+        "MetaData": {
+            "MMSI": 2320025,
+            "MMSI_String": 2320025,
+            "ShipName": "",
+            "latitude": 51.935851666666665,
+            "longitude": 1.318295,
+            "time_utc": "2024-08-28 15:52:26.439673693 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 248.4,
+                "CommunicationState": 59916,
+                "Latitude": -22.861008333333334,
+                "Longitude": -43.17848166666667,
+                "MessageID": 3,
+                "NavigationalStatus": 1,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0.3,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 24,
+                "TrueHeading": 205,
+                "UserID": 710011210,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 710011210,
+            "MMSI_String": 710011210,
+            "ShipName": "NORMAND CARIOCA     ",
+            "latitude": -22.861008333333334,
+            "longitude": -43.17848166666667,
+            "time_utc": "2024-08-28 15:52:26.439808396 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "UnknownMessage": {}
+        },
+        "MessageType": "UnknownMessage",
+        "MetaData": {
+            "MMSI": 2320061,
+            "MMSI_String": 2320061,
+            "ShipName": "",
+            "latitude": 51.444579999999995,
+            "longitude": 0.39501000000000003,
+            "time_utc": "2024-08-28 15:52:26.439990676 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 172.8,
+                "CommunicationState": 59916,
+                "Latitude": 56.00501833333333,
+                "Longitude": 12.697013333333333,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 9.5,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 24,
+                "TrueHeading": 170,
+                "UserID": 231846000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 231846000,
+            "MMSI_String": 231846000,
+            "ShipName": "SVITZER GAIA        ",
+            "latitude": 56.00501833333333,
+            "longitude": 12.697013333333333,
+            "time_utc": "2024-08-28 15:52:26.440163009 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 360,
+                "CommunicationState": 59916,
+                "Latitude": 51.91376666666667,
+                "Longitude": 4.487151666666667,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 1,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 244740334,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 244740334,
+            "MMSI_String": 244740334,
+            "ShipName": "NEHALENNIA",
+            "latitude": 51.91376666666667,
+            "longitude": 4.487151666666667,
+            "time_utc": "2024-08-28 15:52:26.440380755 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": true,
+                "Cog": 360,
+                "CommunicationState": 393222,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 42.77638666666667,
+                "Longitude": -9.05603,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 225995317,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 225995317,
+            "MMSI_String": 225995317,
+            "ShipName": "CHIVO",
+            "latitude": 42.77638666666667,
+            "longitude": -9.05603,
+            "time_utc": "2024-08-28 15:52:26.440678111 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "UnknownMessage": {}
+        },
+        "MessageType": "UnknownMessage",
+        "MetaData": {
+            "MMSI": 3160029,
+            "MMSI_String": 3160029,
+            "ShipName": "",
+            "latitude": 24.461956666666666,
+            "longitude": 118.54158833333332,
+            "time_utc": "2024-08-28 15:52:26.446764439 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 202.1,
+                "CommunicationState": 59916,
+                "Latitude": 54.59327666666666,
+                "Longitude": 12.241076666666666,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 5.8,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 193,
+                "UserID": 311945000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 311945000,
+            "MMSI_String": 311945000,
+            "ShipName": "CELTICA HAV",
+            "latitude": 54.59327666666666,
+            "longitude": 12.241076666666666,
+            "time_utc": "2024-08-28 15:52:26.447051536 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": false,
+                "ClassBDisplay": false,
+                "ClassBDsc": false,
+                "ClassBMsg22": true,
+                "ClassBUnit": true,
+                "Cog": 198.8,
+                "CommunicationState": 393222,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 55.58411666666667,
+                "Longitude": 12.91485,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 22,
+                "UserID": 265602760,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 265602760,
+            "MMSI_String": 265602760,
+            "ShipName": "",
+            "latitude": 55.58411666666667,
+            "longitude": 12.91485,
+            "time_utc": "2024-08-28 15:52:26.447352258 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": false,
+                "Cog": 277,
+                "CommunicationState": 81993,
+                "CommunicationStateIsItdma": false,
+                "Latitude": 50.713451666666664,
+                "Longitude": -1.9598416666666667,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 0.7,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 235107824,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 235107824,
+            "MMSI_String": 235107824,
+            "ShipName": "POLICE RIB ALARM",
+            "latitude": 50.713451666666664,
+            "longitude": -1.9598416666666667,
+            "time_utc": "2024-08-28 15:52:26.447657208 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": false,
+                "Cog": 360,
+                "CommunicationState": 66298,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 29.544248333333332,
+                "Longitude": -95.04171500000001,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 338362277,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 338362277,
+            "MMSI_String": 338362277,
+            "ShipName": "ENDLESS SUMMER",
+            "latitude": 29.544248333333332,
+            "longitude": -95.04171500000001,
+            "time_utc": "2024-08-28 15:52:26.447875336 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 70.7,
+                "CommunicationState": 59916,
+                "Latitude": 69.65173,
+                "Longitude": 18.962288333333333,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 160,
+                "UserID": 257218500,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 257218500,
+            "MMSI_String": 257218500,
+            "ShipName": "KAPTEIN BUHRE",
+            "latitude": 69.65173,
+            "longitude": 18.962288333333333,
+            "time_utc": "2024-08-28 15:52:26.448100186 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": true,
+                "Cog": 360,
+                "CommunicationState": 393222,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 43.583578333333335,
+                "Longitude": 7.128593333333333,
+                "MessageID": 18,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 227441270,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 227441270,
+            "MMSI_String": 227441270,
+            "ShipName": "AS DE COEUR ",
+            "latitude": 43.583578333333335,
+            "longitude": 7.128593333333333,
+            "time_utc": "2024-08-28 15:52:26.448313134 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 231.7,
+                "CommunicationState": 59916,
+                "Latitude": 58.975033333333336,
+                "Longitude": 5.729258333333333,
+                "MessageID": 3,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": -29,
+                "RepeatIndicator": 0,
+                "Sog": 4.8,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 227,
+                "UserID": 257654700,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 257654700,
+            "MMSI_String": 257654700,
+            "ShipName": "RESCUE 159 ELIAS",
+            "latitude": 58.975033333333336,
+            "longitude": 5.729258333333333,
+            "time_utc": "2024-08-28 15:52:26.448591064 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 162.5,
+                "CommunicationState": 59916,
+                "Latitude": 28.13453333333333,
+                "Longitude": -15.411693333333334,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 19,
+                "TrueHeading": 1,
+                "UserID": 477001100,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 477001100,
+            "MMSI_String": 477001100,
+            "ShipName": "MSC AGADIR          ",
+            "latitude": 28.13453333333333,
+            "longitude": -15.411693333333334,
+            "time_utc": "2024-08-28 15:52:26.484841664 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "DataLinkManagementMessage": {
+                "Data": {
+                    "0": {
+                        "Increment": 250,
+                        "Offset": 91,
+                        "TimeOut": 1,
+                        "Valid": false,
+                        "integerOfSlots": 1
+                    },
+                    "1": {
+                        "Increment": 1125,
+                        "Offset": 2250,
+                        "TimeOut": 2,
+                        "Valid": false,
+                        "integerOfSlots": 1
+                    },
+                    "2": {
+                        "Increment": 0,
+                        "Offset": 0,
+                        "TimeOut": 0,
+                        "Valid": false,
+                        "integerOfSlots": 0
+                    },
+                    "3": {
+                        "Increment": 0,
+                        "Offset": 0,
+                        "TimeOut": 0,
+                        "Valid": false,
+                        "integerOfSlots": 0
+                    }
+                },
+                "MessageID": 20,
+                "RepeatIndicator": 0,
+                "Spare": 0,
+                "UserID": 2300051,
+                "Valid": true
+            }
+        },
+        "MessageType": "DataLinkManagementMessage",
+        "MetaData": {
+            "MMSI": 2300051,
+            "MMSI_String": 2300051,
+            "ShipName": "VIKING CINDERELLA   ",
+            "latitude": 59.78261333333333,
+            "longitude": 21.361434999999997,
+            "time_utc": "2024-08-28 15:52:26.485167924 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": false,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": true,
+                "Cog": 184.5,
+                "CommunicationState": 393222,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 49.29270666666666,
+                "Longitude": -122.88185333333332,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 22,
+                "TrueHeading": 511,
+                "UserID": 338310483,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 338310483,
+            "MMSI_String": 338310483,
+            "ShipName": "SPINNER",
+            "latitude": 49.29270666666666,
+            "longitude": -122.88185333333332,
+            "time_utc": "2024-08-28 15:52:26.485546893 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "BaseStationReport": {
+                "CommunicationState": 24272,
+                "FixType": 1,
+                "Latitude": 56.079125,
+                "LongRangeEnable": false,
+                "Longitude": 12.129486666666667,
+                "MessageID": 4,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Spare": 0,
+                "UserID": 2190048,
+                "UtcDay": 28,
+                "UtcHour": 15,
+                "UtcMinute": 52,
+                "UtcMonth": 8,
+                "UtcSecond": 23,
+                "UtcYear": 2024,
+                "Valid": true
+            }
+        },
+        "MessageType": "BaseStationReport",
+        "MetaData": {
+            "MMSI": 2190048,
+            "MMSI_String": 2190048,
+            "ShipName": "",
+            "latitude": 56.079125,
+            "longitude": 12.129486666666667,
+            "time_utc": "2024-08-28 15:52:26.485922134 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StaticDataReport": {
+                "MessageID": 24,
+                "PartNumber": false,
+                "RepeatIndicator": 0,
+                "ReportA": {
+                    "Name": "MV SEALEAF",
+                    "Valid": true
+                },
+                "ReportB": {
+                    "CallSign": "",
+                    "Dimension": {
+                        "A": 0,
+                        "B": 0,
+                        "C": 0,
+                        "D": 0
+                    },
+                    "FixType": 0,
+                    "ShipType": 0,
+                    "Spare": 0,
+                    "Valid": false,
+                    "VenderIDModel": 0,
+                    "VenderIDSerial": 0,
+                    "VendorIDName": ""
+                },
+                "Reserved": 0,
+                "UserID": 503080350,
+                "Valid": true
+            }
+        },
+        "MessageType": "StaticDataReport",
+        "MetaData": {
+            "MMSI": 503080350,
+            "MMSI_String": 503080350,
+            "ShipName": "MV SEALEAF",
+            "latitude": -27.9498,
+            "longitude": 153.42296166666665,
+            "time_utc": "2024-08-28 15:52:26.486178673 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 312.6,
+                "CommunicationState": 59916,
+                "Latitude": 39.460696666666664,
+                "Longitude": -0.3176383333333333,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 96,
+                "UserID": 224634000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 224634000,
+            "MMSI_String": 224634000,
+            "ShipName": "MARTA MATA          ",
+            "latitude": 39.460696666666664,
+            "longitude": -0.3176383333333333,
+            "time_utc": "2024-08-28 15:52:26.486492501 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 43,
+                "CommunicationState": 59916,
+                "Latitude": 1.1210766666666667,
+                "Longitude": 103.75540333333333,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": true,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 7.1,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 13,
+                "TrueHeading": 511,
+                "UserID": 457378000,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 457378000,
+            "MMSI_String": 457378000,
+            "ShipName": "LKI 309             ",
+            "latitude": 1.1210766666666667,
+            "longitude": 103.75540333333333,
+            "time_utc": "2024-08-28 15:52:26.486732458 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "UnknownMessage": {}
+        },
+        "MessageType": "UnknownMessage",
+        "MetaData": {
+            "MMSI": 2320061,
+            "MMSI_String": 2320061,
+            "ShipName": "",
+            "latitude": 51.444579999999995,
+            "longitude": 0.39501000000000003,
+            "time_utc": "2024-08-28 15:52:26.486943323 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "BaseStationReport": {
+                "CommunicationState": 33664,
+                "FixType": 15,
+                "Latitude": 59.388956666666665,
+                "LongRangeEnable": false,
+                "Longitude": 24.03974,
+                "MessageID": 4,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Spare": 0,
+                "UserID": 2766100,
+                "UtcDay": 28,
+                "UtcHour": 15,
+                "UtcMinute": 52,
+                "UtcMonth": 8,
+                "UtcSecond": 23,
+                "UtcYear": 2024,
+                "Valid": true
+            }
+        },
+        "MessageType": "BaseStationReport",
+        "MetaData": {
+            "MMSI": 2766100,
+            "MMSI_String": 2766100,
+            "ShipName": "",
+            "latitude": 59.388956666666665,
+            "longitude": 24.03974,
+            "time_utc": "2024-08-28 15:52:26.48705427 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 360,
+                "CommunicationState": 59916,
+                "Latitude": 44.330801666666666,
+                "Longitude": 9.217321666666667,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": -128,
+                "RepeatIndicator": 0,
+                "Sog": 0.1,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 511,
+                "UserID": 247167600,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 247167600,
+            "MMSI_String": 247167600,
+            "ShipName": "CREUZA DE MA",
+            "latitude": 44.330801666666666,
+            "longitude": 9.217321666666667,
+            "time_utc": "2024-08-28 15:52:26.4873539 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": true,
+                "ClassBDsc": false,
+                "ClassBMsg22": false,
+                "ClassBUnit": true,
+                "Cog": 34.2,
+                "CommunicationState": 393222,
+                "CommunicationStateIsItdma": true,
+                "Latitude": -28.113405,
+                "Longitude": -48.270155,
+                "MessageID": 18,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 6,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 717854474,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 717854474,
+            "MMSI_String": 717854474,
+            "ShipName": "BRENDA SANTOS       ",
+            "latitude": -28.113405,
+            "longitude": -48.270155,
+            "time_utc": "2024-08-28 15:52:26.487718843 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": false,
+                "Cog": 360,
+                "CommunicationState": 84202,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 54.40088333333333,
+                "Longitude": 10.213869999999998,
+                "MessageID": 18,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 211111110,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 211111110,
+            "MMSI_String": 211111110,
+            "ShipName": "CATEPETL",
+            "latitude": 54.40088333333333,
+            "longitude": 10.213869999999998,
+            "time_utc": "2024-08-28 15:52:26.488006621 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 54.4,
+                "CommunicationState": 59916,
+                "Latitude": -21.797801666666665,
+                "Longitude": -40.980693333333335,
+                "MessageID": 3,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 127,
+                "RepeatIndicator": 0,
+                "Sog": 7.7,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 19,
+                "TrueHeading": 62,
+                "UserID": 710004312,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 710004312,
+            "MMSI_String": 710004312,
+            "ShipName": "WS ARIES            ",
+            "latitude": -21.797801666666665,
+            "longitude": -40.980693333333335,
+            "time_utc": "2024-08-28 15:52:26.488242321 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": true,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": true,
+                "Cog": 128.3,
+                "CommunicationState": 393222,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 54.75127166666667,
+                "Longitude": 10.67372,
+                "MessageID": 18,
+                "PositionAccuracy": true,
+                "Raim": true,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 218016670,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 218016670,
+            "MMSI_String": 218016670,
+            "ShipName": "ATTINA",
+            "latitude": 54.75127166666667,
+            "longitude": 10.67372,
+            "time_utc": "2024-08-28 15:52:26.488576326 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "UnknownMessage": {}
+        },
+        "MessageType": "UnknownMessage",
+        "MetaData": {
+            "MMSI": 2320061,
+            "MMSI_String": 2320061,
+            "ShipName": "",
+            "latitude": 51.444579999999995,
+            "longitude": 0.39501000000000003,
+            "time_utc": "2024-08-28 15:52:26.488781981 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 0.1,
+                "CommunicationState": 59916,
+                "Latitude": 22.327065,
+                "Longitude": 114.14459833333333,
+                "MessageID": 1,
+                "NavigationalStatus": 9,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 22,
+                "TrueHeading": 126,
+                "UserID": 477937300,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 477937300,
+            "MMSI_String": 477937300,
+            "ShipName": "",
+            "latitude": 22.327065,
+            "longitude": 114.14459833333333,
+            "time_utc": "2024-08-28 15:52:26.488959452 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 93.9,
+                "CommunicationState": 59916,
+                "Latitude": 51.895025000000004,
+                "Longitude": 5.669903333333334,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": true,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 7.7,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 1,
+                "Timestamp": 21,
+                "TrueHeading": 94,
+                "UserID": 269057695,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 269057695,
+            "MMSI_String": 269057695,
+            "ShipName": "VIKING SIGYN",
+            "latitude": 51.895025000000004,
+            "longitude": 5.669903333333334,
+            "time_utc": "2024-08-28 15:52:26.489167391 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": false,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": true,
+                "Cog": 291,
+                "CommunicationState": 393222,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 48.75892666666667,
+                "Longitude": -122.50541333333334,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 368139980,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 368139980,
+            "MMSI_String": 368139980,
+            "ShipName": "ANDIAMO",
+            "latitude": 48.75892666666667,
+            "longitude": -122.50541333333334,
+            "time_utc": "2024-08-28 15:52:26.489411678 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "ShipStaticData": {
+                "AisVersion": 1,
+                "CallSign": "PF2962",
+                "Destination": "VARIABELE>EUROPA ",
+                "Dimension": {
+                    "A": 30,
+                    "B": 9,
+                    "C": 3,
+                    "D": 3
+                },
+                "Dte": false,
+                "Eta": {
+                    "Day": 0,
+                    "Hour": 24,
+                    "Minute": 60,
+                    "Month": 0
+                },
+                "FixType": 15,
+                "ImoNumber": 0,
+                "MaximumStaticDraught": 0.2,
+                "MessageID": 5,
+                "Name": "ANCILLA",
+                "RepeatIndicator": 0,
+                "Spare": false,
+                "Type": 79,
+                "UserID": 244730608,
+                "Valid": true
+            }
+        },
+        "MessageType": "ShipStaticData",
+        "MetaData": {
+            "MMSI": 244730608,
+            "MMSI_String": 244730608,
+            "ShipName": "ANCILLA",
+            "latitude": 51.383315,
+            "longitude": 4.033611666666666,
+            "time_utc": "2024-08-28 15:52:26.489698484 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": false,
+                "ClassBDisplay": false,
+                "ClassBDsc": false,
+                "ClassBMsg22": false,
+                "ClassBUnit": false,
+                "Cog": 182,
+                "CommunicationState": 0,
+                "CommunicationStateIsItdma": false,
+                "Latitude": 27.499591666666667,
+                "Longitude": -82.57249166666666,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 0.2,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 60,
+                "TrueHeading": 182,
+                "UserID": 338416401,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 338416401,
+            "MMSI_String": 338416401,
+            "ShipName": "KINDRED SPIRIT",
+            "latitude": 27.499591666666667,
+            "longitude": -82.57249166666666,
+            "time_utc": "2024-08-28 15:52:26.489946558 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "ShipStaticData": {
+                "AisVersion": 2,
+                "CallSign": "UBSZ7  ",
+                "Destination": "FOR ORDER           ",
+                "Dimension": {
+                    "A": 201,
+                    "B": 43,
+                    "C": 18,
+                    "D": 24
+                },
+                "Dte": false,
+                "Eta": {
+                    "Day": 1,
+                    "Hour": 0,
+                    "Minute": 0,
+                    "Month": 1
+                },
+                "FixType": 1,
+                "ImoNumber": 9306782,
+                "MaximumStaticDraught": 8.2,
+                "MessageID": 5,
+                "Name": "KARELIYA            ",
+                "RepeatIndicator": 0,
+                "Spare": false,
+                "Type": 89,
+                "UserID": 273257910,
+                "Valid": true
+            }
+        },
+        "MessageType": "ShipStaticData",
+        "MetaData": {
+            "MMSI": 273257910,
+            "MMSI_String": 273257910,
+            "ShipName": "KARELIYA            ",
+            "latitude": 43.07829,
+            "longitude": 132.03970833333332,
+            "time_utc": "2024-08-28 15:52:26.490184483 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "AddressedBinaryMessage": {
+                "ApplicationID": {
+                    "DesignatedAreaCode": 232,
+                    "FunctionIdentifier": 1,
+                    "Valid": true
+                },
+                "BinaryData": "\u0001\u0000\u0000\u0001\u0001\u0000\u0001\u0000\u0000\u0000\u0000\u0001\u0001\u0001\u0000\u0001\u0001\u0001\u0000\u0001\u0000\u0000\u0001\u0000\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0000\u0001\u0001\u0000\u0000\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0001\u0001\u0001\u0000\u0000\u0000\u0000\u0000\u0001\u0001\u0000\u0001\u0001\u0001\u0001\u0001\u0001",
+                "DestinationID": 2320900,
+                "MessageID": 6,
+                "RepeatIndicator": 0,
+                "Retransmission": true,
+                "Sequenceinteger": 3,
+                "Spare": false,
+                "UserID": 235112742,
+                "Valid": true
+            }
+        },
+        "MessageType": "AddressedBinaryMessage",
+        "MetaData": {
+            "MMSI": 235112742,
+            "MMSI_String": 235112742,
+            "ShipName": "NEPTUNE CLIPPER",
+            "latitude": 51.48385,
+            "longitude": -0.01,
+            "time_utc": "2024-08-28 15:52:26.490438648 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "StandardClassBPositionReport": {
+                "AssignedMode": false,
+                "ClassBBand": false,
+                "ClassBDisplay": false,
+                "ClassBDsc": true,
+                "ClassBMsg22": true,
+                "ClassBUnit": true,
+                "Cog": 278.9,
+                "CommunicationState": 393222,
+                "CommunicationStateIsItdma": true,
+                "Latitude": 48.45180666666667,
+                "Longitude": -123.29410666666666,
+                "MessageID": 18,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare1": 0,
+                "Spare2": 0,
+                "Timestamp": 23,
+                "TrueHeading": 511,
+                "UserID": 316043105,
+                "Valid": true
+            }
+        },
+        "MessageType": "StandardClassBPositionReport",
+        "MetaData": {
+            "MMSI": 316043105,
+            "MMSI_String": 316043105,
+            "ShipName": "RHAPSODY",
+            "latitude": 48.45180666666667,
+            "longitude": -123.29410666666666,
+            "time_utc": "2024-08-28 15:52:26.490665802 +0000 UTC"
+        }
+    },
+    {
+        "Message": {
+            "PositionReport": {
+                "Cog": 325.5,
+                "CommunicationState": 59916,
+                "Latitude": 37.913556666666665,
+                "Longitude": 23.704405,
+                "MessageID": 3,
+                "NavigationalStatus": 5,
+                "PositionAccuracy": false,
+                "Raim": false,
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 23,
+                "TrueHeading": 229,
+                "UserID": 235101024,
+                "Valid": true
+            }
+        },
+        "MessageType": "PositionReport",
+        "MetaData": {
+            "MMSI": 235101024,
+            "MMSI_String": 235101024,
+            "ShipName": "MONOKINI            ",
+            "latitude": 37.913556666666665,
+            "longitude": 23.704405,
+            "time_utc": "2024-08-28 15:52:26.490915018 +0000 UTC"
+        }
+    }
+]

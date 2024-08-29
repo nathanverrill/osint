@@ -1,6 +1,8 @@
 aiohttp
 confluent-kafka
-websockets
 orjson
+python-dotenv
 pyyaml
+requests
 tenacity
+websockets

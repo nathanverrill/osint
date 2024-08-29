@@ -32,36 +32,37 @@ class AISBytewaxOperations:
     @staticmethod
     def enrich_metadata(msg):
         """Assign id and standardize MMSI, shipname, and add tracking."""
-        msg_json = orjson.loads(msg.value)
-
+        batch_json = orjson.loads(msg.value)
+        for j in batch_json:
+            j['UUID'] = uuid4()
         # assign uuid for traceability
-        msg_json['UUID'] = uuid4()
+        # msg_json['UUID'] = uuid4()
         
-        # extract nested MetaData
-        md = msg_json['MetaData']
+        # # extract nested MetaData
+        # md = msg_json['MetaData']
         
-        # remove trailing UTC so it converts properly
-        # example: 2024-08-19 17:46:57.481183349 +0000 UTC
-        dt = parser.parse(md['time_utc'][:-4])        
-        msg_json['TimestampIso'] = dt.isoformat()
-        msg_json['Timestamp'] = dt.timestamp()        
+        # # remove trailing UTC so it converts properly
+        # # example: 2024-08-19 17:46:57.481183349 +0000 UTC
+        # dt = parser.parse(md['time_utc'][:-4])        
+        # msg_json['TimestampIso'] = dt.isoformat()
+        # msg_json['Timestamp'] = dt.timestamp()        
                 
-        # allow leading zeroes in mmsi
-        msg_json['MMSI'] = str(md['MMSI'])
+        # # allow leading zeroes in mmsi
+        # msg_json['MMSI'] = str(md['MMSI'])
                 
-        # remove trailing space in ship name
-        msg_json['ShipName'] = md['ShipName'].strip()
+        # # remove trailing space in ship name
+        # msg_json['ShipName'] = md['ShipName'].strip()
         
-        # move lat/lng to top level
-        msg_json['Lat'] = md['latitude']
-        msg_json['Lng'] = md['longitude']
+        # # move lat/lng to top level
+        # msg_json['Lat'] = md['latitude']
+        # msg_json['Lng'] = md['longitude']
         
-        # remove nested metadata
-        if 'MetaData' in msg_json:
-            del msg_json['MetaData']
+        # # remove nested metadata
+        # if 'MetaData' in msg_json:
+        #     del msg_json['MetaData']
         
         # return
-        return KafkaSinkMessage(msg.key, orjson.dumps(msg_json))    
+        return KafkaSinkMessage(msg.key, orjson.dumps(batch_json))    
 
     @staticmethod
     def bin_location(msg):
@@ -154,6 +155,7 @@ class AISBytewaxOperations:
     @staticmethod
     def set_mmsi_key(msg):
         """Use MMSI key"""
-        msg_json = orjson.loads(msg.value)
+        # msg_json = orjson.loads(msg.value)
 
-        return KafkaSinkMessage(msg_json['MMSI'], msg.value)
+        # return KafkaSinkMessage(str(msg_json['MetaData']['MMSI']), msg.value)
+        return KafkaSinkMessage('test_bob', msg.value)

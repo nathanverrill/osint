@@ -1,0 +1,31 @@
+kafka:
+  broker: 
+  - 'localhost:19092'
+ais:
+  topics:
+    raw:
+    - "raw_maritime_streamio"
+    output:
+    - "maritime_reports_test"
+  message_types:
+    - "BaseStationReport"
+    - "MultiSlotBinaryMessage"
+    - "ExtendedClassBPositionReport"
+    - "SafetyBroadcastMessage"
+    - "PositionReport"
+    - "ShipStaticData"
+    - "StandardClassBPositionReport"
+    - "StandardSearchAndRescueAircraftReport"
+    - "StaticDataReport"
+    - "SingleSlotBinaryMessage"
+    - "Interrogation"
+    - "LongRangeAisBroadcastMessage"
+    - "GnssBroadcastBinaryMessage"
+    - "DataLinkManagementMessage"
+    - "AddressedSafetyMessage"
+    - "AddressedBinaryMessage"
+    - "CoordinatedUTCInquiry"
+    - "BinaryAcknowledge"
+    - "ChannelManagement"
+    - "AssignedModeCommand"
+    - "AidsToNavigationReport"
