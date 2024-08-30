@@ -121,14 +121,14 @@ services:
     depends_on:
       - redpanda-0
 
-  osint-maritime-streamio:
+  ais-collection-streamio:
     env_file:
       - .env
     build:
-      context: ./maritime_streamio
+      context: ./ais_collection_streamio
       dockerfile: Dockerfile
-    container_name: osint-maritime-streamio
-    image: osint-maritime-streamio:latest
+    container_name: ais-collection-streamio
+    image: ais-collection-streamio:latest
     networks:
       - redpanda_network
     depends_on:
