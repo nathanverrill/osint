@@ -41,6 +41,11 @@ services:
       - 18082:18082
       - 19092:19092
       - 19644:9644
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9644/v1/status/ready"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
   redpanda-1:
     command:
       - redpanda
@@ -67,8 +72,14 @@ services:
       - 28082:28082
       - 29092:29092
       - 29644:9644
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9644/v1/status/ready"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     depends_on:
-      - redpanda-0
+      redpanda-0:
+        condition: service_healthy
   redpanda-2:
     command:
       - redpanda
@@ -95,8 +106,16 @@ services:
       - 38082:38082
       - 39092:39092
       - 39644:9644
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9644/v1/status/ready"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     depends_on:
-      - redpanda-0
+      redpanda-0:
+        condition: service_healthy
+      redpanda-1:
+        condition: service_healthy
   console:
     container_name: redpanda-console
     image: docker.redpanda.com/redpandadata/console:v2.7.1
@@ -132,7 +151,10 @@ services:
     networks:
       - redpanda_network
     depends_on:
-      - redpanda-0
-      - redpanda-1
-      - redpanda-2
+      redpanda-0:
+        condition: service_healthy
+      redpanda-1:
+        condition: service_healthy
+      redpanda-2:
+        condition: service_healthy
     restart: always
