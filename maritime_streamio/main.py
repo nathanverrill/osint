@@ -19,7 +19,7 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 # Kafka configuration
 kafka_config = {
-  "bootstrap.servers": "redpanda:9092",
+  "bootstrap.servers": "redpanda-0:9092",
   "compression.type": "snappy",
   "batch.size": 1048576,
   "linger.ms": 200,
