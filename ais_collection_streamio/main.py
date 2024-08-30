@@ -29,6 +29,7 @@ def kafka_health_check(broker, timeout=30):
     :param timeout: Timeout for the health check in seconds
     :return: True if Kafka is ready, False otherwise
     """
+    logging.info("Beginning Kafka health check...")
     admin_client = AdminClient({'bootstrap.servers': broker})
     end_time = time.time() + timeout
 
@@ -123,6 +124,7 @@ async def monitor_websocket(producer):
         producer.flush()  # Ensure any remaining messages are sent
 
 async def main():
+
     while True:
         if kafka_health_check(BROKER):
             producer = Producer(kafka_config)
@@ -139,5 +141,6 @@ async def main():
         await asyncio.sleep(KAFKA_RETRY_INTERVAL)
 
 if __name__ == "__main__":
+    logging.info("AIS Collection Streamio script started. Waiting 30 seconds for other services to warm up before Kafka health check. Once health check is complete will subscribe to aisstream.io web socket and produce each message to Kafka.")
     time.sleep(30)  # let other services warm up
     asyncio.run(main())
