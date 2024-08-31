@@ -64,7 +64,11 @@ kafka_topic = 'raw_ais_reports'
 
 async def send_to_kafka(producer, message):
     try:
-        producer.produce(kafka_topic, key=str(uuid4()), value=message)
+        key = {
+            "uuid": str(uuid4()),
+            "timestamp": int(time.time() * 1000)
+        }
+        producer.produce(kafka_topic, key=orjson.dumps(key), value=message)
         producer.poll(0)  # Trigger delivery reports
     except Exception as e:
         logging.error(f"Failed to send data to Kafka: {e}")
