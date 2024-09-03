@@ -166,3 +166,5 @@ nohup.out
 # PyEnv
 .python-version
 osint.code-workspace
+export/streamio.db
+streamio.db
