@@ -25,6 +25,16 @@ from jsonpath_ng.ext import parse # key search with expressions
 class AISBytewaxOperations:
     
     @staticmethod
+    def finalize_for_kafka_ouput(data):
+        kafka_key_json = {
+            'MessageType': data['MessageType'],
+            'MMSI': data['MMSI']
+        }
+        kafka_key = orjson.dumps(kafka_key_json)
+        kafka_value = orjson.dumps(data)
+        return KafkaSinkMessage(kafka_key, kafka_value)
+    
+    @staticmethod
     def format_timestamp(msg):
         """Make timestamps epoch and python datetime compatible."""
         return KafkaSinkMessage(msg.key, msg.value)    
@@ -32,55 +42,59 @@ class AISBytewaxOperations:
     @staticmethod
     def enrich_metadata(msg):
         """Assign id and standardize MMSI, shipname, and add tracking."""
-        batch_json = orjson.loads(msg.value)
-        for j in batch_json:
-            j['UUID'] = uuid4()
-        # assign uuid for traceability
-        # msg_json['UUID'] = uuid4()
+        source_key = orjson.loads(msg.key)
+        data = orjson.loads(msg.value)
         
-        # # extract nested MetaData
-        # md = msg_json['MetaData']
+        # traceability to source message
+        data['SourceMessageID'] = source_key['uuid']
+        data['SourceMessageTimestamp'] = source_key['timestamp']
         
-        # # remove trailing UTC so it converts properly
-        # # example: 2024-08-19 17:46:57.481183349 +0000 UTC
-        # dt = parser.parse(md['time_utc'][:-4])        
-        # msg_json['TimestampIso'] = dt.isoformat()
-        # msg_json['Timestamp'] = dt.timestamp()        
+        # extract nested MetaData
+        md = data['MetaData']
+        
+        # remove trailing UTC so it converts properly
+        # example: 2024-08-19 17:46:57.481183349 +0000 UTC
+        dt = parser.parse(md['time_utc'][:-4])        
+        data['EventTimestampIso'] = dt.isoformat()
+        data['EventTimestamp'] = dt.timestamp()        
                 
-        # # allow leading zeroes in mmsi
-        # msg_json['MMSI'] = str(md['MMSI'])
+        # allow leading zeroes in mmsi
+        data['MMSI'] = str(md['MMSI'])
                 
-        # # remove trailing space in ship name
-        # msg_json['ShipName'] = md['ShipName'].strip()
+        # remove trailing space in ship name
+        data['ShipName'] = md['ShipName'].strip()
         
-        # # move lat/lng to top level
-        # msg_json['Lat'] = md['latitude']
-        # msg_json['Lng'] = md['longitude']
+        # move lat/lng to top level
+        data['Lat'] = md['latitude']
+        data['Lng'] = md['longitude']
         
-        # # remove nested metadata
-        # if 'MetaData' in msg_json:
-        #     del msg_json['MetaData']
+        # remove nested metadata
+        if 'MetaData' in data:
+            del data['MetaData']
+        
+        return data
         
         # return
-        return KafkaSinkMessage(msg.key, orjson.dumps(batch_json))    
+        # return KafkaSinkMessage(msg.key, orjson.dumps(data))
 
     @staticmethod
-    def bin_location(msg):
+    def bin_location(msg_json):
         """Optimize location in multiple formats for analytics."""
-        msg_json = orjson.loads(msg.value)
 
         # uber hexes for geo analytics
-        # https://h3geo.org/
-        # 450m edge hex at res 8    
-        h3_resolution = 8
+        # https://h3geo.org/    
+        h3_resolution = 7
 
         # googles geo indexing
         # http://s2geometry.io/
-        # 610m_sphere    
-        s2_level = 14
+        s2_level = 13
+        
+        # geohash
+        # https://pypi.org/project/pygeohash/
+        geohash_precision = 7
 
         # standardize and bin 
-        bin = BinnedLocation(msg_json["Lat"], msg_json["Lng"], h3_resolution, s2_level)
+        bin = BinnedLocation(msg_json["Lat"], msg_json["Lng"], h3_resolution, s2_level, geohash_precision)
         msg_json['LatReported'] = bin.lat_reported
         msg_json['LngReported'] = bin.lng_reported
         msg_json['Lat'] = bin.lat
@@ -89,14 +103,16 @@ class AISBytewaxOperations:
         msg_json['S2'] = bin.s2 
         msg_json['WKT'] = bin.wkt
         msg_json['MGRS'] = bin.mgrs
+        msg_json['GeoHash'] = bin.geohash
 
-        return KafkaSinkMessage(msg.key, orjson.dumps(msg_json))
+        return msg_json
+
+        # return KafkaSinkMessage(msg.key, orjson.dumps(msg_json))
 
 
     @staticmethod
-    def calculate_features(msg):
+    def calculate_features(msg_json):
         """Extract values useful for analytics and visualization."""
-        msg_json = orjson.loads(msg.value)
         msg_type = msg_json["MessageType"]
         
         # Course and Speed
@@ -135,11 +151,8 @@ class AISBytewaxOperations:
                     msg_json["SpecialManoeuvre"] = False # reserved for unavailable/unknown
                 else:
                     msg_json["SpecialManoeuvre"] = bool(matches[0].value) # reported in degrees/min              
-                    
-                
-                    
         
-        return KafkaSinkMessage(msg.key, orjson.dumps(msg_json))
+        return msg_json
     
     @staticmethod
     def flatten_json(msg):
@@ -148,14 +161,7 @@ class AISBytewaxOperations:
         return KafkaSinkMessage(msg.key, orjson.dumps(flat_msg))
 
     @staticmethod
-    def filter_message_type(msg, message_type):
+    def filter_message_type(msg, message_types):
         """Filter messages by the specified message type."""
-        return orjson.loads(msg.value)['MessageType'].lower() == message_type.lower()
+        return orjson.loads(msg.key)['MessageType'] in message_types
     
-    @staticmethod
-    def set_mmsi_key(msg):
-        """Use MMSI key"""
-        # msg_json = orjson.loads(msg.value)
-
-        # return KafkaSinkMessage(str(msg_json['MetaData']['MMSI']), msg.value)
-        return KafkaSinkMessage('test_bob', msg.value)

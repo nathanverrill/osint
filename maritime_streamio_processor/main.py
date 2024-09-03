@@ -66,22 +66,21 @@ flow = Dataflow("Process Raw AIS Streamio Reports")
 stream = kop.input("kafka-in", flow, brokers=BROKER, topics=INPUT_TOPIC,starting_offset=OFFSET_END,batch_size=100)
 errs = op.inspect("errors", stream.errs).then(op.raises, "crash-on-err")
 
-# enriched = op.map("Enrich Metadata", stream, AISBytewaxOperations.enrich_metadata)
-# binned = op.map("Bin Location", enriched, AISBytewaxOperations.bin_location)
-# features = op.map("Calculate Features for Analytics", binned, AISBytewaxOperations.calculate_features)
-# flattened = op.map("Flatten JSON", features, AISBytewaxOperations.flatten_json)
-# op.output("Kafka Out - All Reports", flattened, KafkaSink(BROKER, OUTPUT_TOPIC))
-
-# # Stream processing specific to message type
-# keyed_on_mmsi = op.map("Assign MMSI Kafka Key", stream, AISBytewaxOperations.set_mmsi_key)
-
 enriched = op.map("Enrich Metadata", stream.oks, AISBytewaxOperations.enrich_metadata)
-kop.output("kafka-out", enriched, brokers=BROKER, topic="a_test_ais_streamio_all")
+binned = op.map("Bin Location", enriched, AISBytewaxOperations.bin_location)
+features = op.map("Calculate Features for Analytics", binned, AISBytewaxOperations.calculate_features)
+kafka_output = op.map("Finalize for Kafka", features, AISBytewaxOperations.finalize_for_kafka_ouput)
+kop.output("kafka-out", kafka_output, brokers=BROKER, topic="a_test_ais_streamio_all")
 
-# op.output(f"Kafka Out - All", stream, KafkaSink(BROKER, "test_ais_streamio_all"))
 
-# # # filter and route to topics for each message type
-# for message_type in AIS_MESSAGE_TYPES:
-#     filter_fn = lambda msg, mt=message_type: AISBytewaxOperations.filter_message_type(msg, mt)
-#     filtered_messages = op.filter(f"Filter {message_type}", stream, filter_fn)
-#     op.output(f"Kafka Out - {message_type}", filtered_messages, KafkaSink(BROKER, f"ais_{message_type.lower()}"))
+# filter for position message types and write to positions so they're in a combined topic
+POSITION_MESSAGE_TYPES = ['ExtendedClassBPositionReport','PositionReport','StandardClassBPositionReport','LongRangeAisBroadcastMessage']
+filter_fn = lambda kafka_output, mt=POSITION_MESSAGE_TYPES: AISBytewaxOperations.filter_message_type(kafka_output, mt)
+filtered_messages_positions = op.filter(f"Filter Positions", kafka_output, filter_fn)
+kop.output("kafka-out-positions", filtered_messages_positions, brokers=BROKER, topic="a_test_ais_AllPositionReports")
+
+# write to topics by message type
+for mt in AIS_MESSAGE_TYPES:
+  filter_fn = lambda kafka_output, mt=mt: AISBytewaxOperations.filter_message_type(kafka_output, mt)
+  filtered_messages_all = op.filter(f'Filter {mt}', kafka_output, filter_fn)
+  kop.output(f'kafka-out-static-positions-{mt}', filtered_messages_all, brokers=BROKER, topic=f'a_test_ais_{mt}')

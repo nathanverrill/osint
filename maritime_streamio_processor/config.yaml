@@ -4,9 +4,13 @@ kafka:
 ais:
   topics:
     raw:
-    - "raw_maritime_streamio"
+    - "raw_ais_reports"
     output:
     - "maritime_reports_test"
+  position_message_types:
+      - "ExtendedClassBPositionReport"
+      - "PositionReport"
+      - "StandardClassBPositionReport"
   message_types:
     - "BaseStationReport"
     - "MultiSlotBinaryMessage"

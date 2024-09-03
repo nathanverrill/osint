@@ -17,13 +17,15 @@ Dependencies:
 import h3
 import s2sphere
 import mgrs
+import pygeohash as pgh
 
 class BinnedLocation:
-    def __init__(self, latitude, longitude, h3_resolution=8, s2_level=20):
+    def __init__(self, latitude, longitude, h3_resolution=8, s2_level=20, geohash_precision=8):
         self.lat_reported = latitude
         self.lng_reported = longitude        
         self.h3_resolution = h3_resolution
         self.s2_level = s2_level
+        self.geohash_precision = geohash_precision
         
         # Bin location into the center of S2 Cell
         self.lat, self.lng = self.round_position()
@@ -38,6 +40,10 @@ class BinnedLocation:
         
         # MGRS Military Grid Reference System
         self.mgrs = self.calculate_mgrs()
+        
+        # geohashing
+        # https://pypi.org/project/pygeohash/
+        self.geohash = pgh.encode(self.lat,self.lng, precision=geohash_precision)
 
 
         
