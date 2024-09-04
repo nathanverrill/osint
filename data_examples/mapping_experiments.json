@@ -1,10 +1,45 @@
 [
     {
-        "MMSI": 218055450,
-        "MMSI_String": 218055450,
-        "ShipName": "DA VINCI",
-        "latitude": 54.183081666666666,
-        "longitude": 12.09842,
-        "time_utc": "2024-08-21 17:54:23.592322628 +0000 UTC"
+        "Message": {
+            "PositionReport": {
+                "Cog": 192.7,
+                "CommunicationState": 59916,
+                "Latitude": 44.30104666666667,
+                "Longitude": 12.640575,
+                "MessageID": 1,
+                "NavigationalStatus": 0,
+                "PositionAccuracy": "false",
+                "Raim": "false",
+                "RateOfTurn": 0,
+                "RepeatIndicator": 0,
+                "Sog": 0,
+                "Spare": 0,
+                "SpecialManoeuvreIndicator": 0,
+                "Timestamp": 54,
+                "TrueHeading": 106,
+                "UserID": 253806000,
+                "Valid": "true"
+            }
+        },
+        "MessageType": "PositionReport",
+        "SourceMessageID": "d3c387ae-363c-4a6b-8f41-2994ed5d3fa0",
+        "SourceMessageTimestamp": 1725390416014,
+        "EventTimestampIso": "2024-09-03T19:06:56.069062+00:00",
+        "EventTimestamp": 1725390416.069062,
+        "MMSI": "253806000",
+        "ShipName": "BOS CHAMPAGNE",
+        "Lat": 44.30105,
+        "Lng": 12.64055,
+        "LatReported": 44.30104666666667,
+        "LngReported": 12.640575,
+        "H3": "871ea3814ffffff",
+        "S2": 5151423030823485000,
+        "WKT": "POINT (12.64055 44.30105)",
+        "MGRS": "33TUK11790801",
+        "GeoHash": "srbup8u",
+        "CourseDegrees": 19.27,
+        "SpeedKnots": 0,
+        "RateOfTurn": 0,
+        "SpecialManoeuvre": "false"
     }
 ]

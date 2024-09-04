@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real-Time Ship Stats</title>
+    <style>
+      #stats-panel {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        font-size: 14px;
+        z-index: 1000;
+      }
+      #stats-panel h3 {
+        margin: 0 0 10px 0;
+        font-size: 16px;
+      }
+      #stats-panel p {
+        margin: 5px 0;
+      }
+      #stats-panel .last-update {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="stats-panel">
+      <h3>Ship Stats</h3>
+      <p>Total Ships: <span id="total-ships">0</span></p>
+      <div class="last-update">
+        <h4>Last Update</h4>
+        <p>New MMSIs: <span id="new-mmsis">0</span></p>
+      </div>
+    </div>
+
+    <script>
+      let knownMMSIs = new Set();
+
+      // Update stats in the stats panel
+      function updateStatsPanel(totalShips, newMMSIs) {
+        document.getElementById("total-ships").innerText = totalShips;
+        document.getElementById("new-mmsis").innerText = newMMSIs;
+      }
+
+      // Setup Server-Sent Events (SSE) to receive updates
+      const evtSource = new EventSource("http://localhost:8001/events");
+
+      evtSource.onmessage = function (event) {
+        const mmsis = JSON.parse(event.data);
+        const newMMSIs = mmsis.length;
+
+        mmsis.forEach((mmsi) => {
+          knownMMSIs.add(mmsi);
+        });
+
+        const totalShips = knownMMSIs.size;
+
+        updateStatsPanel(totalShips, newMMSIs);
+      };
+    </script>
+  </body>
+</html>

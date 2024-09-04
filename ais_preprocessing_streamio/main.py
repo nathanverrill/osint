@@ -70,17 +70,17 @@ enriched = op.map("Enrich Metadata", stream.oks, AISBytewaxOperations.enrich_met
 binned = op.map("Bin Location", enriched, AISBytewaxOperations.bin_location)
 features = op.map("Calculate Features for Analytics", binned, AISBytewaxOperations.calculate_features)
 kafka_output = op.map("Finalize for Kafka", features, AISBytewaxOperations.finalize_for_kafka_ouput)
-kop.output("kafka-out", kafka_output, brokers=BROKER, topic="a_test_ais_streamio_all")
+kop.output("kafka-out", kafka_output, brokers=BROKER, topic="enriched_ais_reports")
 
 
 # filter for position message types and write to positions so they're in a combined topic
 POSITION_MESSAGE_TYPES = ['ExtendedClassBPositionReport','PositionReport','StandardClassBPositionReport','LongRangeAisBroadcastMessage']
 filter_fn = lambda kafka_output, mt=POSITION_MESSAGE_TYPES: AISBytewaxOperations.filter_message_type(kafka_output, mt)
 filtered_messages_positions = op.filter(f"Filter Positions", kafka_output, filter_fn)
-kop.output("kafka-out-positions", filtered_messages_positions, brokers=BROKER, topic="a_test_ais_AllPositionReports")
+kop.output("kafka-out-positions", filtered_messages_positions, brokers=BROKER, topic="ais_AllPositionReports")
 
 # write to topics by message type
 for mt in AIS_MESSAGE_TYPES:
   filter_fn = lambda kafka_output, mt=mt: AISBytewaxOperations.filter_message_type(kafka_output, mt)
   filtered_messages_all = op.filter(f'Filter {mt}', kafka_output, filter_fn)
-  kop.output(f'kafka-out-static-positions-{mt}', filtered_messages_all, brokers=BROKER, topic=f'a_test_ais_{mt}')
+  kop.output(f'kafka-out-static-positions-{mt}', filtered_messages_all, brokers=BROKER, topic=f'ais_{mt}')
